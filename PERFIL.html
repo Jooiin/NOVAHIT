@@ -611,7 +611,113 @@
 
     outline: none;
 }
+@media (max-width: 600px) {
 
+    .nova-entry-content {
+
+        padding:
+            calc(28px + env(safe-area-inset-top))
+            20px
+            max(
+                24px,
+                env(safe-area-inset-bottom)
+            );
+    }
+
+
+    .nova-entry-background {
+
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+
+        background: #08090b;
+    }
+
+
+    .nova-entry-background img {
+
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        object-position: center center;
+
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+
+    .nova-entry-brand-name {
+
+        font-size: 21px;
+    }
+
+
+    .nova-entry-brand-label {
+
+        font-size: 6px;
+    }
+
+
+    .nova-entry-center {
+
+        padding:
+            50px 0 30px;
+    }
+
+
+    .nova-entry-center h1 {
+
+        font-size:
+            clamp(
+                46px,
+                14vw,
+                66px
+            );
+    }
+
+
+    .nova-entry-center p {
+
+        margin-top: 19px;
+
+        font-size: 13px;
+    }
+
+
+    .nova-entry-actions {
+
+        width: 100%;
+    }
+
+
+    .nova-entry-button {
+
+        width: 100%;
+
+        min-height: 52px;
+
+        padding-left: 20px;
+
+        padding-right: 20px;
+    }
+
+
+    .nova-entry-footer {
+
+        justify-content: center;
+    }
+
+}
     </style>
 
 </head>
