@@ -660,7 +660,7 @@ button {
 
 .site-footer {
     width: 100%;
-    background: #111;
+    background: #ffffff;
     color: #777;
 }
 
@@ -682,7 +682,7 @@ button {
 }
 
 .footer-brand {
-    color: #fff;
+    color: #000000;
     font-size: 12px;
     font-weight: 800;
     letter-spacing: -.4px;
