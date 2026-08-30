@@ -61,17 +61,17 @@ button {
 ========================================================= */
 
 :root {
-    --black: #111111;
-    --black-soft: #171717;
-    --black-card: #1b1b1b;
+    --black: #08090b;
+    --black-soft: #08090b;
+    --black-card: #08090b;
     --white: #ffffff;
     --white-soft: #f5f5f3;
-    --background: #111111;
-    --soft: #171717;
-    --line: #2b2b2b;
+    --background: #08090b;
+    --soft: #08090b;
+    --line: #08090b;
     --gray: #888888;
     --gray-light: #aaaaaa;
-    --gray-dark: #666666;
+    --gray-dark: #08090b;
     --max-width: 1280px;
     --side-padding: 40px;
     --header-height: 72px;
@@ -105,7 +105,7 @@ button {
     z-index: 5000;
     width: 100%;
     background:
-        rgba(17,17,17,.94);
+        08090b;
     border-bottom:
         1px solid rgba(255,255,255,.08);
     backdrop-filter:
@@ -229,9 +229,9 @@ button {
     padding:
         90px 0
         70px;
-    background: #111111;
+    background: #08090b;
     border-bottom:
-        1px solid #2b2b2b;
+        1px solid #08090b;
 }
 
 .training-hero h1 {
@@ -277,7 +277,7 @@ button {
 .training-intro {
     padding:
         120px 0;
-    background: #111111;
+    background: #08090b;
     color: #ffffff;
 }
 
@@ -326,7 +326,7 @@ button {
     padding:
         120px 0
         140px;
-    background: #111111;
+    background: #08090b;
     color: #ffffff;
     overflow: hidden;
     border-top:
