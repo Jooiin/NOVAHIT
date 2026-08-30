@@ -1,291 +1,344 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, viewport-fit=cover"
 
-    <title>NOVA</title>
+>
 
-    <link
-        rel="stylesheet"
-        href="css/index.css"
-    >
+<meta
+name="theme-color"
+content="#08090b"
+
+>
+
+<meta
+name="description"
+content="NOVA · Training"
+
+>
+
+<title>NOVA</title>
+
+<!-- =====================================================
+     SUPABASE
+     ===================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="supabase-config.js"></script>
+
+<!-- =====================================================
+     ESTILOS
+     ===================================================== -->
+
+<link rel="stylesheet" href="css/index.css">
 
 </head>
 
-
 <body>
 
-
-<!-- =========================================================
-     HEADER
-     ========================================================= -->
-
-<header class="athlete-header">
-
-    <div class="athlete-header-inner">
-
-        <a
-            href=""
-            class="athlete-brand"
-        >
-            NOVA
-        </a>
-
-
-        <div class="athlete-header-actions">
-
-            <a
-                href="compras.html"
-                class="athlete-home"
-            >
-                
-            </a>
-
-
-            <a
-                href="PERFIL.html"
-                class="athlete-home"
-            >
-                PERFIL
-            </a>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-
-<!-- =========================================================
-     CONTENIDO
-     ========================================================= -->
-
 <main
-    class="athlete-page"
-    id="inicio"
+    class="nova-page"
+    id="principalPage"
 >
 
 
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
-
-    <section class="athlete-hero">
-
-        <span class="eyebrow">
-            ATLETA
-        </span>
+<div class="nova-container">
 
 
-        <h1>
-            Entrena con estructura.<br>
-            Construye tu camino.
-        </h1>
+    <!-- =================================================
+         MARCA
+         ================================================= -->
+
+    <header class="nova-top">
+
+        <div class="nova-brand">
+
+            <span class="nova-brand-name">
+                NOVA
+            </span>
+
+            <span class="nova-brand-label">
+                TRAINING
+            </span>
+
+        </div>
+
+    </header>
 
 
-        <div class="hero-content">
+    <!-- =================================================
+         PRIMERO · NOVA
+         ================================================= -->
 
-            <p>
-                NOVA es un espacio de fitness pensado
-                para ayudarte a darle estructura a tu
-                entrenamiento desde el inicio hasta el
-                final de cada sesión.
-            </p>
+    <section class="nova-about">
 
-            <p>
-                Si alguna vez no sabes por dónde comenzar,
-                aquí encuentras una dirección para dar
-                ese primer paso.
-            </p>
+        <div class="nova-about-grid">
+
+
+            <div>
+
+                <span class="nova-eyebrow">
+                    NOVA
+                </span>
+
+                <h1>
+                    Entrenamiento.<br>
+                    Rendimiento.<br>
+                    Evolución.
+                </h1>
+
+            </div>
+
+
+            <div class="nova-about-copy">
+
+                <p>
+                    NOVA es un espacio de entrenamiento diseñado
+                    para reunir diferentes disciplinas deportivas
+                    dentro de una misma plataforma.
+                </p>
+
+
+                <p>
+                    El objetivo es ofrecer una estructura clara
+                    para desarrollar condición física, fuerza,
+                    técnica, resistencia y rendimiento,
+                    respetando el proceso de cada atleta.
+                </p>
+
+
+                <p>
+                    Natación, HIIT y fuerza forman parte de una
+                    misma visión: entrenar mejor, construir
+                    capacidad y evolucionar de manera constante.
+                </p>
+
+            </div>
 
         </div>
 
     </section>
 
 
+    <!-- =================================================
+         SEGUNDO · DISCIPLINAS
+         ================================================= -->
 
-    <!-- =====================================================
-         DISCIPLINA · NATACIÓN
-         ===================================================== -->
+    <section class="nova-section">
 
-    <section class="discipline-feature">
+        <div class="nova-section-header">
+
+            <div>
+
+                <span class="nova-eyebrow">
+                    NOVA
+                </span>
+
+                <h2>
+                    Entrena a tu manera.
+                </h2>
+
+            </div>
 
 
-        <div class="feature-image">
-
-            <img
-                src="img/WhatsApp Image 4.jpeg"
-                alt="Entrenamiento de natación"
-            >
-
-        </div>
-
-
-        <div class="feature-content">
-
-            <span class="eyebrow">
-                DISCIPLINA
-            </span>
-
-            <h2>
-                NATACIÓN
-            </h2>
-
-            <p>
-                El agua exige control, técnica y constancia.
-                Entrenar en ella no solo desarrolla tu
-                capacidad física; también trabaja
-                concentración, disciplina y control mental.
+            <p class="nova-section-description">
+                Diferentes formas de entrenar,
+                una misma dirección: mejorar.
             </p>
 
         </div>
 
-    </section>
 
-
-
-    <!-- =====================================================
-         DISCIPLINA · HIT
-         ===================================================== -->
-
-    <section class="discipline-feature">
-
-
-        <div class="feature-image">
-
-            <img
-                src="img/HIT.jpg"
-                alt="Entrenamiento HIT"
-            >
-
-        </div>
-
-
-        <div class="feature-content">
-
-            <span class="eyebrow">
-                DISCIPLINA
-            </span>
-
-            <h2>
-                HIT
-            </h2>
-
-            <p>
-                Las sesiones de alta intensidad desarrollan
-                tu capacidad de trabajo, resistencia y
-                control físico. Entrenar con intensidad
-                te permite mejorar tu condición y responder
-                mejor ante diferentes esfuerzos.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         DISCIPLINA · FUERZA
-         ===================================================== -->
-
-    <section class="discipline-feature">
-
-
-        <div class="feature-image">
-
-            <img
-                src="img/WhatsApp Image .jpeg"
-                alt="Entrenamiento de fuerza"
-            >
-
-        </div>
-
-
-        <div class="feature-content">
-
-            <span class="eyebrow">
-                DISCIPLINA
-            </span>
-
-            <h2>
-                FUERZA
-            </h2>
-
-            <p>
-                La fuerza es la base para construir un cuerpo
-                más capaz y resistente. Entrenar fuerza
-                desarrolla estabilidad, potencia y control,
-                ayudándote a mejorar tu rendimiento dentro
-                y fuera del deporte.
-            </p>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         PREPÁRATE / PROGRAMAS
-         ===================================================== -->
-
-    <section class="prepare-section">
-
-
-        <div class="prepare-image">
-
-            <img
-                src="img/WhatsApp Image 3.jpeg"
-                alt="Entrenamiento NOVA"
-            >
-
-        </div>
-
-
-        <div class="prepare-content">
-
-            <span class="eyebrow">
-                NOVA · PROGRAMAS
-            </span>
-
-            <h2>
-                PREPÁRATE
-            </h2>
-
-            <h3>
-                Tu constancia construye tu rendimiento.
-            </h3>
-
-            <p>
-                Cuando entrenar deja de ser improvisar
-                y comienza a tener una dirección, cada
-                sesión empieza a contar.
-            </p>
-
-            <p>
-                Descubre un programa diseñado para llevar
-                tu entrenamiento un paso más allá.
-            </p>
+        <div class="nova-disciplines">
 
 
             <!-- =================================================
-                 ENTRENAMIENTOS
+                 NATACIÓN
                  ================================================= -->
 
             <a
-                href="training.html"
-                class="buy-button"
+                href="training.html#natacion"
+                class="nova-discipline"
             >
-                ENTRENAMIENTOS
+
+                <img
+                    src="img/WhatsApp Image 4.jpeg"
+                    alt="Natación"
+                >
+
+
+                <div class="nova-discipline-content">
+
+                    <span class="nova-discipline-number">
+                        01
+                    </span>
+
+                    <span class="nova-discipline-label">
+                        AGUA
+                    </span>
+
+                    <h3>
+                        NATACIÓN
+                    </h3>
+
+                    <p class="nova-discipline-description">
+                        Entrenamiento enfocado en técnica,
+                        resistencia, velocidad y eficiencia
+                        dentro del agua.
+                    </p>
+
+
+                    <div class="nova-discipline-tags">
+
+                        <span class="nova-discipline-tag">
+                            TÉCNICA DE NADO
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            RESISTENCIA
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            VELOCIDAD
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            CONTROL Y EFICIENCIA
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- =================================================
+                 HIIT
+                 ================================================= -->
+
+            <a
+                href="training.html#hit"
+                class="nova-discipline"
+            >
+
+                <img
+                    src="img/HIT.jpg"
+                    alt="HIIT"
+                >
+
+
+                <div class="nova-discipline-content">
+
+                    <span class="nova-discipline-number">
+                        02
+                    </span>
+
+                    <span class="nova-discipline-label">
+                        CONDICIÓN
+                    </span>
+
+                    <h3>
+                        HIT
+                    </h3>
+
+                    <p class="nova-discipline-description">
+                        Sesiones de alta intensidad orientadas
+                        a desarrollar condición física y
+                        capacidad de trabajo.
+                    </p>
+
+
+                    <div class="nova-discipline-tags">
+
+                        <span class="nova-discipline-tag">
+                            INTENSIDAD
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            RESISTENCIA
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            CAPACIDAD CARDIOVASCULAR
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            ACONDICIONAMIENTO
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <!-- =================================================
+                 FUERZA
+                 ================================================= -->
+
+            <a
+                href="training.html#fuerza"
+                class="nova-discipline"
+            >
+
+                <img
+                    src="img/WhatsApp Image .jpeg"
+                    alt="Fuerza"
+                >
+
+
+                <div class="nova-discipline-content">
+
+                    <span class="nova-discipline-number">
+                        03
+                    </span>
+
+                    <span class="nova-discipline-label">
+                        RENDIMIENTO
+                    </span>
+
+                    <h3>
+                        FUERZA
+                    </h3>
+
+                    <p class="nova-discipline-description">
+                        Entrenamiento de fortaleza física
+                        para complementar el rendimiento deportivo.
+                    </p>
+
+
+                    <div class="nova-discipline-tags">
+
+                        <span class="nova-discipline-tag">
+                            FORTALEZA
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            POTENCIA
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            ESTABILIDAD
+                        </span>
+
+                        <span class="nova-discipline-tag">
+                            RENDIMIENTO
+                        </span>
+
+                    </div>
+
+                </div>
+
             </a>
 
         </div>
@@ -293,637 +346,362 @@
     </section>
 
 
-</main>
+    <!-- =================================================
+         ENTRENA · EVOLUCIONA
+         ================================================= -->
 
+    <section class="nova-evolve">
 
+        <div class="nova-evolve-grid">
 
 
-<!-- =========================================================
-     FOOTER
-     ========================================================= -->
+            <div>
 
-<footer class="athlete-footer">
+                <span class="nova-eyebrow">
+                    NOVA
+                </span>
 
-    <span>
-        NOVA · TRAINING
-    </span>
+                <h2>
+                    Constancia.<br>
+                    Construcción.
+                </h2>
 
-    <small>
-        © 2026 NOVA · Todos los derechos reservados
-    </small>
+            </div>
 
-</footer>
 
+            <div class="nova-evolve-copy">
 
-
-<!-- =========================================================
-     SUPABASE
-     ========================================================= -->
-
-<script
-    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
-></script>
-
-
-<script
-    src="supabase-config.js"
-></script>
-
-
-
-<!-- =========================================================
-     JAVASCRIPT
-     ========================================================= -->
-
-<script>
-
-
-/* =========================================================
-   NOVA · SUPABASE
-   ========================================================= */
-
-const supabase =
-    window.supabase.createClient(
-        SUPABASE_URL,
-        SUPABASE_PUBLISHABLE_KEY
-    );
-
-
-supabase
-    .auth
-    .getSession()
-    .then(function(result) {
-
-        console.log(
-            "NOVA · Supabase conectado:",
-            result
-        );
-
-    })
-    .catch(function(error) {
-
-        console.error(
-            "NOVA · Error de conexión:",
-            error
-        );
-
-    });
-
-
-
-/* =========================================================
-   ELEMENTOS
-   ========================================================= */
-
-const trainingModal =
-    document.getElementById(
-        "trainingModal"
-    );
-
-
-const openTraining =
-    document.getElementById(
-        "openTraining"
-    );
-
-
-const closeTraining =
-    document.getElementById(
-        "closeTraining"
-    );
-
-
-const routineView =
-    document.getElementById(
-        "routineView"
-    );
-
-
-const disciplineSelector =
-    document.getElementById(
-        "disciplineSelector"
-    );
-
-
-
-/* =========================================================
-   SISTEMA DE ENTRENAMIENTOS
-   =========================================================
-
-   Estos elementos todavía no existen en este index.html.
-   Por eso el código solamente se ejecutará cuando
-   realmente estén presentes.
-
-   Así evitamos que NOVA se rompa mientras construimos
-   las siguientes partes de la plataforma.
-   ========================================================= */
-
-if (
-    trainingModal &&
-    openTraining &&
-    closeTraining &&
-    routineView &&
-    disciplineSelector
-) {
-
-
-    const modalOverlay =
-        trainingModal.querySelector(
-            ".training-modal-overlay"
-        );
-
-
-
-    /* =====================================================
-       ABRIR MODAL
-       ===================================================== */
-
-    openTraining.addEventListener(
-        "click",
-        function() {
-
-            trainingModal.classList.add(
-                "is-visible"
-            );
-
-            trainingModal.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-            document.body.classList.add(
-                "modal-open"
-            );
-
-        }
-    );
-
-
-
-    /* =====================================================
-       CERRAR MODAL
-       ===================================================== */
-
-    function closeModal() {
-
-        trainingModal.classList.remove(
-            "is-visible"
-        );
-
-        trainingModal.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.classList.remove(
-            "modal-open"
-        );
-
-
-        setTimeout(
-            resetModal,
-            250
-        );
-
-    }
-
-
-
-    closeTraining.addEventListener(
-        "click",
-        closeModal
-    );
-
-
-
-    if (modalOverlay) {
-
-        modalOverlay.addEventListener(
-            "click",
-            closeModal
-        );
-
-    }
-
-
-
-    document.addEventListener(
-        "keydown",
-        function(event) {
-
-            if (
-                event.key === "Escape" &&
-                trainingModal.classList.contains(
-                    "is-visible"
-                )
-            ) {
-
-                closeModal();
-
-            }
-
-        }
-    );
-
-
-
-    /* =====================================================
-       DISCIPLINAS
-       ===================================================== */
-
-    document
-        .querySelectorAll(
-            ".discipline-option"
-        )
-        .forEach(
-            button => {
-
-                button.addEventListener(
-                    "click",
-                    function() {
-
-                        const discipline =
-                            this.dataset.discipline;
-
-
-                        showDiscipline(
-                            discipline
-                        );
-
-                    }
-                );
-
-            }
-        );
-
-
-
-    /* =====================================================
-       MOSTRAR DISCIPLINA
-       ===================================================== */
-
-    function showDiscipline(
-        discipline
-    ) {
-
-
-        if (
-            discipline === "natacion"
-        ) {
-
-            showSwimmingSelection();
-
-            return;
-
-        }
-
-
-        if (
-            discipline === "hit"
-        ) {
-
-            showRoutine(
-                NOVA_ATLETA_RUTINAS.HIT,
-                "HIT"
-            );
-
-            return;
-
-        }
-
-
-        if (
-            discipline === "fuerza"
-        ) {
-
-            showRoutine(
-                NOVA_ATLETA_RUTINAS.FUERZA,
-                "FUERZA"
-            );
-
-            return;
-
-        }
-
-    }
-
-
-
-    /* =====================================================
-       NATACIÓN · SELECCIÓN
-       ===================================================== */
-
-    function showSwimmingSelection() {
-
-        disciplineSelector.style.display =
-            "none";
-
-
-        routineView.innerHTML = `
-
-            <button
-                type="button"
-                class="back-button"
-                id="backToDisciplines"
-            >
-                ← DISCIPLINAS
-            </button>
-
-
-            <span class="eyebrow">
-                NATACIÓN · SESIONES
-            </span>
-
-
-            <h2>
-                Elige tu distancia
-            </h2>
-
-
-            <p class="routine-intro">
-                Selecciona la sesión que quieres realizar.
-            </p>
-
-
-            <div class="swimming-options">
-
-
-                <button
-                    type="button"
-                    class="swimming-option"
-                    data-swim="larga"
-                >
-
-                    <span>
-
-                        <strong>
-                            2000 M
-                        </strong>
-
-                        <small>
-                            SESIÓN COMPLETA
-                        </small>
-
-                    </span>
-
-                    <b>
-                        →
-                    </b>
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="swimming-option"
-                    data-swim="tranquila"
-                >
-
-                    <span>
-
-                        <strong>
-                            1000 M
-                        </strong>
-
-                        <small>
-                            RITMO TRANQUILO
-                        </small>
-
-                    </span>
-
-                    <b>
-                        →
-                    </b>
-
-                </button>
+                <p>
+                    Una plataforma de entrenamiento diseñada
+                    para acompañar tu proceso, desarrollar
+                    tu rendimiento y ayudarte a evolucionar
+                    dentro y fuera del deporte.
+                </p>
 
 
             </div>
 
-        `;
+        </div>
+
+    </section>
 
 
-        document
-            .getElementById(
-                "backToDisciplines"
-            )
-            .addEventListener(
-                "click",
-                resetModal
+    <!-- =================================================
+         ÚLTIMO · NOVA TRAINING
+         ================================================= -->
+
+    <section class="nova-training">
+
+        <div class="nova-training-card">
+
+
+            <div class="nova-training-image">
+
+                <img
+                    src="img/WhatsApp Image 3.jpeg"
+                    alt="Entrenamiento NOVA"
+                >
+
+            </div>
+
+
+            <div class="nova-training-overlay"></div>
+
+
+            <div class="nova-training-content">
+
+                <span class="nova-eyebrow">
+                    NOVA · TRAINING
+                </span>
+
+
+                <h2>
+                    PREPÁRATE
+                </h2>
+
+
+                <p>
+                    Accede a sesiones, explora las
+                    disciplinas disponibles y encuentra
+                    el entrenamiento que corresponde
+                    a tu camino.
+                </p>
+
+
+                <a
+                    href="training.html"
+                    class="nova-training-button"
+                >
+
+                    <span>
+                     ENTRENAMIENTOS
+                    </span>
+
+                    <span>
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+</main>
+
+<footer class="athlete-footer">
+
+
+<div class="footer-inner">
+
+    <span>
+        NOVA
+    </span>
+
+    <span>
+        TRAINING
+    </span>
+
+    <span>
+        © 2026 NOVA · Todos los derechos reservados
+    </span>
+
+</div>
+
+
+</footer>
+
+<!-- =====================================================
+     JAVASCRIPT · SUPABASE
+     ===================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    async function () {
+
+        const sessionStatus =
+            document.getElementById(
+                "sessionStatus"
             );
 
 
-        document
-            .querySelectorAll(
-                ".swimming-option"
-            )
-            .forEach(
-                button => {
-
-                    button.addEventListener(
-                        "click",
-                        function() {
-
-                            const selected =
-                                this.dataset.swim;
+        const sessionStatusDot =
+            document.getElementById(
+                "sessionStatusDot"
+            );
 
 
-                            showRoutine(
-                                NOVA_ATLETA_RUTINAS.NATACION[
-                                    selected
-                                ],
-                                "NATACIÓN"
-                            );
+        if (!window.supabase) {
 
+            console.error(
+                "NOVA · Supabase JS no se pudo cargar."
+            );
+
+            if (sessionStatus) {
+
+                sessionStatus.textContent =
+                    "NOVA · ERROR DE CONEXIÓN";
+
+            }
+
+            return;
+        }
+
+
+        if (
+            typeof SUPABASE_URL === "undefined" ||
+            typeof SUPABASE_PUBLISHABLE_KEY === "undefined"
+        ) {
+
+            console.error(
+                "NOVA · No se encontró la configuración de Supabase."
+            );
+
+            if (sessionStatus) {
+
+                sessionStatus.textContent =
+                    "NOVA · CONFIGURACIÓN NO DISPONIBLE";
+
+            }
+
+            return;
+        }
+
+
+        if (
+            !SUPABASE_URL ||
+            !SUPABASE_PUBLISHABLE_KEY
+        ) {
+
+            console.error(
+                "NOVA · Falta SUPABASE_URL o SUPABASE_PUBLISHABLE_KEY."
+            );
+
+            if (sessionStatus) {
+
+                sessionStatus.textContent =
+                    "NOVA · CONFIGURACIÓN NO DISPONIBLE";
+
+            }
+
+            return;
+        }
+
+
+        let supabaseClient;
+
+
+        try {
+
+            supabaseClient =
+                window.supabase.createClient(
+                    SUPABASE_URL,
+                    SUPABASE_PUBLISHABLE_KEY,
+                    {
+                        auth: {
+                            persistSession: true,
+                            autoRefreshToken: true,
+                            detectSessionInUrl: true
                         }
+                    }
+                );
+
+        } catch (error) {
+
+            console.error(
+                "NOVA · Error creando cliente Supabase:",
+                error
+            );
+
+            if (sessionStatus) {
+
+                sessionStatus.textContent =
+                    "NOVA · ERROR DE CONEXIÓN";
+
+            }
+
+            return;
+        }
+
+
+        try {
+
+            const {
+                data,
+                error
+            } =
+                await supabaseClient
+                    .auth
+                    .getSession();
+
+
+            if (error) {
+
+                console.error(
+                    "NOVA · Error comprobando sesión:",
+                    error
+                );
+
+                if (sessionStatus) {
+
+                    sessionStatus.textContent =
+                        "NOVA · ERROR DE SESIÓN";
+
+                }
+
+                return;
+            }
+
+
+            if (
+                !data ||
+                !data.session
+            ) {
+
+                console.log(
+                    "NOVA · Usuario sin sesión activa."
+                );
+
+                if (sessionStatus) {
+
+                    sessionStatus.textContent =
+                        "SESIÓN NO INICIADA";
+
+                }
+
+                return;
+            }
+
+
+            if (sessionStatus) {
+
+                sessionStatus.textContent =
+                    "SESIÓN ACTIVA";
+
+            }
+
+
+            console.log(
+                "NOVA · Usuario autenticado:",
+                data.session.user
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                "NOVA · Error verificando sesión:",
+                error
+            );
+
+            if (sessionStatus) {
+
+                sessionStatus.textContent =
+                    "NOVA · ERROR DE SESIÓN";
+
+            }
+
+        }
+
+
+        supabaseClient
+            .auth
+            .onAuthStateChange(
+                function (
+                    event,
+                    newSession
+                ) {
+
+                    console.log(
+                        "NOVA · Auth event:",
+                        event
                     );
+
+
+                    if (sessionStatus) {
+
+                        sessionStatus.textContent =
+                            newSession
+                                ? "SESIÓN ACTIVA"
+                                : "SESIÓN NO INICIADA";
+
+                    }
 
                 }
             );
 
     }
-
-
-
-    /* =====================================================
-       MOSTRAR RUTINA
-       ===================================================== */
-
-    function showRoutine(
-        routine,
-        discipline
-    ) {
-
-        disciplineSelector.style.display =
-            "none";
-
-
-        routineView.innerHTML = `
-
-            <button
-                type="button"
-                class="back-button"
-                id="backToDisciplines"
-            >
-                ← DISCIPLINAS
-            </button>
-
-
-            <span class="eyebrow">
-                ${discipline} · SESIONES
-            </span>
-
-
-            <h2>
-                ${routine.title}
-            </h2>
-
-
-            <span class="routine-meta">
-                ${routine.meta}
-            </span>
-
-
-            <div class="routine-content">
-
-                ${routine.sections.map(
-                    section => `
-
-                        <section
-                            class="routine-block"
-                        >
-
-                            <h3>
-                                ${section.title}
-                            </h3>
-
-
-                            <div>
-
-                                ${section.content.map(
-                                    line => `
-
-                                        <p>
-                                            ${escapeHtml(
-                                                line
-                                            )}
-                                        </p>
-
-                                    `
-                                ).join("")}
-
-                            </div>
-
-                        </section>
-
-                    `
-                ).join("")}
-
-            </div>
-
-        `;
-
-
-        document
-            .getElementById(
-                "backToDisciplines"
-            )
-            .addEventListener(
-                "click",
-                resetModal
-            );
-
-    }
-
-
-
-    /* =====================================================
-       VOLVER A DISCIPLINAS
-       ===================================================== */
-
-    function resetModal() {
-
-        routineView.innerHTML = "";
-
-        disciplineSelector.style.display =
-            "block";
-
-    }
-
-
-
-    /* =====================================================
-       SEGURIDAD DE TEXTO
-       ===================================================== */
-
-    function escapeHtml(
-        value
-    ) {
-
-        return String(value)
-            .replace(
-                /&/g,
-                "&amp;"
-            )
-            .replace(
-                /</g,
-                "&lt;"
-            )
-            .replace(
-                />/g,
-                "&gt;"
-            )
-            .replace(
-                /"/g,
-                "&quot;"
-            )
-            .replace(
-                /'/g,
-                "&#039;"
-            );
-
-    }
-
-}
-
-
-
-/* =========================================================
-   NOVA · SUPABASE CONECTADO
-   =========================================================
-
-   Por ahora solamente inicializamos la conexión.
-   El sistema de NOVAPERFIL se agregará después.
-
-   ========================================================= */
-
+);
 
 </script>
-
-
-
-<!-- =========================================================
-     NOVA · INTRO
-     ========================================================= -->
-
-<div class="nova-intro">
-
-    <div class="nova-intro-center">
-
-        <div class="nova-intro-logo">
-            NOVA
-        </div>
-
-        <div class="nova-intro-line"></div>
-
-        <span class="nova-intro-label">
-            TRAINING
-        </span>
-
-    </div>
-
-</div>
-
 
 </body>
 
