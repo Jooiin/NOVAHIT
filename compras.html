@@ -42,14 +42,6 @@
         <nav class="main-nav">
 
             <a
-                href="training.html"
-                class="nav-link"
-            >
-                ENTRENAMIENTOS
-            </a>
-
-
-            <a
                 href="#coach"
                 class="nav-link"
                 data-desktop-action="coach"
@@ -81,6 +73,13 @@
                 class="nav-link"
             >
                 PERFIL
+            </a>
+
+                        <a
+                href="training.html"
+                class="nav-link"
+            >
+                ENTRENAMIENTOS
             </a>
 
         </nav>
@@ -159,29 +158,6 @@
 
 
     <div class="nova-menu-links">
-
-
-        <a
-            href="training.html"
-            class="nova-menu-link active"
-            data-menu-section="inicio"
-        >
-
-            <span class="nova-menu-number">
-                01
-            </span>
-
-            <span>
-                ENTRENAMIENTOS
-            </span>
-
-            <span class="nova-menu-arrow">
-                →
-            </span>
-
-        </a>
-
-
 
         <a
             href="#coach"
@@ -268,6 +244,25 @@
 
         </a>
 
+                <a
+            href="training.html"
+            class="nova-menu-link active"
+            data-menu-section="inicio"
+        >
+
+            <span class="nova-menu-number">
+                01
+            </span>
+
+            <span>
+                ENTRENAMIENTOS
+            </span>
+
+            <span class="nova-menu-arrow">
+                →
+            </span>
+
+        </a>
 
     </div>
 
@@ -310,11 +305,6 @@
                     NOVA · TRAINING
                 </span>
 
-
-                <h1>
-                    Entrena.<br>
-                    Evoluciona.
-                </h1>
 
 
                 <p class="home-description">
@@ -1338,15 +1328,14 @@ function openCoach() {
 
 
             <div class="coach-role">
-                Coach en natación y aguas abiertas
+                Coach en natación, aguas abiertas y fuerza funcional.
             </div>
 
 
             <p class="coach-text">
-                Diseño procesos de entrenamiento
-                personalizados para nadadores que buscan
-                mejorar su técnica, eficiencia y rendimiento
-                dentro del agua.
+                Diseño procesos de entrenamiento personalizados
+                para personas que buscan mejorar su eficiencia, rendimiento y técnica
+                dentro del agua y fuera del agua.
             </p>
 
 
@@ -1457,11 +1446,38 @@ const SURVEY_QUESTIONS = [
         options: [
             "Natación",
             "Fuerza",
-            "HIT",
+            "Running",
+            "Crossfit",
+            "Pilates",
             "Ninguno"
         ]
     },
 
+
+    {
+        question:
+            "¿Cuántos días entrenas a la semana?",
+
+        options: [
+            "1 días",
+            "2 días",
+            "3 días",
+            "4 días",
+            "5 o más días",
+            "Ninguno"
+        ]
+    },
+
+    {
+        question:
+            "¿Que te gustaria iniciar o complementar a tu entrenamiento?",
+
+        options: [
+            "Natacion",
+            "HIT + Fuerza",
+            "HIT"
+        ]
+    },
 
     {
         question:
@@ -1472,19 +1488,6 @@ const SURVEY_QUESTIONS = [
             "Resistencia",
             "Fuerza",
             "Técnica"
-        ]
-    },
-
-
-    {
-        question:
-            "¿Cuántos días puedes entrenar?",
-
-        options: [
-            "2 días",
-            "3 días",
-            "4 días",
-            "5 o más días"
         ]
     }
 
@@ -1765,15 +1768,14 @@ function showSurveyResult(
 
 
             <p>
-                Tus respuestas nos ayudarán a conocer
-                mejor lo que buscas y orientarte hacia
-                la opción NOVA más adecuada.
+                Tus respuestas nos ayudaron a conocer
+                mejor lo que buscas y crear un plan NOVA hacia
+                tus metas.
             </p>
 
 
             <p>
-                Si tienes alguna duda específica,
-                continúa la conversación por WhatsApp.
+                Continúa la conversación por WhatsApp.
             </p>
 
 
@@ -1786,7 +1788,7 @@ function showSurveyResult(
                 rel="noopener noreferrer"
                 class="whatsapp-button"
             >
-                CONTINUAR POR WHATSAPP →
+                CONTINUAR →
             </a>
 
         </div>
