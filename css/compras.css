@@ -1,2342 +1,2036 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>NOVA · Inicio</title>
-
-    <link
-        rel="stylesheet"
-        href="css/compras.css"
-    >
-
-</head>
-
-
-<body>
-
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
-<header class="site-header">
-
-    <div class="header-inner">
-
-        <a
-            href=""
-            class="brand"
-        >
-            NOVA
-        </a>
-
-
-        <nav class="main-nav">
-
-            <a
-                href="#coach"
-                class="nav-link"
-                data-desktop-action="coach"
-            >
-                COACH
-            </a>
-
-
-            <a
-                href="#membresias"
-                class="nav-link"
-                data-desktop-action="membresias"
-            >
-                MEMBRESÍAS
-            </a>
-
-
-            <a
-                href="#dudas"
-                class="nav-link"
-                data-desktop-action="dudas"
-            >
-                DUDAS
-            </a>
-
-
-            <a
-                href="PERFIL.html"
-                class="nav-link"
-            >
-                PERFIL
-            </a>
-
-                        <a
-                href="training.html"
-                class="nav-link"
-            >
-                ENTRENAMIENTOS
-            </a>
-
-        </nav>
-
-    </div>
-
-</header>
-
-
-
-<!-- =========================================================
-     HAMBURGUESA
-========================================================= -->
-
-<div class="nova-mobile-menu">
-
-    <button
-        class="nova-menu-toggle"
-        type="button"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-        aria-controls="nova-menu"
-    >
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-    </button>
-
-</div>
-
-
-
-<!-- =========================================================
-     OVERLAY MENÚ
-========================================================= -->
-
-<div
-    class="nova-menu-overlay"
-    id="nova-menu-overlay"
-    aria-hidden="true"
-></div>
-
-
-
-<!-- =========================================================
-     MENÚ MÓVIL
-========================================================= -->
-
-<nav
-    class="nova-menu"
-    id="nova-menu"
-    aria-label="Menú principal"
-    aria-hidden="true"
->
-
-
-    <div class="nova-menu-header">
-
-        <span class="nova-menu-title">
-            NOVA
-        </span>
-
-
-        <button
-            type="button"
-            class="nova-menu-close"
-            aria-label="Cerrar menú"
-        >
-            ×
-        </button>
-
-    </div>
-
-
-
-    <div class="nova-menu-links">
-
-        <a
-            href="#coach"
-            class="nova-menu-link"
-            data-menu-action="coach"
-        >
-
-            <span class="nova-menu-number">
-                02
-            </span>
-
-            <span>
-                COACH
-            </span>
-
-            <span class="nova-menu-arrow">
-                →
-            </span>
-
-        </a>
-
-
-
-        <a
-            href="#membresias"
-            class="nova-menu-link"
-            data-menu-action="membresias"
-        >
-
-            <span class="nova-menu-number">
-                03
-            </span>
-
-            <span>
-                MEMBRESÍAS
-            </span>
-
-            <span class="nova-menu-arrow">
-                →
-            </span>
-
-        </a>
-
-
-
-        <a
-            href="#dudas"
-            class="nova-menu-link"
-            data-menu-action="dudas"
-        >
-
-            <span class="nova-menu-number">
-                04
-            </span>
-
-            <span>
-                DUDAS
-            </span>
-
-            <span class="nova-menu-arrow">
-                →
-            </span>
-
-        </a>
-
-
-
-        <a
-            href="PERFIL.html"
-            class="nova-menu-link"
-        >
-
-            <span class="nova-menu-number">
-                05
-            </span>
-
-            <span>
-                PERFIL
-            </span>
-
-            <span class="nova-menu-arrow">
-                →
-            </span>
-
-        </a>
-
-                <a
-            href="training.html"
-            class="nova-menu-link active"
-            data-menu-section="inicio"
-        >
-
-            <span class="nova-menu-number">
-                01
-            </span>
-
-            <span>
-                ENTRENAMIENTOS
-            </span>
-
-            <span class="nova-menu-arrow">
-                →
-            </span>
-
-        </a>
-
-    </div>
-
-
-
-    <div class="nova-menu-footer">
-
-        <span>
-            NOVA · TRAINING
-        </span>
-
-    </div>
-
-</nav>
-
-
-
-<!-- =========================================================
-     PÁGINA
-========================================================= -->
-
-<main
-    class="home-page"
-    id="inicio"
->
-
-
-    <section class="home-main">
-
-        <div class="page-container">
-
-
-            <!-- =================================================
-                 INTRO
-            ================================================= -->
-
-            <div class="home-intro">
-
-                <span class="home-eyebrow">
-                    NOVA · TRAINING
-                </span>
-
-
-
-                <p class="home-description">
-                    Entrenamiento estructurado para desarrollar
-                    tu rendimiento, mejorar tu capacidad física
-                    y avanzar con una metodología clara.
-                </p>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 DOS RECUADROS PRINCIPALES
-            ================================================= -->
-
-            <div class="home-grid">
-
-
-                <!-- =================================================
-                     MEMBRESÍAS
-                ================================================= -->
-
-                <article
-                    class="home-panel"
-                    id="membresias"
-                >
-
-                    <div>
-
-                        <div class="home-panel-top">
-
-                            <span class="home-panel-label">
-                                NOVA · TRAINING
-                            </span>
-
-
-                            <div class="home-panel-icon">
-                                ◇
-                            </div>
-
-                        </div>
-
-
-                        <h2>
-                            Membresías<br>
-                            y Paquetes
-                        </h2>
-
-
-                        <p class="home-panel-description">
-                            Elige la combinación de entrenamiento
-                            que mejor se adapte a tus objetivos:
-                            Natación, Fuerza y HIT.
-                        </p>
-
-                    </div>
-
-
-                    <button
-                        type="button"
-                        class="home-panel-button"
-                        id="openMemberships"
-                    >
-                        VER MEMBRESÍAS →
-                    </button>
-
-                </article>
-
-
-
-                <!-- =================================================
-                     STORE
-                ================================================= -->
-
-                <article
-                    class="home-panel"
-                    id="store"
-                >
-
-                    <div>
-
-                        <div class="home-panel-top">
-
-                            <span class="home-panel-label">
-                                NOVA · STORE
-                            </span>
-
-
-                            <div class="home-panel-icon">
-                                □
-                            </div>
-
-                        </div>
-
-
-                        <h2>
-                            PRÓXIMAMENTE
-                        </h2>
-
-
-                        <p class="home-panel-description">
-                            Productos NOVA para acompañar
-                            tu entrenamiento.
-                        </p>
-
-                    </div>
-
-
-                    <div class="home-panel-button">
-                        PRÓXIMAMENTE
-                    </div>
-
-                </article>
-
-
-            </div>
-
-
-
-            <!-- =================================================
-                 SECCIÓN ORIGINAL
-            ================================================= -->
-
-            <section
-                class="membership-section"
-                id="membership-list"
-                style="display:none;"
-                aria-hidden="true"
-            >
-
-                <div class="membership-header">
-
-                    <div>
-
-                        <span class="membership-header-label">
-                            NOVA · MEMBRESÍAS
-                        </span>
-
-
-                        <h2>
-                            Encuentra tu<br>
-                            punto de partida.
-                        </h2>
-
-                    </div>
-
-
-                    <p>
-                        Diferentes formas de entrenar.
-                        Una misma metodología NOVA.
-                        Elige el paquete que mejor se
-                        adapte a ti.
-                    </p>
-
-                </div>
-
-
-                <div
-                    class="membership-filters"
-                    id="membershipFilters"
-                >
-
-                    <button
-                        type="button"
-                        class="membership-filter active"
-                        data-filter="todos"
-                    >
-                        TODOS
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="membership-filter"
-                        data-filter="natacion"
-                    >
-                        NATACIÓN
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="membership-filter"
-                        data-filter="natacion-fuerza"
-                    >
-                        NATACIÓN + FUERZA
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="membership-filter"
-                        data-filter="hit-fuerza"
-                    >
-                        HIT + FUERZA
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="membership-filter"
-                        data-filter="hit"
-                    >
-                        HIT
-                    </button>
-
-                </div>
-
-
-                <div
-                    class="membership-grid"
-                    id="membershipGrid"
-                ></div>
-
-            </section>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
-
-    <footer class="site-footer">
-
-        <div class="footer-inner">
-
-            <span class="footer-brand">
-                NOVA
-            </span>
-
-
-            <small class="footer-copy">
-                © 2026 NOVA · Todos los derechos reservados
-            </small>
-
-        </div>
-
-    </footer>
-
-
-</main>
-
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
-<script>
+/* =========================================================
+   NOVA
+   INICIO — STYLE
+   DESKTOP / TABLET / MOBILE
+========================================================= */
 
 
 /* =========================================================
-   NOVA · MEMBRESÍAS
+   RESET
 ========================================================= */
 
-const NOVA_MEMBERSHIPS = [
-
-
-    /* =====================================================
-       NATACIÓN
-    ===================================================== */
-
-    {
-        id: "natacion",
-
-        number: "01",
-
-        icon: "≈",
-
-        category: "NATACIÓN",
-
-        title: "Evolución",
-
-        price: "°",
-
-        description:
-            "Construye una base sólida. Programa diseñado para quienes buscan desarrollar una base técnica, mejorar su confianza en el agua y avanzar mediante una estructura progresiva.",
-
-        details: {
-
-            disciplina: "Natación",
-
-            plan: "30 días",
-
-            video: "✓ · Video análisis del alumno o alumna",
-
-            ajustes: "✓ ✓ ✓",
-
-            llamada: "1 cada 15 días",
-
-            atencion: "Continuo"
-
-        }
-
-    },
-
-
-    /* =====================================================
-       NATACIÓN + FUERZA
-    ===================================================== */
-
-    {
-        id: "natacion-fuerza",
-
-        number: "02",
-
-        icon: "◉",
-
-        category: "NATACIÓN + FUERZA",
-
-        title: "Potencia",
-
-        price: "°",
-
-        description:
-            "Combina natación y fuerza para desarrollar rendimiento dentro y fuera del agua mediante una estructura progresiva.",
-
-        details: {
-
-            disciplina: "Natación + Fuerza",
-
-            plan: "30 días",
-
-            video: "✓ · Video análisis del alumno o alumna",
-
-            ajustes: "✓ ✓ ✓",
-
-            llamada: "1 cada semana",
-
-            atencion: "Continuo"
-
-        }
-
-    },
-
-
-    /* =====================================================
-       HIT + FUERZA
-    ===================================================== */
-
-    {
-        id: "hit-fuerza",
-
-        number: "03",
-
-        icon: "✦",
-
-        category: "HIT + FUERZA",
-
-        title: "Fuera del Agua",
-
-        price: "°",
-
-        description:
-            "Programa combinado de HIT y fuerza para mejorar capacidad física, resistencia, potencia y control corporal.",
-
-        details: {
-
-            disciplina: "HIT + Fuerza",
-
-            plan: "30 días",
-
-            video: "—",
-
-            ajustes: "✓",
-
-            llamada: "1 con disponibilidad de horario",
-
-            atencion: "Continuo"
-
-        }
-
-    },
-
-
-    /* =====================================================
-       HIT
-    ===================================================== */
-
-    {
-        id: "hit",
-
-        number: "04",
-
-        icon: "▲",
-
-        category: "HIT",
-
-        title: "HIT",
-
-        price: "°",
-
-        description:
-            "Entrenamiento de alta intensidad con tres sesiones por semana para desarrollar resistencia y capacidad física.",
-
-        details: {
-
-            disciplina: "HIT",
-
-            plan: "10 días",
-
-            video: "—",
-
-            ajustes: "—",
-
-            llamada: "Con disponibilidad de horario",
-
-            atencion: "Continuo"
-
-        }
-
-    }
-
-];
-
-
-
-/* =========================================================
-   RENDER MEMBRESÍAS
-========================================================= */
-
-function renderMemberships(
-    filter = "todos",
-    grid = null
-) {
-
-    if (!grid) {
-
-        grid =
-            document.getElementById(
-                "membershipGrid"
-            );
-
-    }
-
-
-    if (!grid) {
-        return;
-    }
-
-
-    const memberships =
-        filter === "todos"
-            ? NOVA_MEMBERSHIPS
-            : NOVA_MEMBERSHIPS.filter(
-                item =>
-                    item.id === filter
-            );
-
-
-    grid.innerHTML = "";
-
-
-    memberships.forEach(
-        membership => {
-
-            const card =
-                document.createElement(
-                    "article"
-                );
-
-
-            card.className =
-                "membership-card";
-
-
-            card.innerHTML = `
-
-                <div>
-
-                    <div class="membership-card-top">
-
-                        <span class="membership-card-number">
-                            ${membership.number}
-                        </span>
-
-
-                        <div class="membership-card-icon">
-                            ${membership.icon}
-                        </div>
-
-                    </div>
-
-
-                    <div class="membership-card-category">
-                        ${membership.category}
-                    </div>
-
-
-                    <h3>
-                        ${membership.title}
-                    </h3>
-
-
-                    <p class="membership-card-description">
-                        ${membership.description}
-                    </p>
-
-                </div>
-
-
-                <div class="membership-card-bottom">
-
-                    <div>
-
-                        <span class="membership-price-label">
-                            PROGRAMA
-                        </span>
-
-
-                        <span class="membership-price">
-                            ${membership.price}
-                        </span>
-
-                    </div>
-
-
-                    <button
-                        type="button"
-                        class="membership-card-button"
-                        data-membership="${membership.id}"
-                    >
-                        CONOCER →
-                    </button>
-
-                </div>
-
-            `;
-
-
-            const button =
-                card.querySelector(
-                    ".membership-card-button"
-                );
-
-
-            button.addEventListener(
-                "click",
-                () => {
-
-                    openMembershipDetail(
-                        membership
-                    );
-
-                }
-            );
-
-
-            grid.appendChild(
-                card
-            );
-
-        }
-    );
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f5f3;
+    color: #111;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Text",
+        "SF Pro Display",
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: transparent;
 }
 
 
-
 /* =========================================================
-   MODAL BASE
+   VARIABLES
 ========================================================= */
 
-function createModal(content) {
-
-    const overlay =
-        document.createElement(
-            "div"
-        );
-
-
-    overlay.className =
-        "nova-modal-overlay";
-
-
-    overlay.innerHTML = `
-
-        <div class="nova-modal">
-
-            <button
-                type="button"
-                class="nova-modal-close"
-                aria-label="Cerrar"
-            >
-                ×
-            </button>
-
-            ${content}
-
-        </div>
-
-    `;
-
-
-    document.body.appendChild(
-        overlay
-    );
-
-
-    document.body.classList.add(
-        "modal-open"
-    );
-
-
-    requestAnimationFrame(
-        () => {
-
-            overlay.classList.add(
-                "is-visible"
-            );
-
-        }
-    );
-
-
-    const closeButton =
-        overlay.querySelector(
-            ".nova-modal-close"
-        );
-
-
-    function closeModal() {
-
-        overlay.classList.remove(
-            "is-visible"
-        );
-
-
-        document.body.classList.remove(
-            "modal-open"
-        );
-
-
-        setTimeout(
-            () => {
-
-                overlay.remove();
-
-            },
-            250
-        );
-
-    }
-
-
-    closeButton.addEventListener(
-        "click",
-        closeModal
-    );
-
-
-    overlay.addEventListener(
-        "click",
-        event => {
-
-            if (
-                event.target === overlay
-            ) {
-
-                closeModal();
-
-            }
-
-        }
-    );
-
-
-    function escapeHandler(event) {
-
-        if (
-            event.key === "Escape"
-        ) {
-
-            closeModal();
-
-            document.removeEventListener(
-                "keydown",
-                escapeHandler
-            );
-
-        }
-
-    }
-
-
-    document.addEventListener(
-        "keydown",
-        escapeHandler
-    );
-
-
-    return {
-        overlay,
-        closeModal
-    };
-
+:root {
+    --black: #111111;
+    --white: #ffffff;
+    --background: #f5f5f3;
+    --line: #dededb;
+    --gray: #777774;
+    --gray-light: #999995;
+    --max-width: 1280px;
+    --side-padding: 40px;
 }
 
 
-
 /* =========================================================
-   VENTANA DE MEMBRESÍAS
+   CONTENEDOR
 ========================================================= */
 
-function openMembershipsModal() {
-
-    const modal =
-        createModal(`
-
-            <div class="membership-modal-content">
-
-                <div class="membership-header">
-
-                    <div>
-
-                        <span class="membership-header-label">
-                            NOVA · MEMBRESÍAS
-                        </span>
-
-
-                        <h2>
-                            Encuentra tu<br>
-                            punto de partida.
-                        </h2>
-
-                    </div>
-
-
-                    <p>
-                        Diferentes formas de entrenar.
-                        Una misma metodología NOVA.
-                        Elige el paquete que mejor se
-                        adapte a ti.
-                    </p>
-
-                </div>
-
-
-                <div
-                    class="membership-filters"
-                    id="modalMembershipFilters"
-                >
-
-                    <button
-                        type="button"
-                        class="membership-filter active"
-                        data-filter="todos"
-                    >
-                        TODOS
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="membership-filter"
-                        data-filter="natacion"
-                    >
-                        NATACIÓN
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="membership-filter"
-                        data-filter="natacion-fuerza"
-                    >
-                        NATACIÓN + FUERZA
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="membership-filter"
-                        data-filter="hit-fuerza"
-                    >
-                        HIT + FUERZA
-                    </button>
-
-
-                    <button
-                        type="button"
-                        class="membership-filter"
-                        data-filter="hit"
-                    >
-                        HIT
-                    </button>
-
-                </div>
-
-
-                <div
-                    class="membership-grid"
-                    id="modalMembershipGrid"
-                ></div>
-
-            </div>
-
-        `);
-
-
-    const grid =
-        modal.overlay.querySelector(
-            "#modalMembershipGrid"
+.page-container {
+    width:
+        min(
+            calc(100% - (var(--side-padding) * 2)),
+            var(--max-width)
         );
-
-
-    const filters =
-        modal.overlay.querySelectorAll(
-            ".membership-filter"
-        );
-
-
-    renderMemberships(
-        "todos",
-        grid
-    );
-
-
-    filters.forEach(
-        filterButton => {
-
-            filterButton.addEventListener(
-                "click",
-                () => {
-
-                    filters.forEach(
-                        button => {
-
-                            button.classList.remove(
-                                "active"
-                            );
-
-                        }
-                    );
-
-
-                    filterButton.classList.add(
-                        "active"
-                    );
-
-
-                    renderMemberships(
-                        filterButton.dataset.filter,
-                        grid
-                    );
-
-                }
-            );
-
-        }
-    );
-
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
-
 /* =========================================================
-   DETALLE DE MEMBRESÍA
+   HEADER
 ========================================================= */
 
-function openMembershipDetail(
-    membership
-) {
-
-    const details =
-        membership.details;
-
-
-    createModal(`
-
-        <div class="membership-detail">
-
-            <span class="nova-modal-eyebrow">
-                NOVA · PROGRAMA
-            </span>
-
-
-            <h2>
-                ${membership.category}
-            </h2>
-
-
-            <p class="nova-modal-subtitle">
-                ${membership.title}
-            </p>
-
-
-            <div class="membership-specs">
-
-
-                <div class="membership-spec-row">
-
-                    <span class="membership-spec-label">
-                        DISCIPLINA
-                    </span>
-
-                    <span class="membership-spec-value">
-                        ${details.disciplina}
-                    </span>
-
-                </div>
-
-
-                <div class="membership-spec-row">
-
-                    <span class="membership-spec-label">
-                        PLAN
-                    </span>
-
-                    <span class="membership-spec-value">
-                        ${details.plan}
-                    </span>
-
-                </div>
-
-
-                <div class="membership-spec-row">
-
-                    <span class="membership-spec-label">
-                        VIDEO
-                    </span>
-
-                    <span class="membership-spec-value">
-                        ${details.video}
-                    </span>
-
-                </div>
-
-
-                <div class="membership-spec-row">
-
-                    <span class="membership-spec-label">
-                        AJUSTES
-                    </span>
-
-                    <span class="membership-spec-value">
-                        ${details.ajustes}
-                    </span>
-
-                </div>
-
-
-                <div class="membership-spec-row">
-
-                    <span class="membership-spec-label">
-                        LLAMADA
-                    </span>
-
-                    <span class="membership-spec-value">
-                        ${details.llamada}
-                    </span>
-
-                </div>
-
-
-                <div class="membership-spec-row">
-
-                    <span class="membership-spec-label">
-                        NIVEL DE ATENCIÓN
-                    </span>
-
-                    <span class="membership-spec-value">
-                        ${details.atencion}
-                    </span>
-
-                </div>
-
-
-            </div>
-
-
-<a
-    href="https://wa.me/+525612584271?text=Hola Coach, me gustaria conocer mas detalles sobre los planes de NOVA."
-    target="_blank"
-    rel="noopener noreferrer"
-    class="home-panel-button"
-    style="display:inline-flex;margin-top:30px;"
->
-    CONTINUAR →
-</a>
-
-        </div>
-
-    `);
-
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    width: 100%;
+    height: 72px;
+    background: hsla(60, 9%, 96%, 0.09);
+    border-bottom:
+        1px solid rgba(0,0,0,.07);
+    backdrop-filter:
+        blur(18px);
+    -webkit-backdrop-filter:
+        blur(18px);
 }
 
+
+/* =========================================================
+   HEADER INNER
+========================================================= */
+
+.header-inner {
+    width:
+        min(
+            calc(100% - (var(--side-padding) * 2)),
+            var(--max-width)
+        );
+    height: 72px;
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #111;
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: -1.1px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN DESKTOP
+========================================================= */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 8px 0;
+    color: #666;
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: .9px;
+    transition:
+        color .2s ease;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    height: 1px;
+    background: #111;
+    transition:
+        width .2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #111;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   PÁGINA
+========================================================= */
+
+.home-page {
+    width: 100%;
+    min-height:
+        calc(100svh - 72px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.home-main {
+    flex: 1;
+    width: 100%;
+    padding:
+        105px 0
+        120px;
+}
+
+.home-intro {
+    max-width: 820px;
+}
+
+.home-eyebrow {
+    display: block;
+    margin-bottom: 22px;
+    color: #777;
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.home-intro h1 {
+    color: #111;
+    font-size:
+        clamp(
+            52px,
+            8vw,
+            88px
+        );
+    line-height: .92;
+    letter-spacing: -5px;
+    font-weight: 700;
+}
+
+.home-description {
+    max-width: 530px;
+    margin-top: 28px;
+    color: #686865;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRID PRINCIPAL
+========================================================= */
+
+.home-grid {
+    width: 100%;
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+/* =========================================================
+   RECUADROS PRINCIPALES
+========================================================= */
+
+.home-panel {
+    position: relative;
+    min-height: 430px;
+    padding: 34px;
+    background: #ffffff;
+    border:
+        1px solid #dededb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition:
+        transform .25s ease,
+        border-color .25s ease;
+}
+
+.home-panel:hover {
+    transform: translateY(-3px);
+    border-color: #c8c8c4;
+}
+
+.home-panel-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.home-panel-label {
+    color: #777;
+    font-size: 8px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.home-panel-icon {
+    width: 42px;
+    height: 42px;
+    border:
+        1px solid #dededb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    font-size: 17px;
+    flex-shrink: 0;
+}
+
+.home-panel h2 {
+    margin-top: 18px;
+    color: #111;
+    font-size:
+        clamp(
+            34px,
+            4vw,
+            52px
+        );
+    line-height: .96;
+    letter-spacing: -2.5px;
+    font-weight: 700;
+}
+
+.home-panel-description {
+    max-width: 420px;
+    margin-top: 20px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.home-panel-button {
+    width: fit-content;
+    margin-top: 35px;
+    padding:
+        13px 18px;
+    border:
+        1px solid #111;
+    background: #111;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.home-panel-button:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+/* =========================================================
+   MEMBRESÍAS
+========================================================= */
+
+.membership-section {
+    width: 100%;
+    margin-top: 18px;
+    padding:
+        70px 0
+        90px;
+    border-top:
+        1px solid #dededb;
+}
+
+.membership-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 42px;
+}
+
+.membership-header-label {
+    color: #777;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.7px;
+    text-transform: uppercase;
+}
+
+.membership-header h2 {
+    margin-top: 14px;
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            60px
+        );
+    line-height: .96;
+    letter-spacing: -3px;
+    font-weight: 700;
+}
+
+.membership-header p {
+    max-width: 350px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   FILTROS
+========================================================= */
+
+.membership-filters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 28px;
+}
+
+.membership-filter {
+    border:
+        1px solid #d8d8d4;
+    background: transparent;
+    color: #666;
+    padding:
+        10px 13px;
+    font-size: 8px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+}
+
+.membership-filter:hover,
+.membership-filter.active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
+
+/* =========================================================
+   TARJETAS
+========================================================= */
+
+.membership-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.membership-card {
+    position: relative;
+    min-height: 340px;
+    padding: 28px;
+    background: #fff;
+    border:
+        1px solid #dededb;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform .25s ease,
+        border-color .25s ease;
+}
+
+.membership-card:hover {
+    transform: translateY(-3px);
+    border-color: #c8c8c4;
+}
+
+.membership-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.membership-card-number {
+    color: #999;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.membership-card-icon {
+    width: 38px;
+    height: 38px;
+    border:
+        1px solid #dededb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.membership-card-category {
+    margin-top: 28px;
+    color: #777;
+    font-size: 8px;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
+
+.membership-card h3 {
+    margin-top: 9px;
+    color: #111;
+    font-size: 29px;
+    line-height: 1;
+    letter-spacing: -1.4px;
+    font-weight: 700;
+}
+
+.membership-card-description {
+    margin-top: 17px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.65;
+    max-width: 400px;
+}
+
+.membership-card-bottom {
+    margin-top: auto;
+    padding-top: 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.membership-price-label {
+    display: block;
+    color: #999;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.membership-price {
+    display: block;
+    margin-top: 5px;
+    color: #111;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.membership-card-button {
+    padding:
+        11px 14px;
+    border:
+        1px solid #111;
+    background: #111;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.membership-card-button:hover {
+    background: #fff;
+    color: #111;
+}
+
+
+/* =========================================================
+   STORE
+========================================================= */
+
+.store-section {
+    width: 100%;
+    margin-top: 18px;
+    padding:
+        80px 0
+        100px;
+    border-top:
+        1px solid #dededb;
+}
+
+.store-box {
+    min-height: 320px;
+    padding: 35px;
+    background: #111;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.store-box-label {
+    color: #999;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.store-box h2 {
+    margin-top: 20px;
+    color: #fff;
+    font-size:
+        clamp(
+            44px,
+            7vw,
+            74px
+        );
+    line-height: .95;
+    letter-spacing: -3.5px;
+    font-weight: 700;
+}
+
+.store-box-description {
+    max-width: 440px;
+    margin-top: 18px;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.store-box-arrow {
+    align-self: flex-end;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    width: 100%;
+    background: #ffffff00;
+    border:
+        1px solid #29292915;
+    color: #777;
+}
+
+.footer-inner {
+    width:
+        min(
+            calc(100% - (var(--side-padding) * 2)),
+            var(--max-width)
+        );
+    min-height: 90px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .9px;
+}
+
+.footer-brand {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: -.4px;
+}
+
+.footer-copy {
+    color: #777;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .9px;
+}
+
+
+/* =========================================================
+   MODALES
+========================================================= */
+
+.nova-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    background:
+        rgba(0,0,0,.42);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity .25s ease,
+        visibility .25s ease;
+}
+
+.nova-modal-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nova-modal {
+    width:
+        min(
+            760px,
+            100%
+        );
+    max-height:
+        min(
+            760px,
+            90svh
+        );
+    overflow-y: auto;
+    background: #fff;
+    color: #111;
+    padding: 38px;
+    position: relative;
+    transform:
+        translateY(20px)
+        scale(.98);
+    transition:
+        transform .3s ease;
+}
+
+.nova-modal-overlay.is-visible .nova-modal {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.nova-modal-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    color: #111;
+    font-size: 28px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.nova-modal-eyebrow {
+    color: #777;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.nova-modal h2 {
+    margin-top: 13px;
+    font-size:
+        clamp(
+            38px,
+            6vw,
+            58px
+        );
+    line-height: .95;
+    letter-spacing: -3px;
+    font-weight: 700;
+}
+
+.nova-modal-subtitle {
+    margin-top: 12px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
 
 
 /* =========================================================
    COACH
 ========================================================= */
 
-function openCoach() {
+.coach-profile {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top:
+        1px solid #dededb;
+}
 
-    createModal(`
+.coach-name {
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -1.3px;
+    font-weight: 700;
+}
 
-        <span class="nova-modal-eyebrow">
-            NOVA · COACH
-        </span>
+.coach-role {
+    margin-top: 8px;
+    color: #777;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
-<div class="coach-photo">
-    <img
-        src="img/perfil1.jpeg"
-        alt="Alan Espinosa"
-    >
-</div>
+.coach-text {
+    max-width: 600px;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.75;
+}
 
+.coach-method {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+    gap: 10px;
+}
 
-        <div class="coach-profile">
+.coach-method-item {
+    padding: 18px;
+    background: #f5f5f3;
+    border:
+        1px solid #e2e2df;
+}
 
-            <div class="coach-name">
-                Alan Espinosa
-            </div>
+.coach-method-number {
+    color: #999;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
+.coach-method-item h3 {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.1;
+    letter-spacing: -.3px;
+}
 
-            <div class="coach-role">
-                Coach en natación, aguas abiertas y fuerza funcional.
-            </div>
-
-
-            <p class="coach-text">
-                Diseño procesos de entrenamiento personalizados
-                para personas que buscan mejorar su eficiencia, rendimiento y técnica
-                dentro del agua y fuera del agua.
-            </p>
-
-
-            <p class="coach-text">
-                A través de un método basado en análisis,
-                progresión y control técnico, el objetivo es
-                desarrollar nadadores más seguros, eficientes
-                y conscientes de cada movimiento, creando
-                mejoras sostenibles a largo plazo.
-            </p>
-
-
-            <div class="coach-method">
-
-
-                <div class="coach-method-item">
-
-                    <span class="coach-method-number">
-                        01
-                    </span>
-
-                    <h3>
-                        Análisis
-                    </h3>
-
-                    <p>
-                        Evaluación técnica y detección
-                        de pérdidas de eficiencia.
-                    </p>
-
-                </div>
-
-
-                <div class="coach-method-item">
-
-                    <span class="coach-method-number">
-                        02
-                    </span>
-
-                    <h3>
-                        Estructura
-                    </h3>
-
-                    <p>
-                        Planificación semanal según
-                        objetivos y nivel.
-                    </p>
-
-                </div>
-
-
-                <div class="coach-method-item">
-
-                    <span class="coach-method-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Mecánica
-                    </h3>
-
-                    <p>
-                        Trabajo de frecuencia,
-                        brazada y coordinación.
-                    </p>
-
-                </div>
-
-
-                <div class="coach-method-item">
-
-                    <span class="coach-method-number">
-                        04
-                    </span>
-
-                    <h3>
-                        Progresión
-                    </h3>
-
-                    <p>
-                        Seguimiento y ajustes según
-                        la evolución del atleta.
-                    </p>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    `);
-
+.coach-method-item p {
+    margin-top: 8px;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.55;
 }
 
 
-
 /* =========================================================
-   ENCUESTA DUDAS
+   ENCUESTA
 ========================================================= */
 
-const SURVEY_QUESTIONS = [
+.survey-progress {
+    width: 100%;
+    height: 2px;
+    margin-top: 28px;
+    background: #e5e5e2;
+}
 
-    {
-        question:
-            "¿Qué entrenamiento realizas actualmente?",
+.survey-progress-bar {
+    width: 25%;
+    height: 100%;
+    background: #111;
+    transition: width .25s ease;
+}
 
-        options: [
-            "Natación",
-            "Fuerza",
-            "Running",
-            "Crossfit",
-            "Pilates",
-            "Ninguno"
-        ]
-    },
+.survey-step {
+    margin-top: 35px;
+}
 
+.survey-step-number {
+    color: #999;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 
-    {
-        question:
-            "¿Cuántos días entrenas a la semana?",
+.survey-question {
+    margin-top: 12px;
+    font-size:
+        clamp(
+            24px,
+            4vw,
+            35px
+        );
+    line-height: 1.02;
+    letter-spacing: -1.5px;
+    font-weight: 700;
+}
 
-        options: [
-            "1 días",
-            "2 días",
-            "3 días",
-            "4 días",
-            "5 o más días",
-            "Ninguno"
-        ]
-    },
+.survey-options {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+    gap: 8px;
+}
 
-    {
-        question:
-            "¿Que te gustaria iniciar o complementar a tu entrenamiento?",
+.survey-option {
+    min-height: 52px;
+    padding:
+        12px 14px;
+    border:
+        1px solid #dededb;
+    background: #fff;
+    color: #111;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease;
+}
 
-        options: [
-            "Natacion",
-            "HIT + Fuerza",
-            "HIT"
-        ]
-    },
+.survey-option:hover,
+.survey-option.selected {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
 
-    {
-        question:
-            "¿Qué quieres mejorar principalmente?",
+.survey-next {
+    margin-top: 28px;
+    padding:
+        13px 18px;
+    border:
+        1px solid #111;
+    background: #111;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
 
-        options: [
-            "Rendimiento",
-            "Resistencia",
-            "Fuerza",
-            "Técnica"
-        ]
-    }
+.survey-next:disabled {
+    opacity: .35;
+    cursor: not-allowed;
+}
 
-];
+.survey-result {
+    margin-top: 35px;
+    padding-top: 30px;
+    border-top:
+        1px solid #dededb;
+}
 
+.survey-result h3 {
+    font-size: 28px;
+    line-height: 1;
+    letter-spacing: -1.3px;
+}
 
-let surveyCurrent = 0;
+.survey-result p {
+    margin-top: 14px;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.7;
+}
 
-let surveyAnswers = [];
-
-
-
-/* =========================================================
-   ABRIR ENCUESTA
-========================================================= */
-
-function openSurvey() {
-
-    surveyCurrent = 0;
-
-    surveyAnswers = [];
-
-
-    const modal =
-        createModal(`
-
-            <span class="nova-modal-eyebrow">
-                NOVA · VALORACIÓN
-            </span>
-
-
-            <h2>
-                Cuéntanos sobre ti.
-            </h2>
-
-
-            <p class="nova-modal-subtitle">
-                Responde unas preguntas y te orientaremos
-                hacia la opción NOVA que mejor se adapte
-                a lo que buscas.
-            </p>
-
-
-            <div class="survey-progress">
-
-                <div
-                    class="survey-progress-bar"
-                    id="surveyProgressBar"
-                ></div>
-
-            </div>
-
-
-            <div
-                class="survey-step"
-                id="surveyStep"
-            ></div>
-
-        `);
-
-
-    renderSurveyStep(
-        modal.overlay
-    );
-
+.whatsapp-button {
+    display: inline-flex;
+    margin-top: 25px;
+    padding:
+        14px 18px;
+    background: #111;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 
-
 /* =========================================================
-   RENDER ENCUESTA
+   LAPTOP
 ========================================================= */
 
-function renderSurveyStep(
-    overlay
-) {
-
-    const step =
-        overlay.querySelector(
-            "#surveyStep"
-        );
+@media (max-width: 1200px) {
+    :root {
+        --side-padding: 32px;
+    }
+}
 
 
-    const progress =
-        overlay.querySelector(
-            "#surveyProgressBar"
-        );
+/* =========================================================
+   TABLET
+========================================================= */
 
+@media (max-width: 900px) {
 
-    const question =
-        SURVEY_QUESTIONS[
-            surveyCurrent
-        ];
-
-
-    if (!question) {
-
-        showSurveyResult(
-            overlay
-        );
-
-        return;
-
+    :root {
+        --side-padding: 28px;
     }
 
+    .main-nav {
+        display: none;
+    }
 
-    progress.style.width =
-        (
-            (
-                surveyCurrent + 1
-            ) /
-            SURVEY_QUESTIONS.length
-        ) * 100 + "%";
+    .header-inner {
+        min-height: 68px;
+        height: 68px;
+    }
 
+    .site-header {
+        height: 68px;
+    }
 
-    step.innerHTML = `
+    .home-page {
+        min-height:
+            calc(100svh - 68px);
+    }
 
-        <span class="survey-step-number">
-            PREGUNTA
-            ${surveyCurrent + 1}
-            /
-            ${SURVEY_QUESTIONS.length}
-        </span>
+    .home-main {
+        padding:
+            90px 0
+            100px;
+    }
 
+    .home-grid {
+        grid-template-columns:
+            1fr;
+    }
 
-        <h3 class="survey-question">
-            ${question.question}
-        </h3>
+    .membership-grid {
+        grid-template-columns:
+            1fr;
+    }
 
-
-        <div class="survey-options">
-
-            ${question.options.map(
-                option => `
-
-                    <button
-                        type="button"
-                        class="survey-option"
-                        data-answer="${option}"
-                    >
-                        ${option}
-                    </button>
-
-                `
-            ).join("")}
-
-        </div>
+    .membership-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 
 
-        <button
-            type="button"
-            class="survey-next"
-            id="surveyNext"
-            disabled
-        >
-            ${
-                surveyCurrent ===
-                SURVEY_QUESTIONS.length - 1
-                    ? "FINALIZAR"
-                    : "CONTINUAR"
-            }
-        </button>
+/* =========================================================
+   TABLET / IPAD
+========================================================= */
 
-    `;
+@media (min-width: 601px) and (max-width: 768px) {
 
+    .page-container {
+        width:
+            calc(100% - 48px);
+    }
 
-    let selectedAnswer = null;
+    .header-inner {
+        width:
+            calc(100% - 48px);
+    }
 
-
-    const options =
-        step.querySelectorAll(
-            ".survey-option"
-        );
-
-
-    const nextButton =
-        step.querySelector(
-            "#surveyNext"
-        );
-
-
-    options.forEach(
-        option => {
-
-            option.addEventListener(
-                "click",
-                () => {
-
-                    options.forEach(
-                        item => {
-
-                            item.classList.remove(
-                                "selected"
-                            );
-
-                        }
-                    );
-
-
-                    option.classList.add(
-                        "selected"
-                    );
-
-
-                    selectedAnswer =
-                        option.dataset.answer;
-
-
-                    nextButton.disabled =
-                        false;
-
-                }
+    .home-intro h1 {
+        font-size:
+            clamp(
+                50px,
+                10vw,
+                72px
             );
+        letter-spacing: -3.5px;
+    }
 
-        }
-    );
+    .home-panel {
+        min-height: 390px;
+    }
 
-
-    nextButton.addEventListener(
-        "click",
-        () => {
-
-            if (!selectedAnswer) {
-                return;
-            }
-
-
-            surveyAnswers[
-                surveyCurrent
-            ] = selectedAnswer;
+    .footer-inner {
+        width:
+            calc(100% - 48px);
+    }
+}
 
 
-            surveyCurrent++;
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    :root {
+        --side-padding: 18px;
+    }
+
+    html {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        font-size: 13px;
+    }
+
+    .page-container {
+        width:
+            calc(100% - 36px);
+        max-width: none;
+    }
 
 
-            renderSurveyStep(
-                overlay
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 62px;
+        z-index: 5000;
+    }
+
+    .header-inner {
+        width:
+            calc(100% - 36px);
+        min-height: 62px;
+        height: 62px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .brand {
+        font-size: 20px;
+        letter-spacing: -1px;
+    }
+
+
+    /* =====================================================
+       PÁGINA
+    ===================================================== */
+
+    .home-page {
+        width: 100%;
+        min-height:
+            calc(100svh - 62px);
+        height: auto;
+        overflow: visible;
+    }
+
+    .home-main {
+        width: 100%;
+        flex: 1;
+        padding:
+            72px 0
+            78px;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .home-intro {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .home-eyebrow {
+        margin-bottom: 20px;
+        font-size: 8px;
+        letter-spacing: 1.5px;
+    }
+
+    .home-intro h1 {
+        width: 100%;
+        font-size:
+            clamp(
+                42px,
+                13vw,
+                62px
             );
+        line-height: .95;
+        letter-spacing: -3px;
+    }
 
-        }
-    );
+    .home-description {
+        max-width: 320px;
+        margin-top: 20px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
 
+
+    /* =====================================================
+       GRID
+    ===================================================== */
+
+    .home-grid {
+        margin-top: 58px;
+        display: grid;
+        grid-template-columns:
+            1fr;
+        gap: 12px;
+    }
+
+    .home-panel {
+        min-height: 350px;
+        padding: 25px;
+    }
+
+    .home-panel h2 {
+        font-size: 35px;
+        letter-spacing: -1.8px;
+    }
+
+    .home-panel-description {
+        font-size: 12px;
+        max-width: 290px;
+    }
+
+
+    /* =====================================================
+       MEMBRESÍAS
+    ===================================================== */
+
+    .membership-section {
+        margin-top: 12px;
+        padding:
+            60px 0
+            72px;
+    }
+
+    .membership-header {
+        margin-bottom: 30px;
+    }
+
+    .membership-header h2 {
+        font-size: 38px;
+        letter-spacing: -2px;
+    }
+
+    .membership-header p {
+        max-width: 300px;
+        font-size: 12px;
+    }
+
+    .membership-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        scrollbar-width: none;
+    }
+
+    .membership-filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .membership-filter {
+        flex-shrink: 0;
+        padding:
+            10px 12px;
+    }
+
+    .membership-grid {
+        grid-template-columns:
+            1fr;
+        gap: 10px;
+    }
+
+    .membership-card {
+        min-height: 330px;
+        padding: 24px;
+    }
+
+    .membership-card h3 {
+        font-size: 27px;
+    }
+
+    .membership-card-description {
+        font-size: 11.5px;
+    }
+
+
+    /* =====================================================
+       STORE
+    ===================================================== */
+
+    .store-section {
+        margin-top: 12px;
+        padding:
+            65px 0
+            75px;
+    }
+
+    .store-box {
+        min-height: 330px;
+        padding: 25px;
+    }
+
+    .store-box h2 {
+        font-size:
+            clamp(
+                42px,
+                13vw,
+                62px
+            );
+        letter-spacing: -2.8px;
+    }
+
+    .store-box-description {
+        max-width: 290px;
+        font-size: 12px;
+    }
+
+
+    /* =====================================================
+       MODALES
+    ===================================================== */
+
+    .nova-modal-overlay {
+        padding: 12px;
+    }
+
+    .nova-modal {
+        max-height: 94svh;
+        padding: 27px 22px;
+    }
+
+    .nova-modal h2 {
+        font-size: 39px;
+        letter-spacing: -2px;
+    }
+
+    .coach-method {
+        grid-template-columns:
+            1fr;
+    }
+
+    .survey-options {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer-inner {
+        width:
+            calc(100% - 36px);
+        min-height: 92px;
+        margin: 0 auto;
+        padding:
+            20px 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .footer-brand {
+        font-size: 11px;
+        line-height: 1;
+    }
+
+    .footer-copy {
+        max-width: 100%;
+        font-size: 7px;
+        line-height: 1.5;
+        letter-spacing: .65px;
+    }
 }
 
 
-
 /* =========================================================
-   RESULTADO ENCUESTA
+   IPHONE / ANDROID
 ========================================================= */
 
-function showSurveyResult(
-    overlay
-) {
+@media (max-width: 430px) {
 
-    const step =
-        overlay.querySelector(
-            "#surveyStep"
-        );
+    .page-container {
+        width:
+            calc(100% - 32px);
+    }
 
+    .header-inner {
+        width:
+            calc(100% - 32px);
+        min-height: 60px;
+        height: 60px;
+    }
 
-    const progress =
-        overlay.querySelector(
-            "#surveyProgressBar"
-        );
+    .site-header {
+        height: 60px;
+    }
 
+    .home-page {
+        min-height:
+            calc(100svh - 60px);
+    }
 
-    progress.style.width =
-        "100%";
+    .home-main {
+        padding:
+            68px 0
+            72px;
+    }
 
+    .home-intro h1 {
+        font-size:
+            clamp(
+                40px,
+                12.5vw,
+                58px
+            );
+        letter-spacing: -2.5px;
+    }
 
-    step.innerHTML = `
+    .home-panel {
+        min-height: 335px;
+    }
 
-        <div class="survey-result">
-
-            <h3>
-                Tenemos tu información.
-            </h3>
-
-
-            <p>
-                Tus respuestas nos ayudaron a conocer
-                mejor lo que buscas y crear un plan NOVA hacia
-                tus metas.
-            </p>
-
-
-            <p>
-                Continúa la conversación por WhatsApp.
-            </p>
-
-
-            <a
-                href="https://wa.me/+525612584271?text=${encodeURIComponent(
-                    "Hola NOVA, acabo de completar la valoración y me gustaría recibir orientación sobre los programas. Mis respuestas fueron: " +
-                    surveyAnswers.join(" · ")
-                )}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="whatsapp-button"
-            >
-                CONTINUAR →
-            </a>
-
-        </div>
-
-    `;
-
+    .footer-inner {
+        width:
+            calc(100% - 32px);
+    }
 }
 
 
-
 /* =========================================================
-   BOTÓN MEMBRESÍAS
+   IPHONE PEQUEÑO
 ========================================================= */
 
-const openMemberships =
-    document.getElementById(
-        "openMemberships"
-    );
+@media (max-width: 375px) {
 
+    .page-container {
+        width:
+            calc(100% - 28px);
+    }
 
-if (openMemberships) {
+    .header-inner {
+        width:
+            calc(100% - 28px);
+        min-height: 58px;
+        height: 58px;
+    }
 
-    openMemberships.addEventListener(
-        "click",
-        () => {
+    .site-header {
+        height: 58px;
+    }
 
-            openMembershipsModal();
+    .home-page {
+        min-height:
+            calc(100svh - 58px);
+    }
 
-        }
-    );
+    .home-main {
+        padding:
+            62px 0
+            68px;
+    }
 
+    .home-intro h1 {
+        font-size: 40px;
+        letter-spacing: -2.3px;
+    }
+
+    .home-panel {
+        padding: 22px;
+        min-height: 320px;
+    }
+
+    .membership-card {
+        padding: 22px;
+    }
+
+    .footer-inner {
+        width:
+            calc(100% - 28px);
+        min-height: 82px;
+        padding:
+            16px 0;
+    }
 }
 
 
-
 /* =========================================================
-   HAMBURGUESA
+   LANDSCAPE
 ========================================================= */
 
-const menuToggle =
-    document.querySelector(
-        ".nova-menu-toggle"
-    );
+@media (max-width: 900px) and (orientation: landscape) {
 
-
-const novaMenu =
-    document.querySelector(
-        ".nova-menu"
-    );
-
-
-const novaMenuOverlay =
-    document.querySelector(
-        ".nova-menu-overlay"
-    );
-
-
-const novaMenuClose =
-    document.querySelector(
-        ".nova-menu-close"
-    );
-
-
-const novaMenuLinks =
-    document.querySelectorAll(
-        ".nova-menu-link"
-    );
-
-
-
-/* =========================================================
-   ABRIR MENÚ
-========================================================= */
-
-function openNovaMenu() {
-
-    if (!menuToggle || !novaMenu) {
-        return;
+    .home-main {
+        padding:
+            60px 0
+            70px;
     }
 
-
-    menuToggle.classList.add(
-        "is-open"
-    );
-
-
-    novaMenu.classList.add(
-        "is-open"
-    );
-
-
-    if (novaMenuOverlay) {
-
-        novaMenuOverlay.classList.add(
-            "is-visible"
-        );
-
+    .home-intro h1 {
+        font-size:
+            clamp(
+                42px,
+                8vw,
+                60px
+            );
     }
-
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        "true"
-    );
-
-
-    novaMenu.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
-
-    if (novaMenuOverlay) {
-
-        novaMenuOverlay.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-    }
-
-
-    document.body.classList.add(
-        "menu-open"
-    );
-
 }
 
 
-
 /* =========================================================
-   CERRAR MENÚ
+   SAFE AREA
 ========================================================= */
 
-function closeNovaMenu() {
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
 
-    if (!menuToggle || !novaMenu) {
-        return;
-    }
+    @media (max-width: 600px) {
 
-
-    menuToggle.classList.remove(
-        "is-open"
-    );
-
-
-    novaMenu.classList.remove(
-        "is-open"
-    );
-
-
-    if (novaMenuOverlay) {
-
-        novaMenuOverlay.classList.remove(
-            "is-visible"
-        );
-
-    }
-
-
-    menuToggle.setAttribute(
-        "aria-expanded",
-        "false"
-    );
-
-
-    novaMenu.setAttribute(
-        "aria-hidden",
-        "true"
-    );
-
-
-    if (novaMenuOverlay) {
-
-        novaMenuOverlay.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-    }
-
-
-    document.body.classList.remove(
-        "menu-open"
-    );
-
-}
-
-
-
-/* =========================================================
-   CLICK HAMBURGUESA
-========================================================= */
-
-if (menuToggle) {
-
-    menuToggle.addEventListener(
-        "click",
-        () => {
-
-            const isOpen =
-                menuToggle.classList.contains(
-                    "is-open"
+        .footer-inner {
+            padding-bottom:
+                calc(
+                    18px +
+                    env(safe-area-inset-bottom)
                 );
-
-
-            if (isOpen) {
-
-                closeNovaMenu();
-
-            } else {
-
-                openNovaMenu();
-
-            }
-
         }
-    );
-
+    }
 }
 
 
-
 /* =========================================================
-   CLICK CERRAR
+   PANTALLAS GRANDES
 ========================================================= */
 
-if (novaMenuClose) {
+@media (min-width: 1800px) {
 
-    novaMenuClose.addEventListener(
-        "click",
-        closeNovaMenu
-    );
-
+    .page-container,
+    .header-inner,
+    .footer-inner {
+        max-width: 1450px;
+    }
 }
 
 
-
 /* =========================================================
-   CLICK FUERA
+   REDUCIR MOVIMIENTO
 ========================================================= */
 
-if (novaMenuOverlay) {
+@media (prefers-reduced-motion: reduce) {
 
-    novaMenuOverlay.addEventListener(
-        "click",
-        closeNovaMenu
-    );
+    html {
+        scroll-behavior: auto !important;
+    }
 
+    * {
+        transition-duration:
+            .01ms !important;
+        animation-duration:
+            .01ms !important;
+    }
+}
+/* =========================================================
+   NOVA · HAMBURGUESA
+   MISMO ESTILO EN TODAS LAS PÁGINAS
+========================================================= */
+
+/* CONTENEDOR */
+.nova-mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    z-index: 10000;
+    pointer-events: none;
 }
 
+/* BOTÓN */
+.nova-menu-toggle {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 10001;
+    -webkit-tap-highlight-color: transparent;
+}
 
+/* LÍNEAS */
+.nova-menu-toggle span {
+    display: block;
+    width: 21px;
+    height: 1.5px;
+    background: #111;
+    border-radius: 0;
+    transform-origin: center;
+    transition:
+        transform .25s ease,
+        opacity .18s ease;
+}
+
+/* NORMAL */
+.nova-menu-toggle span:nth-child(1) {
+    transform: translateY(0) rotate(0);
+}
+
+.nova-menu-toggle span:nth-child(2) {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.nova-menu-toggle span:nth-child(3) {
+    transform: translateY(0) rotate(0);
+}
+
+/* HAMBURGUESA → X */
+.nova-menu-toggle.is-open span:nth-child(1) {
+    transform:
+        translateY(3.25px)
+        rotate(45deg);
+}
+
+.nova-menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.nova-menu-toggle.is-open span:nth-child(3) {
+    transform:
+        translateY(-3.25px)
+        rotate(-45deg);
+}
+
+/* SIN MOVIMIENTO DEL BOTÓN */
+.nova-menu-toggle,
+.nova-menu-toggle:hover,
+.nova-menu-toggle:focus,
+.nova-menu-toggle:focus-visible,
+.nova-menu-toggle:active,
+.nova-menu-toggle.is-open {
+    transform: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    outline: none !important;
+}
 
 /* =========================================================
-   LINKS MENÚ
+   MENÚ DESPLEGABLE
 ========================================================= */
 
-novaMenuLinks.forEach(
-    link => {
+.nova-menu {
+    position: fixed;
+    top: 66px;
+    right: 18px;
+    width: min(
+        calc(100vw - 36px),
+        300px
+    );
 
-        link.addEventListener(
-            "click",
-            event => {
+    padding: 8px;
 
-                const action =
-                    link.dataset.menuAction;
+    display: flex;
+    flex-direction: column;
 
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 0;
 
-                if (action === "coach") {
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.12);
 
-                    event.preventDefault();
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
-                    closeNovaMenu();
+    transform:
+        translateY(-8px)
+        scale(.98);
 
-                    setTimeout(
-                        () => {
+    transform-origin: top right;
 
-                            openCoach();
+    transition:
+        opacity .22s ease,
+        transform .22s ease,
+        visibility .22s ease;
 
-                        },
-                        180
-                    );
+    z-index: 9999;
+}
 
-                    return;
+/* MENÚ ABIERTO */
+.nova-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 
-                }
+    transform:
+        translateY(0)
+        scale(1);
+}
 
+/* LINKS */
+.nova-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 4px 0;
+}
 
-                if (action === "dudas") {
+.nova-menu-link {
+    min-height: 48px;
+    padding: 0 16px;
 
-                    event.preventDefault();
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
-                    closeNovaMenu();
+    border: 0;
+    border-radius: 0;
 
-                    setTimeout(
-                        () => {
+    background: transparent;
+    color: #111;
 
-                            openSurvey();
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: .8px;
 
-                        },
-                        180
-                    );
+    text-decoration: none;
 
-                    return;
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
 
-                }
+/* QUITAR NÚMEROS Y FLECHAS */
+.nova-menu-number,
+.nova-menu-arrow {
+    display: none !important;
+}
 
+/* OCULTAR ELEMENTOS ANTIGUOS */
+.nova-menu-header,
+.nova-menu-footer,
+.nova-menu-close {
+    display: none !important;
+}
 
-                if (
-                    action ===
-                    "membresias"
-                ) {
+/* HOVER */
+.nova-menu-link:hover {
+    background: #f5f5f5;
+    color: #111;
+}
 
-                    event.preventDefault();
+/* ACTIVO */
+.nova-menu-link.active {
+    background: #111;
+    color: #fff;
+}
 
-                    closeNovaMenu();
+.nova-menu-link.active:hover {
+    background: #111;
+    color: #fff;
+}
 
-                    setTimeout(
-                        () => {
+/* =========================================================
+   OVERLAY
+========================================================= */
 
-                            openMembershipsModal();
+.nova-menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
 
-                        },
-                        180
-                    );
+    background: rgba(0,0,0,.35);
 
-                    return;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 
-                }
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
+    transition:
+        opacity .22s ease,
+        visibility .22s ease;
+}
 
-                const section =
-                    link.dataset.menuSection;
+.nova-menu-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
 
+/* =========================================================
+   SISTEMA ANTIGUO
+========================================================= */
 
-                if (section) {
+.menu-toggle {
+    display: none !important;
+}
 
-                    novaMenuLinks.forEach(
-                        item => {
+.nova-mobile-nav {
+    display: none !important;
+}
 
-                            item.classList.remove(
-                                "active"
-                            );
+/* =========================================================
+   TABLET + MÓVIL
+========================================================= */
 
-                        }
-                    );
+@media (max-width: 900px) {
 
+    .nova-mobile-menu {
+        display: block;
+        pointer-events: none;
+    }
 
-                    link.classList.add(
-                        "active"
-                    );
+    .nova-menu-toggle {
+        display: flex;
+    }
+}
 
-                }
+/* =========================================================
+   TABLET
+========================================================= */
 
+@media (min-width: 601px) and (max-width: 900px) {
 
-                closeNovaMenu();
+    .nova-menu-toggle {
+        top: 12px;
+        right: 24px;
+        width: 40px;
+        height: 40px;
+    }
 
-            }
+    .nova-menu {
+        top: 60px;
+        right: 24px;
+
+        width: min(
+            calc(100vw - 48px),
+            320px
         );
-
     }
-);
-
-
+}
 
 /* =========================================================
-   NAV DESKTOP
+   MÓVIL
 ========================================================= */
 
-const desktopLinks =
-    document.querySelectorAll(
-        ".nav-link"
-    );
+@media (max-width: 600px) {
 
-
-desktopLinks.forEach(
-    link => {
-
-        link.addEventListener(
-            "click",
-            event => {
-
-                const action =
-                    link.dataset.desktopAction;
-
-
-                if (action === "coach") {
-
-                    event.preventDefault();
-
-
-                    desktopLinks.forEach(
-                        item => {
-
-                            item.classList.remove(
-                                "active"
-                            );
-
-                        }
-                    );
-
-
-                    link.classList.add(
-                        "active"
-                    );
-
-
-                    openCoach();
-
-                    return;
-
-                }
-
-
-                if (action === "dudas") {
-
-                    event.preventDefault();
-
-
-                    desktopLinks.forEach(
-                        item => {
-
-                            item.classList.remove(
-                                "active"
-                            );
-
-                        }
-                    );
-
-
-                    link.classList.add(
-                        "active"
-                    );
-
-
-                    openSurvey();
-
-                    return;
-
-                }
-
-
-                if (
-                    action ===
-                    "membresias"
-                ) {
-
-                    event.preventDefault();
-
-
-                    desktopLinks.forEach(
-                        item => {
-
-                            item.classList.remove(
-                                "active"
-                            );
-
-                        }
-                    );
-
-
-                    link.classList.add(
-                        "active"
-                    );
-
-
-                    openMembershipsModal();
-
-                    return;
-
-                }
-
-
-                desktopLinks.forEach(
-                    item => {
-
-                        item.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
-
-
-                link.classList.add(
-                    "active"
-                );
-
-            }
-        );
-
+    .nova-menu-toggle {
+        top: 9px;
+        right: 18px;
+        width: 38px;
+        height: 38px;
     }
-);
 
+    .nova-menu {
+        top: 55px;
+        right: 18px;
 
+        width: calc(100vw - 36px);
+        max-width: 340px;
+    }
+
+    .nova-menu-link {
+        min-height: 50px;
+        padding: 0 16px;
+        font-size: 9px;
+    }
+}
 
 /* =========================================================
-   TECLA ESCAPE
+   IPHONE / ANDROID
 ========================================================= */
 
-document.addEventListener(
-    "keydown",
-    event => {
+@media (max-width: 430px) {
 
-        if (
-            event.key === "Escape" &&
-            novaMenu &&
-            novaMenu.classList.contains(
-                "is-open"
-            )
-        ) {
-
-            closeNovaMenu();
-
-        }
-
+    .nova-menu-toggle {
+        width: 36px;
+        height: 36px;
+        top: 9px;
+        right: 16px;
     }
-);
 
+    .nova-menu {
+        top: 53px;
+        right: 16px;
 
+        width: calc(100vw - 32px);
+    }
+}
 
 /* =========================================================
-   RESIZE
+   IPHONE PEQUEÑO
 ========================================================= */
 
-window.addEventListener(
-    "resize",
-    () => {
+@media (max-width: 375px) {
 
-        if (
-            window.innerWidth > 900 &&
-            novaMenu &&
-            novaMenu.classList.contains(
-                "is-open"
-            )
-        ) {
-
-            closeNovaMenu();
-
-        }
-
+    .nova-menu-toggle {
+        width: 34px;
+        height: 34px;
+        top: 9px;
+        right: 14px;
     }
-);
 
+    .nova-menu {
+        top: 51px;
+        right: 14px;
 
-</script>
+        width: calc(100vw - 28px);
+    }
+}
 
+/* =========================================================
+   DESKTOP
+========================================================= */
 
-</body>
+@media (min-width: 901px) {
 
-</html>
+    .nova-mobile-menu {
+        display: none !important;
+    }
+
+    .nova-menu-toggle,
+    .nova-menu {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   BODY AL ABRIR
+========================================================= */
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* =========================================================
+   REDUCIR MOVIMIENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nova-menu,
+    .nova-menu-toggle,
+    .nova-menu-toggle span,
+    .nova-menu-link {
+        transition: none !important;
+    }
+}
+.site-header {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: 62px;
+    z-index: 5000;
+}
+/* =========================================================
+   NOVA · HEADER FIJO SOLO EN WEB
+========================================================= */
+
+@media (min-width: 901px) {
+
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    .home-page {
+        padding-top: 80px;
+    }
+
+}
+/* =========================================================
+   NOVA · FOTO DEL COACH
+========================================================= */
+
+.coach-photo {
+    width: 90px;
+    height: 90px;
+    margin: 0 0 22px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.coach-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
