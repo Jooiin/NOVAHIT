@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>NOVA · Inicio</title>
+
+<link
+    rel="stylesheet"
+    href="css/compras.css"
+>
+
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="site-header">
+
+<div class="header-inner">
+
+    <a
+        href="index.html"
+        class="brand"
+    >
+        NOVA
+    </a>
+
+    <nav class="main-nav">
+
+        <a
+            href="index.html"
+            class="nav-link"
+        >
+            INICIO
+        </a>
+
+
+        <a
+            href="#dudas"
+            class="nav-link"
+            data-desktop-action="dudas"
+        >
+            DUDAS
+        </a>
+
+        <a
+            href="training.html"
+            class="nav-link"
+        >
+            ENTRENAMIENTOS
+        </a>
+
+    </nav>
+
+</div>
+
+</header>
+
+
+<!-- =========================================================
+     HAMBURGUESA
+========================================================= -->
+
+<div class="nova-mobile-menu">
+
+<button
+    class="nova-menu-toggle"
+    type="button"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+    aria-controls="nova-menu"
+>
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</button>
+
+</div>
+
+
+<!-- =========================================================
+     OVERLAY MENÚ
+========================================================= -->
+
+<div
+    class="nova-menu-overlay"
+    id="nova-menu-overlay"
+    aria-hidden="true"
+></div>
+
+
+<!-- =========================================================
+     MENÚ MÓVIL
+========================================================= -->
+
+<nav
+    class="nova-menu"
+    id="nova-menu"
+    aria-label="Menú principal"
+    aria-hidden="true"
+>
+
+<div class="nova-menu-header">
+
+    <span class="nova-menu-title">
+        NOVA
+    </span>
+
+    <button
+        type="button"
+        class="nova-menu-close"
+        aria-label="Cerrar menú"
+    >
+        ×
+    </button>
+
+</div>
+
+
+<div class="nova-menu-links">
+
+    <a
+        href="index.html"
+        class="nova-menu-link active"
+        data-menu-section="inicio"
+    >
+
+        <span class="nova-menu-number">
+            01
+        </span>
+
+        <span>
+            INICIO
+        </span>
+
+        <span class="nova-menu-arrow">
+            →
+        </span>
+
+    </a>
+
+
+
+    <a
+        href="#dudas"
+        class="nova-menu-link"
+        data-menu-action="dudas"
+    >
+
+        <span class="nova-menu-number">
+            03
+        </span>
+
+        <span>
+            DUDAS
+        </span>
+
+        <span class="nova-menu-arrow">
+            →
+        </span>
+
+    </a>
+
+
+    <a
+        href="training.html"
+        class="nova-menu-link"
+    >
+
+        <span class="nova-menu-number">
+            04
+        </span>
+
+        <span>
+            ENTRENAMIENTOS
+        </span>
+
+        <span class="nova-menu-arrow">
+            →
+        </span>
+
+    </a>
+
+</div>
+
+
+<div class="nova-menu-footer">
+
+    <span>
+        NOVA · TRAINING
+    </span>
+
+</div>
+
+</nav>
+
+
+<!-- =========================================================
+     PÁGINA
+========================================================= -->
+
+<section class="home-main">
+
+    <div class="page-container">
+
+
+        <!-- =================================================
+             INTRO
+        ================================================= -->
+
+        <div class="home-intro">
+
+            <span class="home-eyebrow">
+                NOVA · TRAINING
+            </span>
+
+            <p class="home-description">
+                Entrenamiento estructurado para desarrollar
+                tu rendimiento, mejorar tu capacidad física
+                y avanzar con una metodología clara.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             MEMBRESÍAS
+        ================================================= -->
+
+        <section
+            class="membership-section"
+            id="membresias"
+        >
+
+            <div class="membership-header">
+
+                <div>
+
+                    <span class="membership-header-label">
+                        NOVA · MEMBRESÍAS
+                    </span>
+
+                    <h2>
+                        Encuentra tu<br>
+                        punto de partida.
+                    </h2>
+
+                </div>
+
+
+                <p>
+                    Elige el programa que mejor
+                    se adapte a tu objetivo.
+                    Conócelo y descubre lo que
+                    incluye antes de comprar.
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 LISTA DIRECTA DE PLANES
+            ================================================= -->
+
+            <div
+                class="nova-plans-list"
+                id="membershipGrid"
+            ></div>
+
+        </section>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="site-footer">
+
+    <div class="footer-inner">
+
+        <span class="footer-brand">
+            NOVA
+        </span>
+
+        <small class="footer-copy">
+            © 2026 NOVA · Todos los derechos reservados
+        </small>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   NOVA · PLANES
+========================================================= */
+
+const NOVA_MEMBERSHIPS = [
+
+    {
+        id: "base",
+        number: "01",
+        category: "NATACIÓN",
+        title: "Base",
+        price: "$1,099",
+
+        description:
+            "Construye una base sólida de técnica, resistencia y adaptación dentro del agua.",
+
+        details: [
+
+            {
+                title: "Técnica",
+                description:
+                    "Trabajo enfocado en mejorar la posición, coordinación y eficiencia de cada movimiento."
+            },
+
+            {
+                title: "Resistencia",
+                description:
+                    "Desarrollo progresivo de la capacidad aeróbica para sostener sesiones de entrenamiento con mayor control."
+            },
+
+            {
+                title: "Ritmos",
+                description:
+                    "Aprende a reconocer y controlar diferentes intensidades para entrenar de manera más estructurada."
+            },
+
+            {
+                title: "Adaptación",
+                description:
+                    "El volumen y la dificultad evolucionan de acuerdo con tu nivel y respuesta al entrenamiento."
+            },
+
+            {
+                title: "Progresión",
+                description:
+                    "El trabajo aumenta gradualmente para construir una base que permita seguir avanzando."
+            },
+
+            {
+                title: "Seguimiento",
+                description:
+                    "La evolución permite realizar ajustes para mantener el entrenamiento alineado con tus objetivos."
+            }
+
+        ]
+
+    },
+
+
+    {
+        id: "rendimiento",
+        number: "02",
+        category: "NATACIÓN",
+        title: "Rendimiento",
+        price: "$1,499",
+
+        description:
+            "Entrena para mejorar técnica, ritmos, resistencia y capacidad de rendimiento.",
+
+        details: [
+
+            {
+                title: "Eficiencia técnica",
+                description:
+                    "Perfecciona la ejecución de cada movimiento para reducir pérdidas de energía y mejorar tu nado."
+            },
+
+            {
+                title: "Ritmo",
+                description:
+                    "Trabajo estructurado de diferentes intensidades para desarrollar control y capacidad de mantener ritmos."
+            },
+
+            {
+                title: "Velocidad",
+                description:
+                    "Sesiones específicas para desarrollar velocidad y capacidad de responder a esfuerzos de mayor intensidad."
+            },
+
+            {
+                title: "Resistencia",
+                description:
+                    "Progresiones diseñadas para sostener esfuerzos más largos sin perder calidad técnica."
+            },
+
+            {
+                title: "Carga",
+                description:
+                    "Organización progresiva del volumen y la intensidad para generar adaptación sin perder control."
+            },
+
+            {
+                title: "Seguimiento",
+                description:
+                    "Los entrenamientos pueden ajustarse de acuerdo con tu evolución, sensaciones y objetivos."
+            }
+
+        ]
+
+    },
+
+
+    {
+        id: "aguas-abiertas",
+        number: "03",
+        category: "AGUAS ABIERTAS",
+        title: "Aguas Abiertas",
+        price: "$1,499",
+
+        description:
+            "Desarrolla resistencia, distancia, ritmo y estrategia para nadar en aguas abiertas.",
+
+        details: [
+
+            {
+                title: "Distancia",
+                description:
+                    "Progresiones orientadas a mejorar la capacidad de cubrir distancias mayores con control."
+            },
+
+            {
+                title: "Resistencia",
+                description:
+                    "Trabajo aeróbico enfocado en sostener esfuerzos prolongados dentro y fuera de la piscina."
+            },
+
+            {
+                title: "Ritmo",
+                description:
+                    "Aprende a distribuir el esfuerzo para evitar comenzar demasiado rápido y mantener un ritmo estable."
+            },
+
+            {
+                title: "Estrategia",
+                description:
+                    "Desarrollo de recursos para gestionar el esfuerzo, los cambios de ritmo y las diferentes fases de una sesión."
+            },
+
+            {
+                title: "Adaptación",
+                description:
+                    "El entrenamiento se orienta progresivamente a las demandas específicas de las aguas abiertas."
+            },
+
+            {
+                title: "Preparación",
+                description:
+                    "La carga se organiza para avanzar hacia objetivos de distancia y rendimiento de forma progresiva."
+            }
+
+        ]
+
+    },
+
+
+    {
+        id: "fuerza",
+        number: "04",
+        category: "FUERZA",
+        title: "Fuerza",
+        price: "$499",
+
+        description:
+            "Desarrolla fuerza, capacidad física y acondicionamiento para complementar tu entrenamiento.",
+
+        details: [
+
+            {
+                title: "Fuerza general",
+                description:
+                    "Trabajo orientado a desarrollar una base de fuerza que mejore tu capacidad física."
+            },
+
+            {
+                title: "Progresión",
+                description:
+                    "Las cargas y ejercicios evolucionan de forma gradual para favorecer una adaptación constante."
+            },
+
+            {
+                title: "Capacidad física",
+                description:
+                    "Combina fuerza y acondicionamiento para desarrollar un cuerpo más preparado para el esfuerzo."
+            },
+
+            {
+                title: "Control de carga",
+                description:
+                    "La intensidad y el volumen se organizan para mantener una progresión estructurada."
+            },
+
+            {
+                title: "Complemento",
+                description:
+                    "El trabajo puede integrarse con otras disciplinas para mejorar el rendimiento general."
+            },
+
+            {
+                title: "Seguimiento",
+                description:
+                    "La evolución permite ajustar el entrenamiento según tu progreso y respuesta a las cargas."
+            }
+
+        ]
+
+    }
+
+];
+
+
+/* =========================================================
+   PLAN SELECCIONADO
+========================================================= */
+
+let selectedPlan = null;
+
+
+/* =========================================================
+   RENDER PLANES
+========================================================= */
+
+function renderMemberships(){
+
+    const grid =
+        document.getElementById(
+            "membershipGrid"
+        );
+
+    if(!grid){
+        return;
+    }
+
+    grid.innerHTML = "";
+
+    NOVA_MEMBERSHIPS.forEach(
+        membership => {
+
+            const item =
+                document.createElement(
+                    "article"
+                );
+
+            item.className =
+                "nova-plan-item";
+
+            item.innerHTML = `
+
+                <div class="nova-plan-number">
+                    ${membership.number}
+                </div>
+
+                <div class="nova-plan-info">
+
+                    <span class="nova-plan-category">
+                        ${membership.category}
+                    </span>
+
+                    <h3 class="nova-plan-title">
+                        ${membership.title}
+                    </h3>
+
+                    <p class="nova-plan-description">
+                        ${membership.description}
+                    </p>
+
+                </div>
+
+                <div class="nova-plan-action">
+
+                    <span class="nova-plan-price">
+                        ${membership.price}
+                    </span>
+
+                    <button
+                        type="button"
+                        class="nova-plan-button"
+                    >
+                        CONOCER →
+                    </button>
+
+                </div>
+
+            `;
+
+
+            const button =
+                item.querySelector(
+                    ".nova-plan-button"
+                );
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    openPlanDetail(
+                        membership
+                    );
+
+                }
+            );
+
+
+            grid.appendChild(
+                item
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   MODAL BASE
+========================================================= */
+
+function createModal(content){
+
+    const overlay =
+        document.createElement(
+            "div"
+        );
+
+    overlay.className =
+        "nova-modal-overlay";
+
+    overlay.innerHTML = `
+
+        <div
+            class="nova-modal"
+            role="dialog"
+            aria-modal="true"
+        >
+
+            <button
+                type="button"
+                class="nova-modal-close"
+                aria-label="Cerrar ventana"
+            >
+                ×
+            </button>
+
+            ${content}
+
+        </div>
+
+    `;
+
+
+    document.body.appendChild(
+        overlay
+    );
+
+
+    document.body.classList.add(
+        "modal-open"
+    );
+
+
+    requestAnimationFrame(
+        () => {
+
+            overlay.classList.add(
+                "is-visible"
+            );
+
+        }
+    );
+
+
+    const closeButton =
+        overlay.querySelector(
+            ".nova-modal-close"
+        );
+
+
+    let isClosing = false;
+
+
+    function closeModal(){
+
+        if(isClosing){
+            return;
+        }
+
+        isClosing = true;
+
+
+        overlay.classList.remove(
+            "is-visible"
+        );
+
+
+        document.body.classList.remove(
+            "modal-open"
+        );
+
+
+        document.removeEventListener(
+            "keydown",
+            escapeHandler
+        );
+
+
+        setTimeout(
+            () => {
+
+                if(
+                    overlay &&
+                    overlay.parentNode
+                ){
+
+                    overlay.remove();
+
+                }
+
+            },
+            250
+        );
+
+    }
+
+
+    function escapeHandler(event){
+
+        if(
+            event.key === "Escape"
+        ){
+
+            closeModal();
+
+        }
+
+    }
+
+
+    if(closeButton){
+
+        closeButton.addEventListener(
+            "click",
+            closeModal
+        );
+
+    }
+
+
+    overlay.addEventListener(
+        "click",
+        event => {
+
+            if(
+                event.target === overlay
+            ){
+
+                closeModal();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        escapeHandler
+    );
+
+
+    return {
+        overlay,
+        closeModal
+    };
+
+}
+
+
+/* =========================================================
+   DETALLE DEL PLAN
+========================================================= */
+
+function openPlanDetail(
+    membership
+){
+
+    selectedPlan =
+        membership;
+
+
+    const detailsHTML =
+        membership.details
+            .map(
+                (detail, index) => `
+
+                    <div class="plan-detail-item">
+
+                        <span class="plan-detail-number">
+                            ${String(
+                                index + 1
+                            ).padStart(2,"0")}
+                        </span>
+
+                        <div class="plan-detail-content">
+
+                            <h3>
+                                ${detail.title}
+                            </h3>
+
+                            <p>
+                                ${detail.description}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                `
+            )
+            .join("");
+
+
+    const modal =
+        createModal(`
+
+            <div class="plan-detail">
+
+                <span class="nova-modal-eyebrow">
+                    NOVA · ${membership.category}
+                </span>
+
+                <h2>
+                    ${membership.title}
+                </h2>
+
+                <p class="plan-detail-intro">
+                    ${membership.description}
+                </p>
+
+                <div class="plan-detail-section">
+
+                    <span class="plan-detail-label">
+                        ESTE PLAN INCLUYE
+                    </span>
+
+                    <div class="plan-detail-list">
+
+                        ${detailsHTML}
+
+                    </div>
+
+                </div>
+
+                <div class="plan-detail-price">
+
+                    <span class="plan-detail-price-label">
+                        INVERSIÓN
+                    </span>
+
+                    <span class="plan-detail-price-value">
+                        ${membership.price}
+                    </span>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="plan-detail-purchase"
+                    id="planPurchaseButton"
+                >
+                    QUIERO ESTE PLAN →
+                </button>
+
+            </div>
+
+        `);
+
+
+    const purchaseButton =
+        modal.overlay.querySelector(
+            "#planPurchaseButton"
+        );
+
+
+    if(purchaseButton){
+
+        purchaseButton.addEventListener(
+            "click",
+            () => {
+
+                modal.closeModal();
+
+
+                setTimeout(
+                    () => {
+
+                        openPurchase(
+                            membership
+                        );
+
+                    },
+                    260
+                );
+
+            }
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   VENTANA DE COMPRA
+========================================================= */
+
+function openPurchase(
+    membership
+){
+
+    selectedPlan =
+        membership;
+
+
+    const whatsappText =
+        "Hola NOVA, quiero comprar el plan " +
+        membership.title +
+        ". Precio: " +
+        membership.price +
+        ". Me gustaría continuar con el proceso de compra.";
+
+
+    const whatsappURL =
+        "https://wa.me/525612584271?text=" +
+        encodeURIComponent(
+            whatsappText
+        );
+
+
+    createModal(`
+
+        <div class="purchase-window">
+
+            <span class="nova-modal-eyebrow">
+                NOVA · COMPRA
+            </span>
+
+            <h2>
+                Tu siguiente paso.
+            </h2>
+
+            <p class="nova-modal-subtitle">
+                Has seleccionado el siguiente programa.
+                Revisa la información y continúa con NOVA
+                para completar tu compra.
+            </p>
+
+            <div class="purchase-summary">
+
+                <span class="purchase-summary-label">
+                    PLAN SELECCIONADO
+                </span>
+
+                <h3 class="purchase-summary-title">
+                    ${membership.title}
+                </h3>
+
+                <p class="purchase-summary-category">
+                    ${membership.category}
+                </p>
+
+                <div class="purchase-price">
+
+                    <span class="purchase-price-label">
+                        PRECIO
+                    </span>
+
+                    <span class="purchase-price-value">
+                        ${membership.price}
+                    </span>
+
+                </div>
+
+            </div>
+
+            <p class="purchase-info">
+                Al continuar, NOVA recibirá tu solicitud
+                para confirmar disponibilidad, resolver
+                cualquier detalle y completar el proceso
+                de compra del programa seleccionado.
+            </p>
+
+            <div class="purchase-actions">
+
+                <a
+                    href="${whatsappURL}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="purchase-whatsapp"
+                >
+                    CONTINUAR CON LA COMPRA →
+                </a>
+
+            </div>
+
+            <p class="purchase-note">
+                El proceso de pago se confirmará directamente
+                con NOVA antes de finalizar la compra.
+            </p>
+
+        </div>
+
+    `);
+
+}
+
+
+/* =========================================================
+   DUDAS · ENCUESTA
+========================================================= */
+
+function openSurvey(){
+
+    const modal =
+        createModal(`
+
+            <div class="survey-window">
+
+                <span class="nova-modal-eyebrow">
+                    NOVA · DUDAS
+                </span>
+
+                <h2>
+                    Cuéntanos sobre ti.
+                </h2>
+
+                <p class="nova-modal-subtitle">
+                    Responde estas preguntas y podremos
+                    orientarte sobre el programa que puede
+                    adaptarse mejor a lo que buscas.
+                </p>
+
+
+                <form
+                    id="novaSurveyForm"
+                    class="nova-survey-form"
+                >
+
+
+                    <div class="nova-survey-field">
+
+                        <label for="surveyName">
+                            ¿Cómo te llamas?
+                        </label>
+
+                        <input
+                            type="text"
+                            id="surveyName"
+                            name="name"
+                            placeholder="Tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="nova-survey-field">
+
+                        <label for="surveyDiscipline">
+                            ¿Qué quieres entrenar?
+                        </label>
+
+                        <select
+                            id="surveyDiscipline"
+                            name="discipline"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="Natación">
+                                Natación
+                            </option>
+
+                            <option value="Aguas abiertas">
+                                Aguas abiertas
+                            </option>
+
+                            <option value="Fuerza">
+                                Fuerza
+                            </option>
+
+                            <option value="No estoy seguro">
+                                No estoy seguro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="nova-survey-field">
+
+                        <label for="surveyGoal">
+                            ¿Cuál es tu principal objetivo?
+                        </label>
+
+                        <select
+                            id="surveyGoal"
+                            name="goal"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="Mejorar mi técnica">
+                                Mejorar mi técnica
+                            </option>
+
+                            <option value="Mejorar mi resistencia">
+                                Mejorar mi resistencia
+                            </option>
+
+                            <option value="Mejorar mi velocidad">
+                                Mejorar mi velocidad
+                            </option>
+
+                            <option value="Prepararme para una competencia">
+                                Prepararme para una competencia
+                            </option>
+
+                            <option value="Mejorar mi condición física">
+                                Mejorar mi condición física
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="nova-survey-field">
+
+                        <label for="surveyLevel">
+                            ¿Cuál consideras que es tu nivel?
+                        </label>
+
+                        <select
+                            id="surveyLevel"
+                            name="level"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="Principiante">
+                                Principiante
+                            </option>
+
+                            <option value="Intermedio">
+                                Intermedio
+                            </option>
+
+                            <option value="Avanzado">
+                                Avanzado
+                            </option>
+
+                            <option value="No estoy seguro">
+                                No estoy seguro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="nova-survey-field">
+
+                        <label for="surveyExperience">
+                            ¿Cuánto tiempo llevas entrenando?
+                        </label>
+
+                        <select
+                            id="surveyExperience"
+                            name="experience"
+                            required
+                        >
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="Menos de 6 meses">
+                                Menos de 6 meses
+                            </option>
+
+                            <option value="6 meses a 1 año">
+                                6 meses a 1 año
+                            </option>
+
+                            <option value="1 a 3 años">
+                                1 a 3 años
+                            </option>
+
+                            <option value="Más de 3 años">
+                                Más de 3 años
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="nova-survey-field">
+
+                        <label for="surveyMessage">
+                            Cuéntanos algo más
+                        </label>
+
+                        <textarea
+                            id="surveyMessage"
+                            name="message"
+                            rows="4"
+                            placeholder="¿Qué buscas mejorar o qué duda tienes?"
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="plan-whatsapp-button"
+                    >
+                        ENVIAR Y HABLAR CON NOVA →
+                    </button>
+
+                </form>
+
+            </div>
+
+        `);
+
+
+    const form =
+        modal.overlay.querySelector(
+            "#novaSurveyForm"
+        );
+
+
+    if(!form){
+        return;
+    }
+
+
+    form.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+
+            const name =
+                form
+                    .querySelector(
+                        "#surveyName"
+                    )
+                    .value
+                    .trim();
+
+
+            const discipline =
+                form
+                    .querySelector(
+                        "#surveyDiscipline"
+                    )
+                    .value;
+
+
+            const goal =
+                form
+                    .querySelector(
+                        "#surveyGoal"
+                    )
+                    .value;
+
+
+            const level =
+                form
+                    .querySelector(
+                        "#surveyLevel"
+                    )
+                    .value;
+
+
+            const experience =
+                form
+                    .querySelector(
+                        "#surveyExperience"
+                    )
+                    .value;
+
+
+            const message =
+                form
+                    .querySelector(
+                        "#surveyMessage"
+                    )
+                    .value
+                    .trim();
+
+
+            const whatsappText =
+                "Hola NOVA, me gustaría recibir orientación sobre los programas.%0A%0A" +
+                "Nombre: " +
+                name +
+                "%0A" +
+                "Disciplina: " +
+                discipline +
+                "%0A" +
+                "Objetivo: " +
+                goal +
+                "%0A" +
+                "Nivel: " +
+                level +
+                "%0A" +
+                "Experiencia: " +
+                experience +
+                "%0A" +
+                "Información adicional: " +
+                (message || "Sin información adicional.");
+
+
+            const whatsappURL =
+                "https://wa.me/525612584271?text=" +
+                encodeURIComponent(
+                    "Hola NOVA, me gustaría recibir orientación sobre los programas.\n\n" +
+                    "Nombre: " +
+                    name +
+                    "\n" +
+                    "Disciplina: " +
+                    discipline +
+                    "\n" +
+                    "Objetivo: " +
+                    goal +
+                    "\n" +
+                    "Nivel: " +
+                    level +
+                    "\n" +
+                    "Experiencia: " +
+                    experience +
+                    "\n" +
+                    "Información adicional: " +
+                    (message || "Sin información adicional.")
+                );
+
+
+            window.open(
+                whatsappURL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+
+            modal.closeModal();
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   HAMBURGUESA
+========================================================= */
+
+const menuToggle =
+    document.querySelector(
+        ".nova-menu-toggle"
+    );
+
+
+const novaMenu =
+    document.querySelector(
+        ".nova-menu"
+    );
+
+
+const novaMenuOverlay =
+    document.querySelector(
+        ".nova-menu-overlay"
+    );
+
+
+const novaMenuClose =
+    document.querySelector(
+        ".nova-menu-close"
+    );
+
+
+const novaMenuLinks =
+    document.querySelectorAll(
+        ".nova-menu-link"
+    );
+
+
+/* =========================================================
+   ABRIR MENÚ
+========================================================= */
+
+function openNovaMenu(){
+
+    if(
+        !menuToggle ||
+        !novaMenu
+    ){
+        return;
+    }
+
+
+    menuToggle.classList.add(
+        "is-open"
+    );
+
+
+    novaMenu.classList.add(
+        "is-open"
+    );
+
+
+    if(novaMenuOverlay){
+
+        novaMenuOverlay.classList.add(
+            "is-visible"
+        );
+
+    }
+
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "true"
+    );
+
+
+    novaMenu.setAttribute(
+        "aria-hidden",
+        "false"
+    );
+
+
+    if(novaMenuOverlay){
+
+        novaMenuOverlay.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+    }
+
+
+    document.body.classList.add(
+        "menu-open"
+    );
+
+}
+
+
+/* =========================================================
+   CERRAR MENÚ
+========================================================= */
+
+function closeNovaMenu(){
+
+    if(
+        !menuToggle ||
+        !novaMenu
+    ){
+        return;
+    }
+
+
+    menuToggle.classList.remove(
+        "is-open"
+    );
+
+
+    novaMenu.classList.remove(
+        "is-open"
+    );
+
+
+    if(novaMenuOverlay){
+
+        novaMenuOverlay.classList.remove(
+            "is-visible"
+        );
+
+    }
+
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+
+    novaMenu.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    if(novaMenuOverlay){
+
+        novaMenuOverlay.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+    }
+
+
+    document.body.classList.remove(
+        "menu-open"
+    );
+
+}
+
+
+/* =========================================================
+   CLICK HAMBURGUESA
+========================================================= */
+
+if(menuToggle){
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+                menuToggle.classList.contains(
+                    "is-open"
+                );
+
+
+            if(isOpen){
+
+                closeNovaMenu();
+
+            }else{
+
+                openNovaMenu();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CLICK CERRAR
+========================================================= */
+
+if(novaMenuClose){
+
+    novaMenuClose.addEventListener(
+        "click",
+        closeNovaMenu
+    );
+
+}
+
+
+/* =========================================================
+   CLICK FUERA
+========================================================= */
+
+if(novaMenuOverlay){
+
+    novaMenuOverlay.addEventListener(
+        "click",
+        closeNovaMenu
+    );
+
+}
+
+
+/* =========================================================
+   LINKS MENÚ
+========================================================= */
+
+novaMenuLinks.forEach(
+    link => {
+
+        link.addEventListener(
+            "click",
+            event => {
+
+                const action =
+                    link.dataset.menuAction;
+
+
+                if(
+                    action ===
+                    "dudas"
+                ){
+
+                    event.preventDefault();
+
+                    closeNovaMenu();
+
+                    setTimeout(
+                        () => {
+
+                            openSurvey();
+
+                        },
+                        180
+                    );
+
+                    return;
+
+                }
+
+
+                if(
+                    action ===
+                    "membresias"
+                ){
+
+                    event.preventDefault();
+
+                    closeNovaMenu();
+
+                    setTimeout(
+                        () => {
+
+                            document
+                                .getElementById(
+                                    "membresias"
+                                )
+                                ?.scrollIntoView({
+                                    behavior:"smooth"
+                                });
+
+                        },
+                        180
+                    );
+
+                    return;
+
+                }
+
+
+                const section =
+                    link.dataset.menuSection;
+
+
+                if(section){
+
+                    novaMenuLinks.forEach(
+                        item => {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    link.classList.add(
+                        "active"
+                    );
+
+                }
+
+
+                closeNovaMenu();
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   NAV DESKTOP
+========================================================= */
+
+const desktopLinks =
+    document.querySelectorAll(
+        ".nav-link"
+    );
+
+
+desktopLinks.forEach(
+    link => {
+
+        link.addEventListener(
+            "click",
+            event => {
+
+                const action =
+                    link.dataset.desktopAction;
+
+
+                if(
+                    action ===
+                    "dudas"
+                ){
+
+                    event.preventDefault();
+
+
+                    desktopLinks.forEach(
+                        item => {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    link.classList.add(
+                        "active"
+                    );
+
+
+                    openSurvey();
+
+                    return;
+
+                }
+
+
+                if(
+                    action ===
+                    "membresias"
+                ){
+
+                    event.preventDefault();
+
+
+                    desktopLinks.forEach(
+                        item => {
+
+                            item.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+
+                    link.classList.add(
+                        "active"
+                    );
+
+
+                    document
+                        .getElementById(
+                            "membresias"
+                        )
+                        ?.scrollIntoView({
+                            behavior:"smooth"
+                        });
+
+                    return;
+
+                }
+
+
+                desktopLinks.forEach(
+                    item => {
+
+                        item.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+
+                link.classList.add(
+                    "active"
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   ESCAPE
+========================================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if(
+            event.key === "Escape" &&
+            novaMenu &&
+            novaMenu.classList.contains(
+                "is-open"
+            )
+        ){
+
+            closeNovaMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   RESIZE
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if(
+            window.innerWidth > 900 &&
+            novaMenu &&
+            novaMenu.classList.contains(
+                "is-open"
+            )
+        ){
+
+            closeNovaMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INICIAR
+========================================================= */
+
+renderMemberships();
+/* =========================================================
+   NOVA · FIX MENÚ MÓVIL
+   Evita aria-hidden sobre un elemento que conserva el foco
+========================================================= */
+
+document.addEventListener("click", function(e){
+
+    const menuLink = e.target.closest(".nova-menu-link");
+
+    if(!menuLink) return;
+
+    const menu = document.getElementById("nova-menu");
+
+    if(!menu) return;
+
+    /*
+        Quitamos el foco del enlace antes de ocultar
+        el menú para evitar el warning de aria-hidden.
+    */
+    setTimeout(() => {
+
+        if(document.activeElement === menuLink){
+            menuLink.blur();
+        }
+
+    }, 0);
+
+});
+</script>
+
+</body>
+
+</html>

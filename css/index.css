@@ -1,0 +1,2041 @@
+/* =========================================================
+   NOVA · TRAINING
+   INDEX / PRINCIPAL
+   CSS LIMPIO · PULIDO · RESPONSIVE
+   ========================================================= */
+
+/* =========================================================
+   01 · RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background: #08090b;
+    color: #ffffff;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "SF Pro",
+        "Segoe UI",
+        Roboto,
+        Inter,
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+body.nova-modal-open,
+body.nova-menu-open {
+    overflow: hidden;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, .65);
+    outline-offset: 4px;
+}
+
+/* =========================================================
+   02 · NOVA PAGE
+   ========================================================= */
+
+.nova-page {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.nova-container {
+    width: min(1100px, calc(100% - 44px));
+    margin: 0 auto;
+    padding: 28px 0 80px;
+}
+
+/* =========================================================
+   03 · HEADER / MARCA / NAVEGACIÓN
+   ========================================================= */
+
+.nova-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    z-index: 5000;
+    display: flex;
+    align-items: center;
+    padding: 0 122px;
+    background: #08090b;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.nova-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    color: #ffffff;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.nova-brand-name {
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: .9;
+    letter-spacing: -.04em;
+}
+
+.nova-brand-label {
+    color: rgba(255, 255, 255, .48);
+    font-size: 8px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .18em;
+}
+
+/* =========================================================
+   04 · NAVEGACIÓN DESKTOP
+   ========================================================= */
+
+.nova-desktop-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nova-desktop-nav a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, .58);
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-decoration: none;
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+.nova-desktop-nav a:hover,
+.nova-desktop-nav a.active {
+    color: #ffffff;
+}
+
+.nova-desktop-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 1px;
+    background: #ffffff;
+    transition: width .2s ease;
+}
+
+.nova-desktop-nav a:hover::after,
+.nova-desktop-nav a.active::after {
+    width: 100%;
+}
+
+/* =========================================================
+   05 · HAMBURGUESA
+   SOLO TABLET + MÓVIL
+   ========================================================= */
+
+.nova-menu-button {
+    display: none;
+    position: fixed;
+    top: 14px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 5100;
+    -webkit-tap-highlight-color: transparent;
+    transition: none;
+}
+
+.nova-menu-button span {
+    display: block;
+    width: 23px;
+    height: 1.5px;
+    background: #ffffff;
+    transform-origin: center;
+    transition:
+        transform .25s ease,
+        opacity .2s ease;
+}
+
+.nova-menu-button span:nth-child(1) {
+    transform: translateY(0) rotate(0);
+}
+
+.nova-menu-button span:nth-child(2) {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.nova-menu-button span:nth-child(3) {
+    transform: translateY(0) rotate(0);
+}
+
+/* =========================================================
+   HAMBURGUESA → X
+   ========================================================= */
+
+.nova-menu-button.is-open span:nth-child(1) {
+    transform: translateY(5.5px) rotate(45deg);
+}
+
+.nova-menu-button.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nova-menu-button.is-open span:nth-child(3) {
+    transform: translateY(-5.5px) rotate(-45deg);
+}
+
+/* =========================================================
+   EVITAR MOVIMIENTO DEL BOTÓN
+   ========================================================= */
+
+.nova-menu-button:hover,
+.nova-menu-button:focus,
+.nova-menu-button:focus-visible,
+.nova-menu-button:active {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    transform: none;
+}
+
+/* =========================================================
+   06 · MENÚ MÓVIL
+   ========================================================= */
+
+.nova-menu {
+    position: fixed;
+    top: 82px;
+    right: 18px;
+    width: min(300px, calc(100vw - 36px));
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .18);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform:
+        translateY(-8px)
+        scale(.98);
+    transform-origin: top right;
+    transition:
+        opacity .2s ease,
+        transform .2s ease,
+        visibility .2s ease;
+    z-index: 5050;
+}
+
+.nova-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+/* =========================================================
+   LINKS DEL MENÚ
+   ========================================================= */
+
+.nova-menu-link {
+    width: 100%;
+    min-height: 48px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: #08090b;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.nova-menu-link:hover,
+.nova-menu-link.active {
+    background: #08090b;
+    color: #ffffff;
+}
+
+.nova-menu-link.active:hover {
+    background: #08090b;
+    color: #ffffff;
+}
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.nova-menu-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .22);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+        opacity .2s ease,
+        visibility .2s ease;
+    z-index: 5040;
+}
+
+.nova-menu-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* =========================================================
+   07 · EYEBROW
+   ========================================================= */
+
+.nova-eyebrow {
+    display: block;
+    color: rgba(255, 255, 255, .32);
+    font-size: 8px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .20em;
+}
+
+/* =========================================================
+   08 · ABOUT / HERO
+   ========================================================= */
+
+.nova-about {
+    width: 100%;
+    padding-top: 72px;
+}
+
+.nova-about-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    gap: 50px;
+    align-items: end;
+}
+
+.nova-about h1 {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: clamp(40px, 6vw, 58px);
+    font-weight: 800;
+    line-height: .90;
+    letter-spacing: -.07em;
+}
+
+.nova-about-copy {
+    max-width: 520px;
+    color: rgba(255, 255, 255, .45);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.nova-about-copy p + p {
+    margin-top: 18px;
+}
+
+/* =========================================================
+   09 · BOTONES PRINCIPALES
+   ========================================================= */
+
+.nova-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.nova-primary-button,
+.nova-secondary-button {
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    border-radius: 999px;
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .11em;
+    cursor: pointer;
+    transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease,
+        opacity .2s ease;
+}
+
+.nova-primary-button {
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    color: #08090b;
+}
+
+.nova-secondary-button {
+    border: 1px solid rgba(255, 255, 255, .16);
+    background: rgba(255, 255, 255, .035);
+    color: #ffffff;
+}
+
+.nova-primary-button:hover,
+.nova-secondary-button:hover {
+    transform: translateY(-2px);
+}
+
+.nova-primary-button:hover {
+    opacity: .88;
+}
+
+.nova-secondary-button:hover {
+    background: rgba(255, 255, 255, .08);
+    border-color: rgba(255, 255, 255, .28);
+}
+
+/* =========================================================
+   10 · DISCIPLINAS
+   ========================================================= */
+
+.nova-section {
+    width: 100%;
+    padding-top: 78px;
+}
+
+.nova-section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.nova-section-header h2 {
+    margin-top: 9px;
+    color: #ffffff;
+    font-size: clamp(31px, 5vw, 45px);
+    font-weight: 800;
+    line-height: .92;
+    letter-spacing: -.065em;
+}
+
+.nova-section-description {
+    max-width: 360px;
+    color: rgba(255, 255, 255, .35);
+    font-size: 11px;
+    line-height: 1.55;
+    text-align: right;
+}
+
+/* =========================================================
+   11 · TARJETAS DE DISCIPLINA
+   ========================================================= */
+
+.nova-disciplines {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.nova-discipline {
+    position: relative;
+    min-height: 330px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    background: #111216;
+}
+
+.nova-discipline img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: .52;
+    transition:
+        transform .45s ease,
+        opacity .45s ease;
+}
+
+.nova-discipline:hover img {
+    transform: scale(1.045);
+    opacity: .62;
+}
+
+.nova-discipline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, .10) 0%,
+            rgba(0, 0, 0, .38) 42%,
+            rgba(0, 0, 0, .94) 100%
+        );
+}
+
+.nova-discipline-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    padding: 20px 17px 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.nova-discipline-number {
+    color: rgba(255, 255, 255, .38);
+    font-size: 7px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .17em;
+}
+
+.nova-discipline-label {
+    margin-top: 7px;
+    color: rgba(255, 255, 255, .45);
+    font-size: 7px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .17em;
+}
+
+.nova-discipline-content h3 {
+    margin-top: 7px;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: .9;
+    letter-spacing: -.055em;
+}
+
+.nova-discipline-description {
+    max-width: 270px;
+    margin-top: 12px;
+    color: rgba(255, 255, 255, .54);
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.nova-discipline-tags {
+    margin-top: 13px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.nova-discipline-tag {
+    padding: 6px 8px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .025);
+    color: rgba(255, 255, 255, .48);
+    font-size: 6.5px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .05em;
+}
+
+/* =========================================================
+   12 · SERVICIOS
+   ========================================================= */
+
+.nova-services {
+    width: 100%;
+    padding-top: 85px;
+}
+
+.nova-services-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.nova-service {
+    position: relative;
+    min-height: 430px;
+    padding: 28px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    background: #111216;
+}
+
+.nova-service-number {
+    color: rgba(255, 255, 255, .35);
+    font-size: 7px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .17em;
+}
+
+.nova-service-label {
+    margin-top: 45px;
+    color: rgba(255, 255, 255, .38);
+    font-size: 7px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .18em;
+}
+
+.nova-service h3 {
+    margin-top: 9px;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 800;
+    line-height: .92;
+    letter-spacing: -.065em;
+}
+
+.nova-service > p {
+    max-width: 500px;
+    margin-top: 18px;
+    color: rgba(255, 255, 255, .44);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.nova-service-list {
+    margin: 24px 0 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.nova-service-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    color: rgba(255, 255, 255, .55);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.nova-service-list li:first-child {
+    border-top: 1px solid rgba(255, 255, 255, .07);
+}
+
+.nova-service-list li::before {
+    content: "—";
+    margin-right: 9px;
+    color: rgba(255, 255, 255, .25);
+}
+
+.nova-service-button {
+    width: max-content;
+    max-width: 100%;
+    margin-top: auto;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .11em;
+    text-align: left;
+}
+
+.nova-service-button span {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform .2s ease;
+}
+
+.nova-service-button:hover span {
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   13 · MÉTODO NOVA
+   ========================================================= */
+
+.nova-method {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.nova-method-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    gap: 50px;
+    align-items: end;
+}
+
+.nova-method h2 {
+    margin-top: 9px;
+    color: #ffffff;
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 800;
+    line-height: .88;
+    letter-spacing: -.075em;
+}
+
+.nova-method-copy {
+    max-width: 520px;
+    color: rgba(255, 255, 255, .44);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+/* =========================================================
+   14 · PASOS DEL MÉTODO
+   ========================================================= */
+
+.nova-method-steps {
+    width: 100%;
+    margin-top: 58px;
+    display: grid;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.nova-method-step {
+    min-height: 225px;
+    padding: 25px 20px;
+    border-right: 1px solid rgba(255, 255, 255, .08);
+}
+
+.nova-method-step:last-child {
+    border-right: 0;
+}
+
+.nova-method-step > span {
+    color: rgba(255, 255, 255, .32);
+    font-size: 7px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .17em;
+}
+
+.nova-method-step h3 {
+    margin-top: 48px;
+    color: rgba(255, 255, 255, .82);
+    font-size: 9px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .14em;
+}
+
+.nova-method-step p {
+    max-width: 210px;
+    margin-top: 13px;
+    color: rgba(255, 255, 255, .38);
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+/* =========================================================
+   15 · EVOLUCIÓN
+   ========================================================= */
+
+.nova-evolve {
+    width: 100%;
+    padding-top: 95px;
+}
+
+.nova-evolve-grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+    gap: 50px;
+}
+
+.nova-evolve-copy {
+    align-self: end;
+    color: rgba(255, 255, 255, .45);
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.nova-evolve-copy p + p {
+    margin-top: 18px;
+}
+
+/* =========================================================
+   16 · PLANES
+   ========================================================= */
+
+.nova-plans {
+    width: 100%;
+    padding-top: 100px;
+}
+
+.nova-plans-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.nova-plan {
+    min-height: 270px;
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 20px;
+    background: #111216;
+}
+
+.nova-plan-label {
+    color: rgba(255, 255, 255, .35);
+    font-size: 7px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .18em;
+}
+
+.nova-plan h3 {
+    max-width: 450px;
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: clamp(27px, 4vw, 40px);
+    font-weight: 800;
+    line-height: .95;
+    letter-spacing: -.06em;
+}
+
+.nova-plan p {
+    max-width: 480px;
+    margin-top: 17px;
+    color: rgba(255, 255, 255, .42);
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+.nova-plan-button {
+    width: max-content;
+    max-width: 100%;
+    margin-top: auto;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 13px;
+    border: 0;
+    background: transparent;
+    color: #ffffff;
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .11em;
+}
+
+.nova-plan-button span {
+    font-size: 17px;
+    font-weight: 400;
+    transition: transform .2s ease;
+}
+
+.nova-plan-button:hover span {
+    transform: translateX(4px);
+}
+
+/* =========================================================
+   17 · CTA FINAL
+   ========================================================= */
+
+.nova-training {
+    width: 100%;
+    padding-top: 80px;
+}
+
+.nova-training-card {
+    position: relative;
+    width: 100%;
+    min-height: 310px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 25px;
+    background: #111216;
+}
+
+.nova-training-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nova-training-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: .78;
+}
+
+.nova-training-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 0, 0, .05) 0%,
+            rgba(0, 0, 0, .20) 35%,
+            rgba(0, 0, 0, .88) 100%
+        );
+}
+
+.nova-training-content {
+    position: relative;
+    z-index: 2;
+    min-height: 310px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.nova-training-content h2 {
+    margin-top: 9px;
+    color: #ffffff;
+    font-size: clamp(38px, 6vw, 58px);
+    font-weight: 800;
+    line-height: .90;
+    letter-spacing: -.065em;
+}
+
+.nova-training-content p {
+    max-width: 430px;
+    margin-top: 13px;
+    color: rgba(255, 255, 255, .62);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.nova-training-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.nova-training-button {
+    min-width: 180px;
+    min-height: 46px;
+    padding: 0 17px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border: 1px solid #ffffff;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #08090b;
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .11em;
+    cursor: pointer;
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+}
+
+.nova-training-button:hover {
+    transform: translateY(-2px);
+    opacity: .88;
+}
+
+.nova-training-button span:last-child {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* =========================================================
+   18 · MODAL · CONTENEDOR
+   ========================================================= */
+
+.nova-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    height: 100dvh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity .22s ease,
+        visibility .22s ease;
+}
+
+.nova-modal.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* =========================================================
+   19 · MODAL · FONDO
+   ========================================================= */
+
+.nova-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .74);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* =========================================================
+   20 · MODAL · CAJA
+   ========================================================= */
+
+.nova-modal-dialog {
+    position: relative;
+    z-index: 2;
+    width: min(570px, 100%);
+    max-height:
+        min(
+            720px,
+            calc(100dvh - 40px)
+        );
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 42px;
+    border: 1px solid rgba(255, 255, 255, .10);
+    border-radius: 25px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24, 25, 28, .98),
+            rgba(10, 11, 13, .98)
+        );
+    box-shadow:
+        0 30px 100px rgba(0, 0, 0, .65);
+    color: #ffffff;
+    text-align: left;
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(255, 255, 255, .14)
+        transparent;
+    transform:
+        translateY(18px)
+        scale(.98);
+    transition:
+        transform .25s ease;
+}
+
+.nova-modal.is-open .nova-modal-dialog {
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+.nova-modal-dialog > * {
+    max-width: 100%;
+}
+
+/* =========================================================
+   21 · MODAL · CERRAR
+   ========================================================= */
+
+.nova-modal-close {
+    position: absolute;
+    top: 17px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .04);
+    color: rgba(255, 255, 255, .65);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.nova-modal-close:hover {
+    background: rgba(255, 255, 255, .10);
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+/* =========================================================
+   22 · MODAL · EYEBROW
+   ========================================================= */
+
+.nova-modal-eyebrow {
+    display: block;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, .32);
+    font-size: 8px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: .20em;
+    text-align: center;
+}
+
+/* =========================================================
+   23 · MODAL · TÍTULO
+   ========================================================= */
+
+.nova-modal-dialog h2 {
+    width: 100%;
+    max-width: 500px;
+    margin: 8px auto 0;
+    color: #ffffff;
+    font-size: clamp(38px, 6vw, 58px);
+    font-weight: 800;
+    line-height: .91;
+    letter-spacing: -.07em;
+    text-align: center;
+}
+
+/* =========================================================
+   24 · MODAL · TEXTO
+   ========================================================= */
+
+.nova-modal-text {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px auto 0;
+    color: rgba(255, 255, 255, .45);
+    font-size: 13px;
+    line-height: 1.75;
+    text-align: left;
+}
+
+/* =========================================================
+   25 · MODAL · LISTA
+   ========================================================= */
+
+.nova-modal-list {
+    width: 100%;
+    max-width: 500px;
+    margin: 24px auto 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.nova-modal-list li {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    color: rgba(255, 255, 255, .60);
+    font-size: 10px;
+    line-height: 1.55;
+    text-align: left;
+}
+
+.nova-modal-list li::before {
+    content: "—";
+    flex: 0 0 auto;
+    color: rgba(255, 255, 255, .25);
+}
+
+/* =========================================================
+   26 · MODAL · IMAGEN
+   ========================================================= */
+
+.nova-modal-dialog img {
+    width: 88px;
+    height: 88px;
+    display: block;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1 / 1;
+    border: 2px solid rgba(255, 255, 255, .10);
+    border-radius: 50%;
+}
+
+/* =========================================================
+   27 · MODAL COACH · PERFIL
+   ========================================================= */
+
+.coach-photo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+.coach-photo img {
+    width: 88px;
+    height: 88px;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid rgba(255, 255, 255, .10);
+    border-radius: 50%;
+}
+
+.coach-profile {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.coach-name {
+    margin-top: 2px;
+    color: #ffffff;
+    font-size: clamp(38px, 6vw, 52px);
+    font-weight: 800;
+    line-height: .92;
+    letter-spacing: -.07em;
+    text-align: center;
+}
+
+.coach-role {
+    margin-top: 11px;
+    color: rgba(255, 255, 255, .32);
+    font-size: 8px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: .13em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.coach-text {
+    width: 100%;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, .45);
+    font-size: 12px;
+    line-height: 1.75;
+    text-align: left;
+}
+
+.coach-text + .coach-text {
+    margin-top: 14px;
+}
+
+/* =========================================================
+   28 · MODAL COACH · METODOLOGÍA
+   ========================================================= */
+
+.coach-method {
+    width: 100%;
+    margin-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.coach-method-item {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+.coach-method-number {
+    display: block;
+    color: rgba(255, 255, 255, .25);
+    font-size: 7px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .17em;
+}
+
+.coach-method-item h3 {
+    margin-top: 8px;
+    color: rgba(255, 255, 255, .78);
+    font-size: 9px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .14em;
+}
+
+.coach-method-item p {
+    max-width: 440px;
+    margin-top: 8px;
+    color: rgba(255, 255, 255, .38);
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   29 · MODAL · BOTÓN
+   ========================================================= */
+
+.nova-modal-button {
+    width: max-content;
+    min-height: 46px;
+    margin: 27px auto 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #08090b;
+    text-decoration: none;
+    font-size: 8px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: .11em;
+    cursor: pointer;
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+}
+
+.nova-modal-button:hover {
+    transform: translateY(-2px);
+    opacity: .88;
+}
+
+/* =========================================================
+   30 · MODAL · SCROLLBAR
+   ========================================================= */
+
+.nova-modal-dialog::-webkit-scrollbar {
+    width: 5px;
+}
+
+.nova-modal-dialog::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.nova-modal-dialog::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .14);
+    border-radius: 999px;
+}
+
+/* =========================================================
+   31 · FOOTER
+   ========================================================= */
+
+.athlete-footer {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, .07);
+    background: #0b0b0b;
+}
+
+.athlete-footer .footer-inner {
+    width: min(1309px, calc(100% - 56px));
+    min-height: 90px;
+    margin: 0 auto;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    color: #777777;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .9px;
+}
+
+/* =========================================================
+   32 · TABLET
+   851px — 1100px
+   ========================================================= */
+
+@media (max-width: 1100px) {
+    .nova-container {
+        width: min(100% - 40px, 1000px);
+    }
+
+    .nova-method-step {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+/* =========================================================
+   33 · TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+    .nova-container {
+        width: calc(100% - 36px);
+    }
+
+    .nova-disciplines {
+        grid-template-columns: 1fr;
+    }
+
+    .nova-discipline {
+        min-height: 300px;
+    }
+
+    .nova-services-grid,
+    .nova-plans-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nova-method-grid,
+    .nova-evolve-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .nova-method-steps {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .nova-method-step:nth-child(2) {
+        border-right: 0;
+    }
+}
+
+/* =========================================================
+   34 · HEADER TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .nova-top {
+        padding: 0 24px;
+    }
+
+    .nova-desktop-nav {
+        display: none;
+    }
+
+    .nova-menu-button {
+        display: flex;
+    }
+}
+
+/* =========================================================
+   35 · MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+    .nova-container {
+        width: 100%;
+        padding: 24px 18px 55px;
+    }
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .nova-top {
+        height: 60px;
+        padding: 0 18px;
+    }
+
+    .nova-brand-name {
+        font-size: 19px;
+    }
+
+    .nova-brand-label {
+        font-size: 7px;
+    }
+
+    .nova-menu-button {
+        top: 10px;
+        right: 18px;
+        width: 44px;
+        height: 44px;
+    }
+
+    .nova-menu {
+        top: 76px;
+        right: 16px;
+        width: calc(100vw - 32px);
+        max-width: 340px;
+    }
+
+    /* -----------------------------------------------------
+       ABOUT
+       ----------------------------------------------------- */
+
+    .nova-about {
+        padding-top: 58px;
+    }
+
+    .nova-about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .nova-about h1 {
+        font-size: clamp(42px, 12vw, 54px);
+    }
+
+    .nova-about-copy {
+        max-width: 100%;
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    /* -----------------------------------------------------
+       BOTONES
+       ----------------------------------------------------- */
+
+    .nova-hero-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nova-primary-button,
+    .nova-secondary-button {
+        width: 100%;
+    }
+
+    /* -----------------------------------------------------
+       DISCIPLINAS
+       ----------------------------------------------------- */
+
+    .nova-section {
+        padding-top: 60px;
+    }
+
+    .nova-section-header {
+        display: block;
+    }
+
+    .nova-section-description {
+        max-width: 100%;
+        margin-top: 12px;
+        text-align: left;
+    }
+
+    .nova-discipline {
+        min-height: 270px;
+    }
+
+    /* -----------------------------------------------------
+       SERVICIOS
+       ----------------------------------------------------- */
+
+    .nova-services {
+        padding-top: 70px;
+    }
+
+    .nova-service {
+        min-height: auto;
+        padding: 25px 20px 22px;
+    }
+
+    .nova-service-label {
+        margin-top: 32px;
+    }
+
+    /* -----------------------------------------------------
+       MÉTODO
+       ----------------------------------------------------- */
+
+    .nova-method {
+        padding-top: 70px;
+    }
+
+    .nova-method-steps {
+        grid-template-columns: 1fr;
+        margin-top: 42px;
+    }
+
+    .nova-method-step {
+        min-height: auto;
+        padding: 22px 18px;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .08);
+    }
+
+    .nova-method-step:last-child {
+        border-bottom: 0;
+    }
+
+    .nova-method-step h3 {
+        margin-top: 30px;
+    }
+
+    /* -----------------------------------------------------
+       EVOLUCIÓN
+       ----------------------------------------------------- */
+
+    .nova-evolve {
+        padding-top: 65px;
+    }
+
+    /* -----------------------------------------------------
+       PLANES
+       ----------------------------------------------------- */
+
+    .nova-plans {
+        padding-top: 70px;
+    }
+
+    .nova-plan {
+        min-height: 245px;
+        padding: 26px 20px;
+    }
+
+    /* -----------------------------------------------------
+       CTA
+       ----------------------------------------------------- */
+
+    .nova-training {
+        padding-top: 65px;
+    }
+
+    .nova-training-card {
+        min-height: 285px;
+        border-radius: 22px;
+    }
+
+    .nova-training-content {
+        min-height: 285px;
+        padding: 21px;
+    }
+
+    .nova-training-actions {
+        width: 20%;
+        flex-direction: column;
+    }
+
+    .nova-training-button {
+        width: 100%;
+    }
+
+    /* -----------------------------------------------------
+       MODAL
+       ----------------------------------------------------- */
+
+    .nova-modal {
+        align-items: flex-end;
+        padding: 0;
+    }
+
+    .nova-modal-dialog {
+        width: 100%;
+        max-width: 100%;
+        max-height:
+            calc(100dvh - 12px);
+        padding: 42px 22px 28px;
+        border-radius:
+            24px 24px 0 0;
+        border-bottom: 0;
+        transform: translateY(30px);
+    }
+
+    .nova-modal.is-open .nova-modal-dialog {
+        transform: translateY(0);
+    }
+
+    .nova-modal-close {
+        top: 13px;
+        right: 14px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .nova-modal-dialog img,
+    .coach-photo img {
+        width: 82px;
+        height: 82px;
+    }
+
+    .nova-modal-eyebrow {
+        margin-bottom: 9px;
+        font-size: 7px;
+    }
+
+    .nova-modal-dialog h2 {
+        font-size: clamp(34px, 10vw, 42px);
+        line-height: .93;
+    }
+
+    .nova-modal-text {
+        margin-top: 18px;
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .nova-modal-list {
+        margin-top: 21px;
+    }
+
+    .nova-modal-list li {
+        padding: 11px 0;
+        font-size: 10px;
+    }
+
+    .nova-modal-button {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    /* -----------------------------------------------------
+       COACH
+       ----------------------------------------------------- */
+
+    .coach-name {
+        font-size: clamp(34px, 10vw, 42px);
+        line-height: .93;
+    }
+
+    .coach-role {
+        font-size: 7px;
+    }
+
+    .coach-text {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .coach-method {
+        margin-top: 21px;
+    }
+
+    .coach-method-item {
+        padding: 13px 0;
+    }
+
+    .coach-method-item p {
+        font-size: 10px;
+    }
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    .athlete-footer .footer-inner {
+        width: calc(100% - 40px);
+        min-height: 100px;
+        padding: 22px 0;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 7px;
+        text-align: left;
+    }
+}
+
+/* =========================================================
+   36 · MOBILE PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 430px) {
+    .nova-container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .nova-brand-name {
+        font-size: 23px;
+    }
+
+    .nova-menu-button {
+        width: 42px;
+        height: 42px;
+        top: 9px;
+        right: 16px;
+    }
+
+    .nova-menu {
+        top: 67px;
+        right: 16px;
+        width: calc(100vw - 32px);
+    }
+
+    .nova-about h1 {
+        font-size: 44px;
+    }
+
+    .nova-section-header h2 {
+        font-size: 36px;
+    }
+
+    .nova-discipline {
+        min-height: 285px;
+    }
+
+    .nova-discipline-content {
+        padding: 20px 16px 16px;
+    }
+
+    .nova-discipline-content h3 {
+        font-size: 29px;
+    }
+
+    .nova-evolve h2 {
+        font-size: 48px;
+    }
+
+    .nova-training-content {
+        padding: 21px;
+    }
+
+    .nova-training-content h2 {
+        font-size: 42px;
+    }
+
+    .nova-modal-dialog {
+        padding-left: 19px;
+        padding-right: 19px;
+    }
+
+    .nova-modal-dialog img,
+    .coach-photo img {
+        width: 76px;
+        height: 76px;
+    }
+
+    .nova-modal-dialog h2 {
+        font-size: 38px;
+    }
+
+    .coach-name {
+        font-size: 38px;
+    }
+
+    .athlete-footer .footer-inner {
+        width: calc(100% - 32px);
+    }
+}
+
+/* =========================================================
+   37 · IPHONE PEQUEÑO
+   ========================================================= */
+
+@media (max-width: 375px) {
+    .nova-menu-button {
+        width: 40px;
+        height: 40px;
+        top: 8px;
+        right: 14px;
+    }
+
+    .nova-menu {
+        top: 62px;
+        right: 14px;
+        width: calc(100vw - 28px);
+    }
+}
+
+/* =========================================================
+   38 · LANDSCAPE MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .nova-container {
+        padding-top: 22px;
+        padding-bottom: 55px;
+    }
+
+    .nova-about {
+        padding-top: 42px;
+    }
+
+    .nova-about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .nova-about h1 {
+        font-size: clamp(38px, 8vh, 54px);
+    }
+
+    .nova-method-grid,
+    .nova-evolve-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .nova-method-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nova-method-step:nth-child(2) {
+        border-right: 0;
+    }
+
+    .nova-modal-dialog {
+        max-height:
+            calc(100dvh - 12px);
+    }
+}
+
+/* =========================================================
+   39 · PANTALLAS DE POCA ALTURA
+   ========================================================= */
+
+@media (max-height: 600px) {
+    .nova-modal-dialog {
+        max-height:
+            calc(100dvh - 24px);
+    }
+}
+
+/* =========================================================
+   40 · PANTALLAS MUY BAJAS
+   ========================================================= */
+
+@media (max-height: 450px) {
+    .nova-modal {
+        padding: 8px;
+    }
+
+    .nova-modal-dialog {
+        max-height:
+            calc(100dvh - 16px);
+        padding-top: 32px;
+        padding-bottom: 22px;
+    }
+
+    .nova-modal-dialog img,
+    .coach-photo img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .nova-modal-eyebrow {
+        margin-bottom: 7px;
+    }
+
+    .coach-name {
+        font-size: 32px;
+    }
+}
+
+/* =========================================================
+   41 · MOVIMIENTO REDUCIDO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .nova-menu,
+    .nova-menu-overlay,
+    .nova-menu-button span,
+    .nova-desktop-nav a,
+    .nova-menu-link {
+        transition: none !important;
+    }
+}
