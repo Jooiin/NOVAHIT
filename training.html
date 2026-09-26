@@ -65,10 +65,64 @@
             color: #000000 !important;
         }
 
+        /* =====================================================
+           NOVA · SUBDIVISIÓN DE NATACIÓN
+           ===================================================== */
+
+        .routine-group {
+            margin-top: 70px;
+        }
+
+        .routine-group:first-of-type {
+            margin-top: 45px;
+        }
+
+        .routine-group-heading {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            padding-bottom: 14px;
+        }
+
+        .routine-group-heading h4 {
+            margin: 0;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+        }
+
+        .routine-group-heading span {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            opacity: 0.55;
+        }
+
+        @media (max-width: 700px) {
+
+            .routine-group {
+                margin-top: 50px;
+            }
+
+            .routine-group-heading {
+                margin-bottom: 22px;
+            }
+
+            .routine-group-heading h4 {
+                font-size: 12px;
+            }
+
+            .routine-group-heading span {
+                font-size: 10px;
+            }
+
+        }
+
     </style>
 
 </head>
-
 
 <body>
 
@@ -86,7 +140,6 @@
             >
                 NOVA
             </a>
-
 
             <nav class="main-nav">
 
@@ -171,7 +224,6 @@
             <span class="nova-menu-title">
                 NOVA
             </span>
-
 
             <button
                 type="button"
@@ -351,10 +403,58 @@
                     </div>
 
 
-                    <div
-                        class="routine-grid"
-                        id="swimmingRoutines"
-                    ></div>
+                    <!-- =================================================
+                         BASE
+                         ================================================= -->
+
+                    <div class="routine-group">
+
+                        <div class="routine-group-heading">
+
+                            <h4>
+                                BASE
+                            </h4>
+
+                            <span>
+                                01 — 08
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="routine-grid"
+                            id="swimmingBaseRoutines"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         RENDIMIENTO
+                         ================================================= -->
+
+                    <div class="routine-group">
+
+                        <div class="routine-group-heading">
+
+                            <h4>
+                                RENDIMIENTO
+                            </h4>
+
+                            <span>
+                                09 — 16
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="routine-grid"
+                            id="swimmingPerformanceRoutines"
+                        ></div>
+
+                    </div>
 
                 </section>
 
@@ -395,7 +495,6 @@
                     ></div>
 
                 </section>
-
 
             </div>
 
@@ -504,10 +603,8 @@
 
         const NOVA_RUTINAS = {
 
-
             /* =====================================================
-               NATACIÓN
-               SEMANA 1
+               NATACIÓN · BASE + RENDIMIENTO
                ===================================================== */
 
             NATACION: [
@@ -515,12 +612,197 @@
                 {
                     id: "natacion-01",
                     number: "01",
-                    title: "TÉCNICA / BASE — Crol: posición, agarre y eficiencia",
-                    description: "Trabajo técnico de crol orientado a mejorar posición corporal, agarre, longitud de brazada y eficiencia dentro del agua.",
-                    meta: "2,000 M · TÉCNICA / BASE",
+                    title: "PRINCIPIANTES — CROL",
+                    description: "Sesión de entrada para construir una base de crol con volumen corto y controlado.",
+                    meta: "500 M · BASE",
 
                     sections: [
+                        {
+                            title: "CALENTAMIENTO",
+                            content: [
+                                "100 m libre continuo."
+                            ]
+                        },
+                        {
+                            title: "TÉCNICA",
+                            content: [
+                                "2 × 100 m @ 2:30.",
+                                "1. 50 m crol suave + 50 m crol largo.",
+                                "2. 50 m crol con pausa al frente + 50 m crol completo.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "MATERIAL",
+                            content: [
+                                "100 m patada de crol con tabla @ 2:30.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "AERÓBICO",
+                            content: [
+                                "100 m libre @ 2:15.",
+                                "Ritmo cómodo y continuo."
+                            ]
+                        }
+                    ]
+                },
 
+
+                {
+                    id: "natacion-02",
+                    number: "02",
+                    title: "TÉCNICA — CROL + DORSO",
+                    description: "Trabajo técnico para desarrollar posición corporal, coordinación y control del movimiento.",
+                    meta: "1,000 M · BASE",
+
+                    sections: [
+                        {
+                            title: "CALENTAMIENTO",
+                            content: [
+                                "300 m libre continuo."
+                            ]
+                        },
+                        {
+                            title: "TÉCNICA",
+                            content: [
+                                "4 × 100 m @ 2:15.",
+                                "1. 50 m crol técnico + 50 m crol completo.",
+                                "2. 50 m espalda técnica + 50 m espalda completa.",
+                                "3. 100 m crol con brazada larga.",
+                                "4. 50 m espalda + 50 m crol.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "MATERIAL",
+                            content: [
+                                "100 m crol con pull buoy.",
+                                "100 m espalda con tabla.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "INTEGRACIÓN",
+                            content: [
+                                "100 m @ 2:00.",
+                                "50 m crol + 50 m espalda."
+                            ]
+                        }
+                    ]
+                },
+
+
+                {
+                    id: "natacion-03",
+                    number: "03",
+                    title: "PECHO + CROL",
+                    description: "Sesión técnica para introducir pecho dentro de un trabajo combinado con crol.",
+                    meta: "1,100 M · BASE",
+
+                    sections: [
+                        {
+                            title: "CALENTAMIENTO",
+                            content: [
+                                "300 m libre continuo."
+                            ]
+                        },
+                        {
+                            title: "TÉCNICA",
+                            content: [
+                                "2 × 100 m.",
+                                "1. 50 m pecho técnico + 50 m crol.",
+                                "2. 50 m crol + 50 m pecho.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "BLOQUE COMBINADO",
+                            content: [
+                                "4 × 100 m.",
+                                "1. 50 m pecho + 50 m crol.",
+                                "2. 100 m crol.",
+                                "3. 50 m pecho + 50 m crol.",
+                                "4. 100 m crol progresivo.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "MATERIAL",
+                            content: [
+                                "100 m patada de pecho con tabla.",
+                                "100 m crol con aletas.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "CIERRE",
+                            content: [
+                                "100 m libre suave."
+                            ]
+                        }
+                    ]
+                },
+
+
+                {
+                    id: "natacion-04",
+                    number: "04",
+                    title: "MARIPOSA — BASE TÉCNICA",
+                    description: "Introducción técnica al estilo mariposa mediante bloques controlados y trabajo asistido.",
+                    meta: "1,000 M · BASE",
+
+                    sections: [
+                        {
+                            title: "CALENTAMIENTO",
+                            content: [
+                                "300 m libre continuo."
+                            ]
+                        },
+                        {
+                            title: "TÉCNICA",
+                            content: [
+                                "2 × 100 m.",
+                                "1. 50 m mariposa técnica + 50 m libre.",
+                                "2. 50 m libre + 50 m mariposa técnica.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "MATERIAL",
+                            content: [
+                                "2 × 100 m con aletas.",
+                                "1. 50 m patada de mariposa + 50 m libre.",
+                                "2. 100 m mariposa técnica con aletas.",
+                                "30 s de recuperación."
+                            ]
+                        },
+                        {
+                            title: "INTEGRACIÓN",
+                            content: [
+                                "100 m mariposa técnica @ 2:30.",
+                                "100 m libre progresivo."
+                            ]
+                        },
+                        {
+                            title: "CIERRE",
+                            content: [
+                                "100 m libre suave."
+                            ]
+                        }
+                    ]
+                },
+
+
+                {
+                    id: "natacion-05",
+                    number: "05",
+                    title: "TÉCNICA / BASE — Crol: posición, agarre y eficiencia",
+                    description: "Trabajo técnico de crol orientado a mejorar posición corporal, agarre, longitud de brazada y eficiencia dentro del agua.",
+                    meta: "1,400 M · TÉCNICA / BASE",
+
+                    sections: [
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -529,7 +811,6 @@
                                 "100 m libre — 50 suave + 50 medio."
                             ]
                         },
-
                         {
                             title: "TÉCNICA",
                             content: [
@@ -540,45 +821,39 @@
                                 "4. 50 m crol con pausa de 2 s al frente + 50 m completo."
                             ]
                         },
-
                         {
                             title: "BASE AERÓBICA",
                             content: [
-                                "100 m crol @ 2:00.",
-                                "200 m crol @ 3:50.",
-                                "300 m crol @ 5:50."
+                                "2 × 100 m @ 2:00.",
+                                "1. 100 m crol estable.",
+                                "2. 100 m crol progresivo."
                             ]
                         },
-
                         {
                             title: "FUERZA ESPECÍFICA",
                             content: [
-                                "3 × 100 m @ 2:00 con pull buoy + paletas.",
+                                "2 × 100 m @ 2:00 con pull buoy + paletas.",
                                 "Cada repetición: 25 m fuerte + 50 m sostenido + 25 m fuerte."
                             ]
                         },
-
                         {
                             title: "CIERRE",
                             content: [
-                                "100 m espalda suave.",
-                                "100 m libre muy suave."
+                                "100 m espalda suave."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-02",
-                    number: "02",
+                    id: "natacion-06",
+                    number: "06",
                     title: "RESISTENCIA — Aeróbico progresivo",
                     description: "Sesión de resistencia aeróbica para aprender a sostener el esfuerzo, controlar el ritmo y terminar con mayor intensidad.",
-                    meta: "2,300 M · RESISTENCIA",
+                    meta: "1,400 M · RESISTENCIA",
 
                     sections: [
-
                         {
                             title: "ENTRADA",
                             content: [
@@ -586,7 +861,6 @@
                                 "100 m combinado — 25 mariposa + 25 espalda + 25 pecho + 25 libre."
                             ]
                         },
-
                         {
                             title: "ACTIVACIÓN",
                             content: [
@@ -596,47 +870,39 @@
                                 "3. Crol progresivo."
                             ]
                         },
-
                         {
                             title: "BLOQUE AERÓBICO",
                             content: [
-                                "3 × 300 m @ 5:45.",
-                                "1. 300 m crol estable.",
-                                "2. 100 m crol + 100 m espalda + 100 m crol.",
-                                "3. 200 m crol + 100 m fuerte."
+                                "300 m crol @ 5:45.",
+                                "Ritmo estable durante los primeros 200 m y progresión durante los últimos 100 m."
                             ]
                         },
-
                         {
                             title: "MATERIAL",
                             content: [
-                                "2 × 200 m @ 4:00 con pull buoy + paletas.",
-                                "Cada repetición: primeros 100 m controlados + segundos 100 m fuertes y sostenidos."
+                                "200 m @ 4:00 con pull buoy + paletas.",
+                                "Primeros 100 m controlados + segundos 100 m fuertes y sostenidos."
                             ]
                         },
-
                         {
                             title: "CIERRE",
                             content: [
-                                "100 m espalda suave.",
-                                "30 s de recuperación.",
-                                "200 m libre descendente, terminando a ritmo aeróbico fuerte."
+                                "200 m libre descendente.",
+                                "Termina a ritmo aeróbico fuerte."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-03",
-                    number: "03",
+                    id: "natacion-07",
+                    number: "07",
                     title: "TÉCNICA + RITMO — Cambios sin perder mecánica",
                     description: "Trabajo para introducir cambios de ritmo manteniendo una brazada eficiente, una posición estable y control respiratorio.",
-                    meta: "2,100 M · TÉCNICA / RITMO",
+                    meta: "1,900 M · TÉCNICA / RITMO",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -644,7 +910,6 @@
                                 "100 m espalda, últimos 50 m progresivos."
                             ]
                         },
-
                         {
                             title: "TÉCNICA",
                             content: [
@@ -654,7 +919,6 @@
                                 "3. Crol con respiración bilateral."
                             ]
                         },
-
                         {
                             title: "BLOQUE DE RITMO",
                             content: [
@@ -662,18 +926,14 @@
                                 "Cada 200 m: 50 m controlado + 50 m medio + 50 m fuerte + 50 m controlado."
                             ]
                         },
-
                         {
                             title: "MATERIAL",
                             content: [
-                                "4 × 100 m @ 2:00 con aletas + pull buoy.",
+                                "2 × 100 m @ 2:00 con aletas + pull buoy.",
                                 "1. Crol sostenido.",
-                                "2. Crol progresivo.",
-                                "3. Espalda.",
-                                "4. Crol fuerte."
+                                "2. Crol fuerte."
                             ]
                         },
-
                         {
                             title: "AFLOJE",
                             content: [
@@ -681,20 +941,18 @@
                                 "100 m libre suave."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-04",
-                    number: "04",
+                    id: "natacion-08",
+                    number: "08",
                     title: "RECUPERACIÓN / AERÓBICO — Recuperar nadando",
                     description: "Sesión de baja exigencia para recuperar mediante movimiento continuo, técnica relajada y trabajo aeróbico cómodo.",
                     meta: "1,900 M · RECUPERACIÓN",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -703,7 +961,6 @@
                                 "100 m libre con respiración bilateral."
                             ]
                         },
-
                         {
                             title: "TÉCNICA",
                             content: [
@@ -714,7 +971,6 @@
                                 "4. Libre integrando una brazada relajada."
                             ]
                         },
-
                         {
                             title: "AERÓBICO",
                             content: [
@@ -727,7 +983,6 @@
                                 "100 m combinado suave."
                             ]
                         },
-
                         {
                             title: "MATERIAL",
                             content: [
@@ -737,27 +992,24 @@
                                 "3. Patada lateral integrada con crol."
                             ]
                         },
-
                         {
                             title: "CIERRE",
                             content: [
                                 "200 m libre continuo muy cómodo."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-05",
-                    number: "05",
+                    id: "natacion-09",
+                    number: "09",
                     title: "TRABAJO FUERTE — Fuerza específica + tolerancia",
                     description: "Sesión de mayor exigencia para desarrollar fuerza específica, tolerancia al esfuerzo y capacidad de sostener intensidad.",
                     meta: "2,300 M · FUERZA / INTENSIDAD",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -766,7 +1018,6 @@
                                 "100 m libre progresivo."
                             ]
                         },
-
                         {
                             title: "ACTIVACIÓN",
                             content: [
@@ -776,7 +1027,6 @@
                                 "3. Crol fuerte."
                             ]
                         },
-
                         {
                             title: "BLOQUE FUERTE",
                             content: [
@@ -784,7 +1034,6 @@
                                 "Cada 400 m: 100 m fuerte + 100 m controlado + 100 m fuerte + 100 m controlado."
                             ]
                         },
-
                         {
                             title: "FUERZA CON MATERIAL",
                             content: [
@@ -795,7 +1044,6 @@
                                 "4. Máximo controlado."
                             ]
                         },
-
                         {
                             title: "CIERRE",
                             content: [
@@ -804,27 +1052,24 @@
                                 "200 m libre aeróbico."
                             ]
                         },
-
                         {
                             title: "AFLOJE",
                             content: [
                                 "200 m libre muy suave."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-06",
-                    number: "06",
+                    id: "natacion-10",
+                    number: "10",
                     title: "VELOCIDAD / INTENSIDAD — Aceleración y calidad",
                     description: "Sesión de intensidad para acelerar, responder a cambios de ritmo y sostener calidad técnica bajo fatiga.",
                     meta: "2,000 M · VELOCIDAD",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -832,7 +1077,6 @@
                                 "100 m combinado suave."
                             ]
                         },
-
                         {
                             title: "ACTIVACIÓN",
                             content: [
@@ -842,7 +1086,6 @@
                                 "3. 50 m espalda + 50 m libre fuerte."
                             ]
                         },
-
                         {
                             title: "VELOCIDAD",
                             content: [
@@ -853,7 +1096,6 @@
                                 "6. Máximo controlado."
                             ]
                         },
-
                         {
                             title: "CAMBIOS DE RITMO",
                             content: [
@@ -861,7 +1103,6 @@
                                 "Cada 200 m: 50 m rápido + 50 m suave + 50 m rápido + 50 m suave."
                             ]
                         },
-
                         {
                             title: "MATERIAL",
                             content: [
@@ -869,33 +1110,24 @@
                                 "Crol fuerte, priorizando frecuencia y posición."
                             ]
                         },
-
                         {
                             title: "CIERRE",
                             content: [
                                 "100 m libre muy suave."
                             ]
                         }
-
                     ]
                 },
 
 
-                /* =====================================================
-                   NATACIÓN
-                   SEMANA 2 · ORIENTACIÓN AGUAS ABIERTAS
-                   ===================================================== */
-
-
                 {
-                    id: "natacion-07",
-                    number: "07",
+                    id: "natacion-11",
+                    number: "11",
                     title: "ORIENTACIÓN — Mirada, respiración y línea de nado",
                     description: "Sesión para trasladar la técnica de piscina a aguas abiertas mediante orientación, respiración bilateral y control de la línea de nado.",
                     meta: "2,100 M · AGUAS ABIERTAS",
 
                     sections: [
-
                         {
                             title: "ENTRADA AL AGUA",
                             content: [
@@ -903,7 +1135,6 @@
                                 "150 m espalda y libre, alternando el estilo según necesidad."
                             ]
                         },
-
                         {
                             title: "ORIENTACIÓN",
                             content: [
@@ -913,7 +1144,6 @@
                                 "3. 150 m crol, incorporando orientación durante los últimos 50 m."
                             ]
                         },
-
                         {
                             title: "CONTROL DE LÍNEA",
                             content: [
@@ -922,7 +1152,6 @@
                                 "Durante los últimos 100 m, incorpora una mirada al frente cada 6–8 brazadas sin levantar excesivamente la cabeza."
                             ]
                         },
-
                         {
                             title: "MATERIAL",
                             content: [
@@ -930,7 +1159,6 @@
                                 "Crol sostenido, manteniendo la misma línea corporal durante todo el recorrido."
                             ]
                         },
-
                         {
                             title: "CIERRE",
                             content: [
@@ -938,20 +1166,18 @@
                                 "Respiración cómoda y brazada larga."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-08",
-                    number: "08",
+                    id: "natacion-12",
+                    number: "12",
                     title: "RESISTENCIA — Nado continuo y control de esfuerzo",
                     description: "Sesión de resistencia prolongada para aprender a sostener el ritmo sin depender constantemente de la pared y controlar el esfuerzo durante recorridos largos.",
                     meta: "2,200 M · RESISTENCIA",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -960,7 +1186,6 @@
                                 "100 m libre progresivo."
                             ]
                         },
-
                         {
                             title: "NADO CONTINUO",
                             content: [
@@ -970,7 +1195,6 @@
                                 "Últimos 200 m: ritmo aeróbico fuerte, sin perder eficiencia."
                             ]
                         },
-
                         {
                             title: "CONTROL DE RITMO",
                             content: [
@@ -980,7 +1204,6 @@
                                 "Mantén una progresión de intensidad sin modificar excesivamente la técnica."
                             ]
                         },
-
                         {
                             title: "FUERZA ESPECÍFICA",
                             content: [
@@ -989,27 +1212,24 @@
                                 "Segundo 200 m: progresivo, terminando fuerte."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "200 m espalda y libre suave."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-09",
-                    number: "09",
+                    id: "natacion-13",
+                    number: "13",
                     title: "RITMO DE CARRERA — Cambios y orientación",
                     description: "Trabajo para simular cambios de ritmo propios de una carrera de aguas abiertas y aprender a volver al ritmo de competición después de una aceleración.",
                     meta: "2,200 M · RITMO DE CARRERA",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1018,7 +1238,6 @@
                                 "100 m libre progresivo."
                             ]
                         },
-
                         {
                             title: "TÉCNICA DE ORIENTACIÓN",
                             content: [
@@ -1028,7 +1247,6 @@
                                 "3. Crol sostenido, alternando respiración y orientación."
                             ]
                         },
-
                         {
                             title: "RITMO DE CARRERA",
                             content: [
@@ -1038,7 +1256,6 @@
                                 "100 m @ 1:55 fuerte."
                             ]
                         },
-
                         {
                             title: "ACELERACIONES",
                             content: [
@@ -1046,7 +1263,6 @@
                                 "Durante cada 200 m, realiza una aceleración progresiva desde el segundo 100 m y regresa al ritmo de carrera durante el último 50 m."
                             ]
                         },
-
                         {
                             title: "MATERIAL",
                             content: [
@@ -1054,27 +1270,24 @@
                                 "Crol fuerte y estable, priorizando una frecuencia de brazada alta sin perder posición."
                             ]
                         },
-
                         {
                             title: "AFLOJE",
                             content: [
                                 "200 m libre muy suave."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-10",
-                    number: "10",
+                    id: "natacion-14",
+                    number: "14",
                     title: "RECUPERACIÓN / AERÓBICO — Soltar y mantener",
                     description: "Sesión de recuperación activa para mantener volumen aeróbico, movilidad y sensibilidad del agua sin acumular fatiga.",
                     meta: "1,900 M · RECUPERACIÓN",
 
                     sections: [
-
                         {
                             title: "ENTRADA",
                             content: [
@@ -1082,7 +1295,6 @@
                                 "100 m espalda cómodo."
                             ]
                         },
-
                         {
                             title: "TÉCNICA RELAJADA",
                             content: [
@@ -1092,7 +1304,6 @@
                                 "3. Crol con respiración bilateral."
                             ]
                         },
-
                         {
                             title: "AERÓBICO CONTINUO",
                             content: [
@@ -1100,7 +1311,6 @@
                                 "300 m libre continuo, ligeramente más rápido que el bloque anterior."
                             ]
                         },
-
                         {
                             title: "MATERIAL",
                             content: [
@@ -1109,7 +1319,6 @@
                                 "2. Patada lateral, alternando lados durante el recorrido."
                             ]
                         },
-
                         {
                             title: "CIERRE",
                             content: [
@@ -1117,20 +1326,18 @@
                                 "100 m libre continuo con respiración natural."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-11",
-                    number: "11",
+                    id: "natacion-15",
+                    number: "15",
                     title: "TRABAJO FUERTE — Simulación de carrera",
                     description: "Sesión de alta exigencia que reproduce un esfuerzo de aguas abiertas con salida fuerte, ritmo de carrera, aceleraciones y cierre intenso.",
                     meta: "2,400 M · AGUAS ABIERTAS",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1139,7 +1346,6 @@
                                 "100 m libre progresivo."
                             ]
                         },
-
                         {
                             title: "ACTIVACIÓN",
                             content: [
@@ -1149,7 +1355,6 @@
                                 "3. Crol fuerte."
                             ]
                         },
-
                         {
                             title: "SIMULACIÓN DE CARRERA",
                             content: [
@@ -1159,7 +1364,6 @@
                                 "Últimos 100 m: aceleración progresiva."
                             ]
                         },
-
                         {
                             title: "BLOQUE DE RESPUESTA",
                             content: [
@@ -1169,7 +1373,6 @@
                                 "100 m @ 1:50 máximo controlado."
                             ]
                         },
-
                         {
                             title: "FUERZA CON MATERIAL",
                             content: [
@@ -1178,27 +1381,24 @@
                                 "Segundo 200 m: fuerte progresivo."
                             ]
                         },
-
                         {
                             title: "AFLOJE",
                             content: [
                                 "200 m libre muy suave."
                             ]
                         }
-
                     ]
                 },
 
 
                 {
-                    id: "natacion-12",
-                    number: "12",
+                    id: "natacion-16",
+                    number: "16",
                     title: "VELOCIDAD / INTENSIDAD — Salida, posición y cierre",
                     description: "Sesión final de intensidad para practicar salida de carrera, respuesta a aceleraciones, cambios de posición y cierre fuerte.",
                     meta: "2,200 M · INTENSIDAD",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1206,7 +1406,6 @@
                                 "150 m espalda y libre, terminando progresivo."
                             ]
                         },
-
                         {
                             title: "SALIDA",
                             content: [
@@ -1216,7 +1415,6 @@
                                 "3. Primer 100 m a ritmo de carrera + 50 m aceleración."
                             ]
                         },
-
                         {
                             title: "INTENSIDAD",
                             content: [
@@ -1227,7 +1425,6 @@
                                 "100 m @ 1:50 máximo controlado."
                             ]
                         },
-
                         {
                             title: "MATERIAL",
                             content: [
@@ -1235,7 +1432,6 @@
                                 "Crol fuerte, manteniendo una trayectoria estable y una frecuencia de brazada alta."
                             ]
                         },
-
                         {
                             title: "CIERRE",
                             content: [
@@ -1243,7 +1439,6 @@
                                 "100 m espalda muy cómodo."
                             ]
                         }
-
                     ]
                 }
 
@@ -1264,7 +1459,6 @@
                     meta: "40–45 MIN · GENERAL",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1274,7 +1468,6 @@
                                 "2 × 30 s sentadilla sin profundidad. Baja ligeramente la cadera y sube manteniendo el control."
                             ]
                         },
-
                         {
                             title: "FUERZA DE PIERNAS",
                             content: [
@@ -1285,7 +1478,6 @@
                                 "Descanso: 45–60 s."
                             ]
                         },
-
                         {
                             title: "FUERZA UNILATERAL",
                             content: [
@@ -1294,7 +1486,6 @@
                                 "Descanso: 60 s."
                             ]
                         },
-
                         {
                             title: "CORE",
                             content: [
@@ -1304,14 +1495,12 @@
                                 "Descanso: 30 s."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "5 min de movilidad suave de piernas y cadera."
                             ]
                         }
-
                     ]
                 },
 
@@ -1324,7 +1513,6 @@
                     meta: "40 MIN · GENERAL",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1334,7 +1522,6 @@
                                 "2 × 30 s rotaciones de tronco. Gira suavemente de un lado a otro manteniendo la cadera estable."
                             ]
                         },
-
                         {
                             title: "EMPUJE",
                             content: [
@@ -1345,7 +1532,6 @@
                                 "Descanso: 60 s."
                             ]
                         },
-
                         {
                             title: "FUERZA Y ESTABILIDAD",
                             content: [
@@ -1355,7 +1541,6 @@
                                 "Descanso: 45 s."
                             ]
                         },
-
                         {
                             title: "CORE",
                             content: [
@@ -1365,14 +1550,12 @@
                                 "Descanso: 30–45 s."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "5 min de movilidad de hombros, brazos y columna."
                             ]
                         }
-
                     ]
                 },
 
@@ -1385,7 +1568,6 @@
                     meta: "45 MIN · GENERAL",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1395,7 +1577,6 @@
                                 "2 × 30 s equilibrio sobre una pierna. Mantén una pierna elevada y cambia de lado."
                             ]
                         },
-
                         {
                             title: "FUERZA UNILATERAL",
                             content: [
@@ -1405,7 +1586,6 @@
                                 "Descanso: 60 s."
                             ]
                         },
-
                         {
                             title: "FUERZA DE GLÚTEOS",
                             content: [
@@ -1415,7 +1595,6 @@
                                 "Descanso: 45–60 s."
                             ]
                         },
-
                         {
                             title: "ESTABILIDAD",
                             content: [
@@ -1425,14 +1604,12 @@
                                 "Descanso: 30 s."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "5 min de movilidad de piernas y cadera."
                             ]
                         }
-
                     ]
                 },
 
@@ -1445,7 +1622,6 @@
                     meta: "45 MIN · GENERAL",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1455,7 +1631,6 @@
                                 "2 × 30 s sentadillas suaves. Baja ligeramente la cadera y vuelve a subir."
                             ]
                         },
-
                         {
                             title: "CIRCUITO DE FUERZA",
                             content: [
@@ -1466,7 +1641,6 @@
                                 "Descanso: 60 s entre vueltas."
                             ]
                         },
-
                         {
                             title: "FUERZA COMPLEMENTARIA",
                             content: [
@@ -1476,7 +1650,6 @@
                                 "Descanso: 45–60 s."
                             ]
                         },
-
                         {
                             title: "CORE",
                             content: [
@@ -1486,14 +1659,12 @@
                                 "Descanso: 30 s."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "5 min de movilidad general."
                             ]
                         }
-
                     ]
                 },
 
@@ -1506,7 +1677,6 @@
                     meta: "40–45 MIN · GENERAL",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1516,7 +1686,6 @@
                                 "2 × 30 s movilidad de hombros. Realiza círculos hacia adelante y atrás."
                             ]
                         },
-
                         {
                             title: "FUERZA DE PIERNAS",
                             content: [
@@ -1526,7 +1695,6 @@
                                 "Descanso: 60 s."
                             ]
                         },
-
                         {
                             title: "TREN SUPERIOR",
                             content: [
@@ -1536,7 +1704,6 @@
                                 "Descanso: 60 s."
                             ]
                         },
-
                         {
                             title: "CORE + CONTROL",
                             content: [
@@ -1547,14 +1714,12 @@
                                 "Descanso: 30–45 s."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "5 min de movilidad general y respiración."
                             ]
                         }
-
                     ]
                 },
 
@@ -1567,7 +1732,6 @@
                     meta: "45 MIN · GENERAL",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1577,7 +1741,6 @@
                                 "2 × 30 s puente de glúteos controlado."
                             ]
                         },
-
                         {
                             title: "CADENA POSTERIOR",
                             content: [
@@ -1588,7 +1751,6 @@
                                 "Descanso: 60 s."
                             ]
                         },
-
                         {
                             title: "GLÚTEOS",
                             content: [
@@ -1598,7 +1760,6 @@
                                 "Descanso: 45 s."
                             ]
                         },
-
                         {
                             title: "CORE",
                             content: [
@@ -1608,14 +1769,12 @@
                                 "Descanso: 30 s."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "5 min de movilidad de cadera, piernas y espalda."
                             ]
                         }
-
                     ]
                 },
 
@@ -1628,7 +1787,6 @@
                     meta: "40–45 MIN · GENERAL",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1638,7 +1796,6 @@
                                 "2 × 30 s rotaciones de tronco."
                             ]
                         },
-
                         {
                             title: "FUERZA DE EMPUJE",
                             content: [
@@ -1649,7 +1806,6 @@
                                 "Descanso: 60 s."
                             ]
                         },
-
                         {
                             title: "ESTABILIDAD",
                             content: [
@@ -1660,7 +1816,6 @@
                                 "Descanso: 45 s."
                             ]
                         },
-
                         {
                             title: "CORE",
                             content: [
@@ -1670,14 +1825,12 @@
                                 "Descanso: 30 s."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "5 min de movilidad de hombros, brazos y columna."
                             ]
                         }
-
                     ]
                 },
 
@@ -1690,7 +1843,6 @@
                     meta: "45 MIN · GENERAL",
 
                     sections: [
-
                         {
                             title: "CALENTAMIENTO",
                             content: [
@@ -1700,7 +1852,6 @@
                                 "2 × 30 s sentadillas controladas."
                             ]
                         },
-
                         {
                             title: "CIRCUITO PRINCIPAL",
                             content: [
@@ -1713,7 +1864,6 @@
                                 "Descanso: 60 s entre vueltas."
                             ]
                         },
-
                         {
                             title: "FUERZA COMPLEMENTARIA",
                             content: [
@@ -1724,7 +1874,6 @@
                                 "Descanso: 45 s."
                             ]
                         },
-
                         {
                             title: "ACONDICIONAMIENTO",
                             content: [
@@ -1736,14 +1885,12 @@
                                 "Descanso: 45 s."
                             ]
                         },
-
                         {
                             title: "VUELTA A LA CALMA",
                             content: [
                                 "5 min de movilidad general y respiración."
                             ]
                         }
-
                     ]
                 }
 
@@ -1765,24 +1912,19 @@
             const container =
                 document.getElementById(containerId);
 
-
             if (!container) {
                 return;
             }
 
-
             container.innerHTML = "";
-
 
             routines.forEach(routine => {
 
                 const card =
                     document.createElement("article");
 
-
                 card.className =
                     "routine-card";
-
 
                 card.innerHTML = `
 
@@ -2082,9 +2224,30 @@
            CARGAR RUTINAS
            ===================================================== */
 
+        const swimmingBaseRoutines =
+            NOVA_RUTINAS.NATACION.slice(
+                0,
+                8
+            );
+
+
+        const swimmingPerformanceRoutines =
+            NOVA_RUTINAS.NATACION.slice(
+                8,
+                16
+            );
+
+
         renderRoutines(
-            NOVA_RUTINAS.NATACION,
-            "swimmingRoutines",
+            swimmingBaseRoutines,
+            "swimmingBaseRoutines",
+            "NATACIÓN"
+        );
+
+
+        renderRoutines(
+            swimmingPerformanceRoutines,
+            "swimmingPerformanceRoutines",
             "NATACIÓN"
         );
 
