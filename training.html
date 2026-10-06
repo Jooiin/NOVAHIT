@@ -1,0 +1,2811 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NOVA · Training</title>
+
+    <link
+        rel="stylesheet"
+        href="css/index.css"
+    >
+
+    <style>
+
+        .nova-routine-list {
+            display: grid;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .nova-routine-item {
+            width: 100%;
+            border: 1px solid rgba(17, 17, 17, .12);
+            background: #f5f4ef;
+            border-radius: 18px;
+            padding: 20px 22px;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            font: inherit;
+            color: #111;
+        }
+
+        .nova-routine-item:hover {
+            background: #e9e8e2;
+        }
+
+        .nova-routine-item-left {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .nova-routine-number {
+            font-size: 12px;
+            letter-spacing: .08em;
+            opacity: .55;
+        }
+
+        .nova-routine-name {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -.01em;
+        }
+
+        .nova-routine-level {
+            font-size: 11px;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            opacity: .55;
+            white-space: nowrap;
+        }
+
+        .nova-routine-modal-header {
+            margin-bottom: 28px;
+        }
+
+        .nova-routine-modal-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 18px;
+        }
+
+        .nova-routine-meta-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 30px;
+            padding: 0 12px;
+            border-radius: 999px;
+            background: #e9e8e2;
+            font-size: 11px;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .nova-routine-section {
+            margin-top: 28px;
+        }
+
+        .nova-routine-section-title {
+            margin: 0 0 12px;
+            font-size: 11px;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            opacity: .55;
+        }
+
+        .nova-routine-session {
+            display: grid;
+            gap: 10px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nova-routine-session li {
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: #f5f4ef;
+            line-height: 1.55;
+            font-size: 14px;
+        }
+
+        .nova-routine-note {
+            font-size: 14px;
+            line-height: 1.65;
+            margin: 0;
+        }
+
+        .nova-coach-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 26px;
+            padding: 7px 13px 7px 7px;
+            border-radius: 999px;
+            background: #ffffff;
+            border: 1px solid rgba(17, 17, 17, .1);
+            color: #111111;
+            text-decoration: none;
+        }
+
+        .nova-coach-pill-photo {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex: 0 0 38px;
+        }
+
+        .nova-coach-pill-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .nova-coach-pill-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .nova-coach-pill-info span {
+            font-size: 9px;
+            letter-spacing: .1em;
+            opacity: .5;
+        }
+
+        .nova-coach-pill-info strong {
+            font-size: 13px;
+            line-height: 1;
+        }
+
+        .nova-info-images {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .nova-info-image {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .nova-info-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .nova-coach-modal {
+            display: grid;
+            grid-template-columns: 180px minmax(0, 1fr);
+            gap: 28px;
+            align-items: start;
+        }
+
+        .nova-coach-modal-photo {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .nova-coach-modal-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .nova-coach-modal-info p {
+            line-height: 1.65;
+        }
+
+        .nova-coach-modal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 24px;
+            color: #111;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: .04em;
+        }
+
+        @media (max-width: 700px) {
+
+            .nova-info-images {
+                grid-template-columns: 1fr;
+            }
+
+            .nova-routine-item {
+                padding: 17px;
+            }
+
+            .nova-routine-item-left {
+                gap: 12px;
+            }
+
+            .nova-routine-name {
+                font-size: 14px;
+            }
+
+            .nova-routine-level {
+                display: none;
+            }
+
+            .nova-coach-modal {
+                grid-template-columns: 1fr;
+            }
+
+            .nova-coach-modal-photo {
+                max-width: 180px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NOVA · PAGE TRANSITION
+    ====================================================== -->
+
+    <div
+        class="nova-page-transition"
+        id="novaPageTransition"
+        aria-hidden="true"
+    >
+
+        <div class="nova-page-transition-inner">
+
+            <span class="nova-page-transition-brand">
+                NOVA
+            </span>
+
+            <span class="nova-page-transition-line"></span>
+
+            <span
+                class="nova-page-transition-label"
+                id="novaPageTransitionLabel"
+            >
+                CARGANDO
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NOVA · HEADER
+    ====================================================== -->
+
+    <header
+        class="nova-top"
+        id="top"
+    >
+
+        <div class="nova-top-inner">
+
+            <a
+                href="index.html"
+                class="nova-brand"
+                aria-label="NOVA · Inicio"
+            >
+                NOVA
+            </a>
+
+
+            <nav
+                class="nova-desktop-nav"
+                aria-label="Navegación principal"
+            >
+
+                <a
+                    href="index.html"
+                    class="nova-nav-link"
+                >
+                    INICIO
+                </a>
+
+
+            </nav>
+
+
+            <button
+                type="button"
+                class="nova-menu-button"
+                id="novaMenuButton"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="novaMenu"
+            >
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MOBILE MENU -->
+
+    <div
+        class="nova-menu-overlay"
+        id="novaMenuOverlay"
+        aria-hidden="true"
+    ></div>
+
+
+    <aside
+        class="nova-menu"
+        id="novaMenu"
+        aria-hidden="true"
+    >
+
+        <div class="nova-menu-inner">
+
+            <div class="nova-menu-top">
+
+                <span class="nova-menu-label">
+                    NOVA
+                </span>
+
+                <button
+                    type="button"
+                    class="nova-menu-close"
+                    id="novaMenuClose"
+                    aria-label="Cerrar menú"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <nav
+                class="nova-menu-links"
+                aria-label="Menú móvil"
+            >
+
+                <a
+                    href="index.html"
+                    class="nova-menu-link nova-page-link"
+                    data-page-title="INICIO"
+                >
+                    <span>01</span>
+                    <strong>INICIO</strong>
+                </a>
+
+
+                <a
+                    href="#novaMemberships"
+                    class="nova-menu-link js-open-memberships"
+                >
+                    <span>02</span>
+                    <strong>MEMBRESÍAS</strong>
+                </a>
+
+
+                <a
+                    href="#novaPlan"
+                    class="nova-menu-link js-open-survey"
+                >
+                    <span>03</span>
+                    <strong>PLAN</strong>
+                </a>
+
+            </nav>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main
+        class="nova-page nova-training-page"
+        id="principalPage"
+    >
+
+        <div class="nova-container">
+
+
+            <section
+                class="nova-training-navigation"
+                aria-labelledby="trainingNavigationTitle"
+            >
+
+                <div class="nova-training-navigation-header">
+
+                    <div class="nova-section-eyebrow">
+                        NOVA · ENCUENTRA TU DIRECCIÓN
+                    </div>
+
+
+                    <a
+                        href="#novaCoach"
+                        class="nova-coach-pill js-open-coach"
+                    >
+
+                        <span class="nova-coach-pill-photo">
+
+                            <img
+                                src="img/perfil1.jpeg"
+                                alt="Alan Espinosa"
+                            >
+
+                        </span>
+
+
+                        <span class="nova-coach-pill-info">
+
+                            <span>COACH</span>
+
+                            <strong>
+                                Alan Espinosa
+                            </strong>
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+                <div class="nova-training-cards">
+
+
+                    <!-- CARD 02 · NATACIÓN -->
+
+                    <a
+                        href="#novaSwimming"
+                        class="nova-training-card js-open-swimming"
+                        data-page-title="NATACIÓN"
+                    >
+
+                        <div
+                            class="nova-training-card-image"
+                            style="background-image: url('img/chaps.3.jpg');"
+                        ></div>
+
+                        <div class="nova-training-card-overlay"></div>
+
+
+                        <div class="nova-training-card-top">
+
+                            <span class="nova-training-card-number">
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <div class="nova-training-card-content">
+
+                            <span class="nova-training-card-label">
+                                RUTINAS
+                            </span>
+
+                            <h3>
+                                NATACIÓN
+                            </h3>
+
+                            <p>
+                                Técnica, resistencia y control
+                                para construir un nado más eficiente.
+                            </p>
+
+                            <span class="nova-training-card-button">
+                                VER RUTINAS
+                                <span>→</span>
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- CARD 03 · AGUAS ABIERTAS -->
+
+                    <a
+                        href="#novaOpenWater"
+                        class="nova-training-card js-open-open-water"
+                        data-page-title="AGUAS ABIERTAS"
+                    >
+
+                        <div
+                            class="nova-training-card-image"
+                            style="background-image: url('img/AGUAS\ ABIERTAS.jpg');"
+                        ></div>
+
+                        <div class="nova-training-card-overlay"></div>
+
+
+                        <div class="nova-training-card-top">
+
+                            <span class="nova-training-card-number">
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <div class="nova-training-card-content">
+
+                            <span class="nova-training-card-label">
+                                RUTINAS
+                            </span>
+
+                            <h3>
+                                AGUAS<br>
+                                ABIERTAS
+                            </h3>
+
+                            <p>
+                                Fuerza, resistencia y orientación
+                                para nadar fuera de la piscina.
+                            </p>
+
+                            <span class="nova-training-card-button">
+                                VER RUTINAS
+                                <span>→</span>
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- CARD 04 · FUERZA -->
+
+                    <a
+                        href="#novaStrength"
+                        class="nova-training-card nova-training-card-featured js-open-strength"
+                        data-page-title="FUERZA"
+                    >
+
+                        <div
+                            class="nova-training-card-image"
+                            style="background-image: url('img/NOVA\ FUERZA\ 2.jpg');"
+                        ></div>
+
+                        <div class="nova-training-card-overlay"></div>
+
+
+                        <div class="nova-training-card-top">
+
+                            <span class="nova-training-card-number">
+                                04
+                            </span>
+
+                        </div>
+
+
+                        <div class="nova-training-card-content">
+
+                            <span class="nova-training-card-label">
+                                RUTINAS
+                            </span>
+
+                            <h3>
+                                FUERZA
+                            </h3>
+
+                            <p>
+                                Pierna, core y fuerza total para
+                                construir capacidad física.
+                            </p>
+
+                            <span class="nova-training-card-button">
+                                VER RUTINAS
+                                <span>→</span>
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="nova-footer">
+
+        <div class="nova-footer-inner">
+
+
+            <div class="nova-footer-brand">
+
+                <a
+                    href="index.html#top"
+                    class="nova-footer-logo"
+                >
+                    NOVA
+                </a>
+
+                <p>
+                    TRAINING
+                </p>
+
+                <span>
+                    Entrenamiento. Rendimiento. Evolución.
+                </span>
+
+            </div>
+
+
+            <div class="nova-footer-column">
+
+                <h3>
+                    ENTRENAMIENTOS
+                </h3>
+
+                <a
+                    href="#novaSwimming"
+                    class="js-open-swimming"
+                >
+                    Natación
+                </a>
+
+                <a
+                    href="#novaOpenWater"
+                    class="js-open-open-water"
+                >
+                    Aguas abiertas
+                </a>
+
+                <a
+                    href="#novaStrength"
+                    class="js-open-strength"
+                >
+                    Fuerza
+                </a>
+
+            </div>
+
+
+            <div class="nova-footer-column">
+
+                <h3>
+                    PROGRAMAS
+                </h3>
+
+                <a
+                    href="#novaMemberships"
+                    class="js-open-memberships"
+                >
+                    Membresías
+                </a>
+
+                <a
+                    href="#novaPlan"
+                    class="js-open-survey"
+                >
+                    Encuentra tu plan
+                </a>
+
+                <a
+                    href="#novaMethod"
+                    class="js-open-method"
+                >
+                    Metodología
+                </a>
+
+            </div>
+
+
+            <div class="nova-footer-column">
+
+                <h3>
+                    INFORMACIÓN
+                </h3>
+
+                <a
+                    href="#novaMethod"
+                    class="js-open-method"
+                >
+                    Método NOVA
+                </a>
+
+                <a
+                    href="#novaFaq"
+                    class="js-open-faq"
+                >
+                    FAQs
+                </a>
+
+                <a
+                    href="#novaSwimming"
+                    class="js-open-swimming"
+                >
+                    Natación
+                </a>
+
+                <a
+                    href="#novaOpenWater"
+                    class="js-open-open-water"
+                >
+                    Aguas abiertas
+                </a>
+
+                <a
+                    href="#novaStrength"
+                    class="js-open-strength"
+                >
+                    Fuerza
+                </a>
+
+            </div>
+
+
+            <div class="nova-footer-column">
+
+                <h3>
+                    CONTACTO
+                </h3>
+
+                <a
+                    href="https://calendly.com/alancoach8/nueva-reunion"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Calendly
+                </a>
+
+                <a href="mailto:hola@nova.training">
+                    Correo
+                </a>
+
+            </div>
+
+
+            <div class="nova-footer-column">
+
+                <h3>
+                    LEGAL
+                </h3>
+
+                <a
+                    href="#novaLegal"
+                    class="js-open-legal"
+                    data-legal="privacy"
+                >
+                    Aviso de privacidad
+                </a>
+
+                <a
+                    href="#novaLegal"
+                    class="js-open-legal"
+                    data-legal="terms"
+                >
+                    Términos y condiciones
+                </a>
+
+                <a
+                    href="#novaLegal"
+                    class="js-open-legal"
+                    data-legal="cookies"
+                >
+                    Política de cookies
+                </a>
+
+                <a
+                    href="#novaLegal"
+                    class="js-open-legal"
+                    data-legal="notice"
+                >
+                    Aviso legal
+                </a>
+
+                <a
+                    href="#novaLegal"
+                    class="js-open-legal"
+                    data-legal="cancellations"
+                >
+                    Cancelaciones y reembolsos
+                </a>
+
+                <a
+                    href="#novaLegal"
+                    class="js-open-legal"
+                    data-legal="responsibility"
+                >
+                    Aviso de responsabilidad
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="nova-footer-bottom">
+
+            <span>
+                © 2026 NOVA
+            </span>
+
+            <span>
+                NOVA · TRAINING
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MODAL GLOBAL
+    ====================================================== -->
+
+    <div
+        class="nova-modal"
+        id="novaModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="nova-modal-backdrop"
+            data-modal-close
+        ></div>
+
+
+        <div
+            class="nova-modal-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="novaModalTitle"
+        >
+
+            <button
+                type="button"
+                class="nova-modal-close"
+                id="novaModalClose"
+                aria-label="Cerrar"
+            >
+                ×
+            </button>
+
+
+            <div
+                class="nova-modal-content"
+                id="novaModalContent"
+            ></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                const menuButton =
+                    document.getElementById(
+                        "novaMenuButton"
+                    );
+
+                const menu =
+                    document.getElementById(
+                        "novaMenu"
+                    );
+
+                const menuOverlay =
+                    document.getElementById(
+                        "novaMenuOverlay"
+                    );
+
+                const menuClose =
+                    document.getElementById(
+                        "novaMenuClose"
+                    );
+
+                const modal =
+                    document.getElementById(
+                        "novaModal"
+                    );
+
+                const modalClose =
+                    document.getElementById(
+                        "novaModalClose"
+                    );
+
+                const modalContent =
+                    document.getElementById(
+                        "novaModalContent"
+                    );
+
+                const transition =
+                    document.getElementById(
+                        "novaPageTransition"
+                    );
+
+                const transitionLabel =
+                    document.getElementById(
+                        "novaPageTransitionLabel"
+                    );
+
+                let lastFocusedElement = null;
+
+
+                /* =================================================
+                   MENU
+                ================================================== */
+
+                function openMenu() {
+
+                    menu.classList.add("is-open");
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                    menuOverlay.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
+
+                    document.body.classList.add(
+                        "nova-menu-open"
+                    );
+
+                }
+
+
+                function closeMenu() {
+
+                    menu.classList.remove(
+                        "is-open"
+                    );
+
+                    menu.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuOverlay.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                    document.body.classList.remove(
+                        "nova-menu-open"
+                    );
+
+                }
+
+
+                menuButton.addEventListener(
+                    "click",
+                    function () {
+
+                        if (
+                            menu.classList.contains(
+                                "is-open"
+                            )
+                        ) {
+                            closeMenu();
+                        } else {
+                            openMenu();
+                        }
+
+                    }
+                );
+
+
+                menuClose.addEventListener(
+                    "click",
+                    closeMenu
+                );
+
+
+                menuOverlay.addEventListener(
+                    "click",
+                    closeMenu
+                );
+
+
+                /* =================================================
+                   TRANSICIÓN
+                ================================================== */
+
+                function startPageTransition(
+                    label,
+                    callback
+                ) {
+
+                    if (!transition) {
+
+                        if (callback) {
+                            callback();
+                        }
+
+                        return;
+
+                    }
+
+                    transitionLabel.textContent =
+                        label || "CARGANDO";
+
+                    transition.classList.add(
+                        "is-active"
+                    );
+
+                    window.setTimeout(
+                        function () {
+
+                            if (callback) {
+                                callback();
+                            }
+
+                        },
+                        260
+                    );
+
+                    window.setTimeout(
+                        function () {
+
+                            transition.classList.remove(
+                                "is-active"
+                            );
+
+                        },
+                        650
+                    );
+
+                }
+
+
+                document.querySelectorAll(
+                    ".nova-page-link"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                const href =
+                                    link.getAttribute(
+                                        "href"
+                                    );
+
+                                if (
+                                    !href ||
+                                    href.startsWith("#")
+                                ) {
+                                    return;
+                                }
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                startPageTransition(
+                                    link.dataset.pageTitle ||
+                                    "CARGANDO",
+                                    function () {
+
+                                        window.location.href =
+                                            href;
+
+                                    }
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   MODAL
+                ================================================== */
+
+                function openModal(
+                    html,
+                    title
+                ) {
+
+                    lastFocusedElement =
+                        document.activeElement;
+
+                    modalContent.innerHTML =
+                        html;
+
+                    modal.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
+
+                    modal.classList.add(
+                        "is-open"
+                    );
+
+                    document.body.classList.add(
+                        "nova-modal-open"
+                    );
+
+                    const modalTitle =
+                        document.getElementById(
+                            "novaModalTitle"
+                        );
+
+                    if (
+                        modalTitle &&
+                        title
+                    ) {
+
+                        modalTitle.textContent =
+                            title;
+
+                    }
+
+                    modalClose.focus();
+
+                }
+
+
+                function closeModal() {
+
+                    modal.classList.remove(
+                        "is-open"
+                    );
+
+                    modal.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
+
+                    document.body.classList.remove(
+                        "nova-modal-open"
+                    );
+
+                    if (lastFocusedElement) {
+
+                        try {
+                            lastFocusedElement.focus();
+                        } catch (error) {}
+
+                    }
+
+                }
+
+
+                modalClose.addEventListener(
+                    "click",
+                    closeModal
+                );
+
+
+                document.querySelectorAll(
+                    "[data-modal-close]"
+                ).forEach(
+                    function (element) {
+
+                        element.addEventListener(
+                            "click",
+                            closeModal
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   INICIO
+                ================================================== */
+
+                const methodHTML = `
+
+                    <div class="nova-modal-eyebrow">
+                        NOVA · INICIO
+                    </div>
+
+
+                    <h2 id="novaModalTitle">
+                        Entrenar con dirección.
+                    </h2>
+
+
+                    <div class="nova-modal-text">
+
+                        <p>
+                            NOVA nace de una idea sencilla:
+                            entrenar no es hacer más, sino
+                            entender qué necesitas, diseñar
+                            el camino y sostenerlo con intención.
+                        </p>
+
+                        <p>
+                            Cada sesión busca construir una
+                            capacidad concreta. Técnica, fuerza,
+                            resistencia, control y adaptación
+                            forman parte de un mismo proceso.
+                        </p>
+
+                        <p>
+                            No buscamos entrenar por entrenar.
+                            Buscamos que cada sesión tenga una
+                            razón y que cada etapa te acerque
+                            a lo que quieres conseguir.
+                        </p>
+
+                    </div>
+
+
+                    <div class="nova-info-images">
+
+                        <div class="nova-info-image">
+
+                            <img
+                                src="img/beneficio1.jpeg"
+                                alt="Entrenamiento NOVA"
+                            >
+
+                        </div>
+
+
+                        <div class="nova-info-image">
+
+                            <img
+                                src="img/beneficio1.jpeg"
+                                alt="Proceso de entrenamiento NOVA"
+                            >
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                document.querySelectorAll(
+                    ".js-open-method"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                openModal(
+                                    methodHTML,
+                                    "INICIO"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   COACH · NUEVO MODAL
+                ================================================== */
+
+                const coachHTML = `
+
+                    <div class="nova-modal-eyebrow">
+                        NOVA · COACH
+                    </div>
+
+
+                    <div class="nova-coach-modal">
+
+                        <div class="nova-coach-modal-photo">
+
+                            <img
+                                src="img/perfil1.jpeg"
+                                alt="Alan Espinosa"
+                            >
+
+                        </div>
+
+
+                        <div class="nova-coach-modal-info">
+
+                            <h2 id="novaModalTitle">
+                                
+                            </h2>
+
+
+                            <div class="nova-modal-text">
+
+                                <p>
+                                    Natación, Aguas abiertas
+                                    y Fuerza funcional.
+                                </p>
+
+                                <p>
+                                    El entrenamiento parte de entender
+                                    el objetivo de cada persona para
+                                    construir sesiones con estructura,
+                                    intención y progresión.
+                                </p>
+
+                                <p>
+                                    El trabajo combina natación,
+                                    preparación para aguas abiertas
+                                    y fuerza funcional para desarrollar
+                                    capacidad física dentro y fuera
+                                    del agua.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                document.querySelectorAll(
+                    ".js-open-coach"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                openModal(
+                                    coachHTML,
+                                    ""
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   NATACIÓN · 5 RUTINAS
+                ================================================== */
+
+                const swimmingRoutines = [
+
+                    {
+                        number: "01",
+                        title: "BASE AERÓBICA",
+                        objective: "Resistencia",
+                        duration: "65–70 min",
+                        level: "Base",
+                        description:
+                            "Construye una base aeróbica sólida con bloques largos y ritmo estable. El material aparece después del calentamiento para trabajar tracción y patada sin perder continuidad.",
+                        session: [
+                            "CALENTAMIENTO · 600 m · sin material: 300 m libre suave + 200 m libre progresivo + 100 m espalda.",
+                            "BLOQUE 1 · 800 m · PULL BUOY: 4×200 m libre aeróbico. Coloca el pull buoy entre los muslos durante cada 200 m. 25–30\" de descanso.",
+                            "BLOQUE 2 · 600 m · TABLA + ALETAS: 3×200 m patada de libre. Sostén la tabla al frente y usa las aletas durante cada 200 m. 25\" de descanso.",
+                            "BLOQUE 3 · 400 m · ALETAS: 4×100 m libre a ritmo estable. Usa las aletas durante cada 100 m, concentrándote en mantener una patada continua. 20\" de descanso.",
+                            "AFLOJE · 200 m · sin material: nado muy suave, alternando libre y espalda."
+                        ],
+                        material:
+                            "TABLA: se usa en el Bloque 2 para las 3×200 m de patada. PULL BUOY: se coloca entre los muslos en el Bloque 1 durante las 4×200 m. ALETAS: se usan en los Bloques 2 y 3. Si no tienes material, no hay problema: Bloque 1 se hace nadando libre normal; Bloque 2 se hace patada de libre sin tabla, con brazos extendidos al frente; Bloque 3 se hace libre sin aletas manteniendo una patada activa.",
+                        focus:
+                            "Ritmo aeróbico, posición del cuerpo y capacidad de sostener metros sin perder eficiencia."
+                    },
+
+                    {
+                        number: "02",
+                        title: "4 ESTILOS · TÉCNICA",
+                        objective: "Técnica",
+                        duration: "65–75 min",
+                        level: "Intermedio",
+                        description:
+                            "Sesión específica para los cuatro estilos: mariposa, espalda, pecho y libre. El objetivo es mantener técnica y control antes de aumentar la intensidad.",
+                        session: [
+                            "CALENTAMIENTO · 600 m · sin material: 300 m libre + 100 m espalda + 100 m pecho + 100 m libre progresivo.",
+                            "BLOQUE 1 · 400 m · 4×100 m, uno por estilo: 100 m mariposa + 100 m espalda + 100 m pecho + 100 m libre. 25–30\" de descanso entre repeticiones.",
+                            "BLOQUE 2 · 800 m · 4×200 m: cada 200 m = 100 m del estilo correspondiente + 100 m libre controlado. Orden: mariposa, espalda, pecho, libre. 30\" de descanso.",
+                            "BLOQUE 3 · 400 m · PULL BUOY: 4×100 m libre. Coloca el pull buoy entre los muslos para aislar la tracción y mantener el cuerpo alineado. 20\" de descanso.",
+                            "BLOQUE 4 · 400 m · TABLA + ALETAS: 4×100 m de patada, alternando libre y espalda. Tabla al frente en libre; en espalda, sostén la tabla sobre los muslos o realiza la patada sin tabla si resulta incómodo. Aletas durante los 400 m.",
+                            "AFLOJE · 200 m · sin material: muy suave, eligiendo libre o espalda."
+                        ],
+                        material:
+                            "PULL BUOY: Bloque 3, 4×100 m libre. TABLA: Bloque 4, principalmente en patada de libre. ALETAS: Bloque 4 durante las 4×100 m. En los cuatro estilos del Bloque 1 y Bloque 2 no se usa material. Si no tienes material, el Bloque 3 se hace libre normal concentrando la atención en la tracción y el Bloque 4 se hace patada sin aletas; la tabla puede sustituirse por brazos extendidos al frente.",
+                        focus:
+                            "Calidad técnica de mariposa, espalda, pecho y libre; cada estilo debe conservar su mecánica antes de buscar velocidad."
+                    },
+
+                    {
+                        number: "03",
+                        title: "UMBRAL CONTROLADO",
+                        objective: "Umbral",
+                        duration: "65–70 min",
+                        level: "Rendimiento",
+                        description:
+                            "Bloques largos a intensidad controlada para aprender a sostener un ritmo exigente sin convertir la sesión en una serie de sprints.",
+                        session: [
+                            "CALENTAMIENTO · 600 m · sin material: 300 m libre suave + 200 m libre progresivo + 100 m espalda.",
+                            "BLOQUE 1 · 800 m · PULL BUOY: 4×200 m libre a ritmo de umbral controlado. Pull buoy entre los muslos durante cada 200 m. 30\" de descanso.",
+                            "BLOQUE 2 · 600 m · ALETAS: 3×200 m libre. Usa las aletas para mantener una posición alta y una patada constante; los primeros 100 m controlados y los segundos 100 m ligeramente más fuertes. 30\" de descanso.",
+                            "BLOQUE 3 · 400 m · TABLA + ALETAS: 4×100 m patada de libre fuerte pero sostenible. Tabla al frente y aletas durante toda la repetición. 25\" de descanso.",
+                            "BLOQUE 4 · 400 m · sin material: 2×200 m libre a ritmo sostenido. 30\" de descanso.",
+                            "AFLOJE · 200 m · sin material: nado suave."
+                        ],
+                        material:
+                            "PULL BUOY: Bloque 1, 4×200 m. ALETAS: Bloques 2 y 3. TABLA: Bloque 3. Si no hay material, realiza los 4×200 m nadando libre normal; sustituye las 3×200 m con aletas por libre manteniendo una patada constante y el bloque de tabla por patada sin tabla, brazos extendidos al frente.",
+                        focus:
+                            "Encontrar un ritmo fuerte que puedas sostener con técnica estable y respiración controlada."
+                    },
+
+                    {
+                        number: "04",
+                        title: "4 ESTILOS · RESISTENCIA",
+                        objective: "Resistencia técnica",
+                        duration: "70–75 min",
+                        level: "Intermedio",
+                        description:
+                            "Segundo trabajo específico de los cuatro estilos, ahora con mayor continuidad para aprender a conservar la técnica cuando aparece la fatiga.",
+                        session: [
+                            "CALENTAMIENTO · 600 m · sin material: 200 m libre + 200 m espalda + 100 m pecho + 100 m libre.",
+                            "BLOQUE 1 · 800 m · 4×200 m: 100 m mariposa + 100 m libre / 100 m espalda + 100 m libre / 100 m pecho + 100 m libre / 200 m libre. 30\" de descanso.",
+                            "BLOQUE 2 · 400 m · PULL BUOY: 4×100 m libre, ritmo aeróbico alto. Pull buoy entre los muslos durante cada repetición. 20\" de descanso.",
+                            "BLOQUE 3 · 600 m · TABLA + ALETAS: 3×200 m patada. 100 m libre + 100 m espalda en cada repetición. Tabla para la parte de libre; para espalda puedes colocarla sobre los muslos. Aletas durante los 600 m. 25\" de descanso.",
+                            "BLOQUE 4 · 400 m · sin material: 4×100 m, uno por estilo, a ritmo técnico sostenido. 20–25\" de descanso.",
+                            "AFLOJE · 200 m · sin material: libre muy suave."
+                        ],
+                        material:
+                            "PULL BUOY: Bloque 2. TABLA + ALETAS: Bloque 3. Los cuatro estilos del Bloque 1 y Bloque 4 son sin material. Si no tienes material, nada igual: sustituye el pull buoy por libre normal y realiza la patada sin tabla ni aletas, manteniendo brazos extendidos y una patada controlada.",
+                        focus:
+                            "Sostener la técnica de los cuatro estilos cuando aumenta el volumen y aparece fatiga."
+                    },
+
+                    {
+                        number: "05",
+                        title: "RITMO + CAMBIO",
+                        objective: "Ritmo",
+                        duration: "65–70 min",
+                        level: "Rendimiento",
+                        description:
+                            "Trabajo de cambios de ritmo dentro de bloques largos para mejorar la capacidad de acelerar y volver a controlar el esfuerzo.",
+                        session: [
+                            "CALENTAMIENTO · 600 m · sin material: 300 m libre + 100 m espalda + 200 m libre progresivo.",
+                            "BLOQUE 1 · 800 m · PULL BUOY: 4×200 m libre. Primer 100 m controlado + segundo 100 m fuerte. Pull buoy durante cada 200 m. 30\" de descanso.",
+                            "BLOQUE 2 · 600 m · TABLA + ALETAS: 3×200 m patada de libre. Primer 100 m cómodo + segundo 100 m fuerte. Tabla al frente y aletas durante cada 200 m. 25\" de descanso.",
+                            "BLOQUE 3 · 400 m · ALETAS: 4×100 m libre. 50 m ritmo estable + 50 m fuerte. Aletas durante cada repetición. 25\" de descanso.",
+                            "BLOQUE 4 · 400 m · sin material: 2×200 m libre fuerte controlado. 30\" de descanso.",
+                            "AFLOJE · 200 m · sin material: muy suave."
+                        ],
+                        material:
+                            "PULL BUOY: Bloque 1. TABLA + ALETAS: Bloque 2. ALETAS: Bloque 3. Si no tienes material, realiza los mismos metros sin equipo; en los bloques de patada, mantén brazos extendidos al frente y genera el movimiento desde la cadera.",
+                        focus:
+                            "Aprender a cambiar de ritmo sin perder la posición del cuerpo, la respiración ni la longitud de brazada."
+                    }
+
+                ];
+
+
+                /* =================================================
+                   AGUAS ABIERTAS
+                ================================================== */
+
+                const openWaterRoutines = [
+
+                    {
+                        number: "01",
+                        title: "FUERZA EN EL AGUA I",
+                        objective: "Fuerza",
+                        duration: "60–65 min",
+                        level: "Intermedio",
+                        description:
+                            "Trabajo de fuerza específica de nado para sostener una brazada firme y eficiente durante esfuerzos prolongados en aguas abiertas.",
+                        session: [
+                            "CALENTAMIENTO · 800 m · 400 m suave + 200 m progresivo + 200 m suave con respiración bilateral.",
+                            "BLOQUE 1 · 4×300 m: 200 m fuerte controlado + 100 m suave. 35\" de descanso.",
+                            "BLOQUE 2 · 4×200 m: brazada firme y ritmo constante. Los primeros 100 m controlados + segundos 100 m fuertes. 30\" de descanso.",
+                            "BLOQUE 3 · 4×100 m: 25–30 m de orientación cada 6–8 brazadas + continuar fuerte hasta completar 100 m. 25\" de descanso.",
+                            "AFLOJE · 300 m suave."
+                        ],
+                        material:
+                            "No requiere material. Si el entorno permite usar pull buoy de forma segura, puede utilizarse en uno de los 4×200 m, pero no es necesario.",
+                        focus:
+                            "Aplicar fuerza desde el agarre y mantener una brazada larga aun cuando aumenta la fatiga."
+                    },
+
+                    {
+                        number: "02",
+                        title: "FUERZA EN EL AGUA II",
+                        objective: "Fuerza específica",
+                        duration: "60–70 min",
+                        level: "Rendimiento",
+                        description:
+                            "Sesión de fuerza-resistencia para aguas abiertas, con cambios controlados de presión y ritmo sin depender de sprints cortos.",
+                        session: [
+                            "CALENTAMIENTO · 700 m · 300 m suave + 200 m libre progresivo + 200 m a ritmo cómodo.",
+                            "BLOQUE 1 · 3×300 m: primeros 100 m fuertes + 100 m controlados + 100 m fuertes. 40\" de descanso.",
+                            "BLOQUE 2 · 4×200 m: mantener alta presión de brazada durante todo el bloque. 30\" de descanso.",
+                            "BLOQUE 3 · 3×200 m: 150 m fuertes + 50 m suave, practicando orientación al frente sin levantar demasiado la cabeza. 30\" de descanso.",
+                            "AFLOJE · 300 m suave."
+                        ],
+                        material:
+                            "Sin material obligatorio. El ejercicio se realiza con el peso corporal y la resistencia natural del agua. No es necesario añadir equipo para generar fuerza.",
+                        focus:
+                            "Fuerza-resistencia, agarre del agua y control de la orientación mientras se mantiene presión en la brazada."
+                    },
+
+                    {
+                        number: "03",
+                        title: "RESISTENCIA CONTINUA",
+                        objective: "Resistencia",
+                        duration: "70–80 min",
+                        level: "Intermedio",
+                        description:
+                            "Sesión orientada a sostener un esfuerzo aeróbico largo y estable, reduciendo cambios innecesarios de ritmo.",
+                        session: [
+                            "CALENTAMIENTO · 600 m suave.",
+                            "BLOQUE PRINCIPAL · 1,200 m continuos a ritmo aeróbico estable. Cada 200 m realiza una breve revisión de respiración, posición y orientación.",
+                            "BLOQUE 2 · 2×500 m: ritmo estable; los últimos 100 m de cada bloque ligeramente más fuertes. 45\" de descanso.",
+                            "BLOQUE 3 · 400 m continuo suave-moderado.",
+                            "AFLOJE · 300 m muy suave."
+                        ],
+                        material:
+                            "Sin material. La sesión busca que la resistencia provenga de la continuidad del nado y del control del ritmo.",
+                        focus:
+                            "Economía de movimiento, respiración bilateral cuando sea posible y capacidad de sostener un ritmo constante."
+                    },
+
+                    {
+                        number: "04",
+                        title: "RESISTENCIA POR BLOQUES",
+                        objective: "Resistencia",
+                        duration: "70–75 min",
+                        level: "Rendimiento",
+                        description:
+                            "Bloques largos con pequeños cambios de ritmo para preparar el cuerpo para esfuerzos prolongados y variables en aguas abiertas.",
+                        session: [
+                            "CALENTAMIENTO · 700 m · 300 m suave + 200 m progresivo + 200 m cómodo.",
+                            "BLOQUE 1 · 3×400 m: 300 m ritmo aeróbico + 100 m moderadamente fuerte. 40\" de descanso.",
+                            "BLOQUE 2 · 3×300 m: 200 m estable + 100 m fuerte controlado. 35\" de descanso.",
+                            "BLOQUE 3 · 2×200 m: ritmo continuo, buscando terminar la segunda repetición al mismo ritmo que la primera. 30\" de descanso.",
+                            "AFLOJE · 300 m suave."
+                        ],
+                        material:
+                            "Sin material obligatorio. Si se dispone de pull buoy y se quiere añadir trabajo de tracción, puede usarse únicamente en uno de los 3×300 m; no es necesario para completar la sesión.",
+                        focus:
+                            "Regular el esfuerzo y evitar salir demasiado rápido para poder sostener el ritmo hasta el final."
+                    },
+
+                    {
+                        number: "05",
+                        title: "ORIENTACIÓN Y NAVEGACIÓN",
+                        objective: "Orientación",
+                        duration: "55–65 min",
+                        level: "Intermedio",
+                        description:
+                            "Sesión para practicar orientación, respiración y cambios de dirección sin perder ritmo ni eficiencia de nado.",
+                        session: [
+                            "CALENTAMIENTO · 600 m suave, identificando referencias visuales del recorrido.",
+                            "BLOQUE 1 · 4×300 m: practicar orientación cada 6–8 brazadas durante los primeros 100 m; después nadar normalmente. 30\" de descanso.",
+                            "BLOQUE 2 · 4×200 m: cambiar ligeramente la dirección al llegar a una referencia marcada, manteniendo el ritmo. 30\" de descanso.",
+                            "BLOQUE 3 · 4×100 m: orientación + respiración bilateral cuando sea posible. 25\" de descanso.",
+                            "AFLOJE · 300 m suave."
+                        ],
+                        material:
+                            "No requiere material deportivo. Se necesita un recorrido seguro y, de ser posible, referencias visibles en el entorno. En aguas abiertas, priorizar siempre una zona supervisada y segura.",
+                        focus:
+                            "Levantar la vista lo mínimo necesario, encontrar referencias, corregir la trayectoria y volver inmediatamente a una posición eficiente."
+                    }
+
+                ];
+
+
+                /* =================================================
+                   FUERZA
+                ================================================== */
+
+                const strengthRoutines = [
+
+                    {
+                        number: "01",
+                        title: "CONTROL CORPORAL",
+                        objective: "Control",
+                        duration: "45–55 min",
+                        level: "Base",
+                        description:
+                            "Sesión para aprender a controlar posiciones, tensión y estabilidad antes de buscar cargas altas.",
+                        session: [
+                            "CALENTAMIENTO · 8 min: movilidad de cadera, hombros, tobillos y 2 rondas de sentadilla + push-up + dead bug.",
+                            "SENTADILLA TEMPO · 4×8. Sin material: pies al ancho de hombros, baja en 3 segundos, pausa 1 segundo y sube con control.",
+                            "PUSH-UP · 4×8–12. Sin material: manos bajo o ligeramente fuera de hombros; cuerpo en línea. Si es difícil, apoyar rodillas.",
+                            "REMO UNILATERAL · 3×10 por lado. MATERIAL: 1 mancuerna. Apoya una mano en una superficie estable y lleva el codo hacia la cadera. SIN MATERIAL: realiza remo isométrico con una toalla, tirando de ambos extremos en sentidos opuestos.",
+                            "SPLIT SQUAT ISOMÉTRICO · 3×30–40\" por pierna. Sin material: baja a una posición estable y mantén. Con carga, sostén una mancuerna a cada lado.",
+                            "BEAR CRAWL · 4×20–30 m. Sin material: rodillas cerca del suelo, espalda estable y pasos cortos y controlados.",
+                            "HOLLOW HOLD · 3×30–40\". Sin material: espalda baja pegada al suelo; extiende brazos y piernas solo hasta donde puedas mantener esa posición."
+                        ],
+                        material:
+                            "Solo se utiliza una mancuerna en el remo unilateral y, opcionalmente, en el split squat. Si no hay mancuerna, ambos ejercicios se realizan sin carga siguiendo las instrucciones de la sesión.",
+                        focus:
+                            "Control corporal, estabilidad y calidad de movimiento. La prioridad es mantener posiciones sólidas antes que aumentar dificultad."
+                    },
+
+                    {
+                        number: "02",
+                        title: "PIERNA + CORE",
+                        objective: "Fuerza",
+                        duration: "50–60 min",
+                        level: "Intermedio",
+                        description:
+                            "Trabajo de piernas y zona media para desarrollar fuerza útil y estabilidad durante movimientos básicos.",
+                        session: [
+                            "CALENTAMIENTO · 8–10 min: sentadillas sin peso, zancadas, puente de glúteo y movilidad de tobillo.",
+                            "SENTADILLA GOBLET · 4×8. MATERIAL: 1 mancuerna o kettlebell frente al pecho. SIN MATERIAL: sentadilla con peso corporal y tempo 3–1–1.",
+                            "PESO MUERTO RUMANO · 4×8. MATERIAL: barra o 2 mancuernas; mantén el peso cerca de las piernas y empuja la cadera atrás. SIN MATERIAL: bisagra de cadera lenta, manos en las caderas, buscando sentir isquiotibiales.",
+                            "ZANCADA ATRÁS · 3×10 por pierna. MATERIAL: 2 mancuernas a los lados si se dispone. SIN MATERIAL: usar solo el peso corporal y controlar la bajada.",
+                            "PUENTE DE GLÚTEO · 3×12–15. Sin material: elevar cadera apretando glúteos. CON CARGA: apoyar una mancuerna sobre la pelvis y sujetarla con ambas manos.",
+                            "DEAD BUG · 3×10 por lado. Sin material: espalda baja pegada al suelo mientras extiendes brazo y pierna contrarios.",
+                            "PLANK · 3×30–45\". Sin material: codos bajo hombros y cuerpo en línea."
+                        ],
+                        material:
+                            "Mancuerna/kettlebell para sentadilla goblet, barra o mancuernas para peso muerto rumano y carga opcional para zancadas/puente. Si no hay material, todos los ejercicios tienen la variante con peso corporal descrita en la sesión.",
+                        focus:
+                            "Fuerza de piernas, control de cadera y capacidad de mantener el tronco estable durante el esfuerzo."
+                    },
+
+                    {
+                        number: "03",
+                        title: "FUERZA + POTENCIA",
+                        objective: "Potencia",
+                        duration: "55–65 min",
+                        level: "Rendimiento",
+                        description:
+                            "Combina movimientos de fuerza con acciones explosivas para desarrollar capacidad de producir fuerza rápidamente.",
+                        session: [
+                            "CALENTAMIENTO · 10 min: movilidad + 3 rondas de sentadilla, bisagra de cadera, push-up y saltos suaves.",
+                            "SALTOS VERTICALES · 4×5. Sin material: baja ligeramente y salta buscando altura; aterriza suave y estable.",
+                            "SENTADILLA FRONTAL · 5×4. MATERIAL: barra en posición frontal. SIN BARRA: sentadilla goblet con una mancuerna o sentadilla de peso corporal lenta.",
+                            "PUSH PRESS · 4×5. MATERIAL: barra o 2 mancuernas. Impulsa desde piernas y termina extendiendo brazos. SIN MATERIAL: sustituye por 5–8 flexiones explosivas controladas.",
+                            "PESO MUERTO RUMANO · 4×6. MATERIAL: barra o mancuernas. Mantén espalda neutra y lleva la cadera atrás. SIN MATERIAL: bisagra de cadera lenta con pausa abajo.",
+                            "FARMER CARRY · 4×30 m. MATERIAL: 2 mancuernas/kettlebells a los lados. Camina erguido sin inclinarte. SIN MATERIAL: marcha de carga unilateral con una mochila moderadamente pesada, si está disponible; si no, realiza marcha lenta manteniendo tensión abdominal.",
+                            "HOLLOW HOLD · 3×40\". Sin material: mantener abdomen activo y espalda baja pegada al suelo."
+                        ],
+                        material:
+                            "Barra/mancuernas para sentadilla frontal, push press y peso muerto rumano; 2 cargas para farmer carry. Si no hay equipo, usa las alternativas especificadas en cada ejercicio. Los saltos no requieren material.",
+                        focus:
+                            "Mover cargas con técnica sólida y reservar la velocidad para las repeticiones que puedas ejecutar con control."
+                    },
+
+                    {
+                        number: "04",
+                        title: "TRACCIÓN + TREN SUPERIOR",
+                        objective: "Tracción",
+                        duration: "50–60 min",
+                        level: "Intermedio",
+                        description:
+                            "Fortalece espalda, hombros, pecho y brazos para complementar el trabajo de natación y mejorar el control del tren superior.",
+                        session: [
+                            "CALENTAMIENTO · 8–10 min: movilidad de hombros + 2 rondas de scapular push-up, remo ligero y plancha.",
+                            "REMO CON MANCUERNA · 4×10 por lado. MATERIAL: 1 mancuerna. Apoya una mano y rema llevando el codo hacia la cadera. SIN MATERIAL: remo isométrico con toalla, tirando en sentidos opuestos.",
+                            "PRESS DE PISO · 4×8–10. MATERIAL: 2 mancuernas. Acostado boca arriba, baja codos hasta tocar suavemente el suelo y presiona hacia arriba. SIN MATERIAL: push-up controlado.",
+                            "PULL-OVER · 3×10. MATERIAL: 1 mancuerna. Acostado, lleva la carga por detrás de la cabeza sin perder control costal. SIN MATERIAL: dead bug con brazos extendidos por encima de la cabeza.",
+                            "ELEVACIÓN LATERAL · 3×12. MATERIAL: 2 mancuernas ligeras. Eleva hasta aproximadamente la línea de hombros. SIN MATERIAL: realizar el movimiento lento sin carga, manteniendo tensión voluntaria.",
+                            "PUSH-UP · 3×8–15. Sin material. Si es difícil, manos elevadas sobre una superficie estable.",
+                            "PLANK SHOULDER TAP · 3×10 por lado. Sin material: desde plancha alta, toca hombro contrario sin balancear la cadera."
+                        ],
+                        material:
+                            "Mancuernas para remo, press de piso, pull-over y elevaciones laterales. Si no hay mancuernas, utiliza las alternativas descritas en cada ejercicio; push-up y plancha no necesitan equipo.",
+                        focus:
+                            "Tracción, estabilidad escapular y control del tronco para que la fuerza del tren superior se transfiera mejor al movimiento."
+                    },
+
+                    {
+                        number: "05",
+                        title: "FUERZA TOTAL",
+                        objective: "Fuerza global",
+                        duration: "55–65 min",
+                        level: "Rendimiento",
+                        description:
+                            "Sesión completa de cuerpo entero que integra pierna, bisagra, empuje, tracción y zona media.",
+                        session: [
+                            "CALENTAMIENTO · 10 min: movilidad + 2 rondas de sentadilla, bisagra, push-up y dead bug.",
+                            "SENTADILLA · 4×6. MATERIAL: barra o 1 mancuerna/kettlebell. Con barra, apoya la carga de forma segura y desciende manteniendo rodillas y pies alineados. SIN MATERIAL: sentadilla tempo 4×8.",
+                            "PESO MUERTO RUMANO · 4×6. MATERIAL: barra o mancuernas. Lleva la cadera atrás manteniendo la carga cerca del cuerpo. SIN MATERIAL: bisagra de cadera lenta con pausa.",
+                            "PRESS · 4×8. MATERIAL: 2 mancuernas o barra. Empuja desde una posición estable sin arquear excesivamente la espalda. SIN MATERIAL: push-up 4×8–15.",
+                            "REMO · 4×8–10. MATERIAL: mancuerna, barra o banda. Mantén el torso estable y lleva los codos atrás. SIN MATERIAL: remo isométrico con toalla.",
+                            "CARRY · 4×30 m. MATERIAL: 2 mancuernas/kettlebells. Camina erguido. SIN MATERIAL: marcha lenta manteniendo abdomen y postura, o usa una mochila si está disponible.",
+                            "PLANK · 3×45\". Sin material: cuerpo en línea y abdomen activo."
+                        ],
+                        material:
+                            "Barra/mancuernas para los movimientos principales y 2 cargas para carry. No es obligatorio tener todo el equipo: cada ejercicio incluye una alternativa sin material o con peso corporal.",
+                        focus:
+                            "Integrar fuerza de todo el cuerpo sin sacrificar técnica. La calidad de cada repetición es más importante que la cantidad de carga."
+                    }
+
+                ];
+
+
+                /* =================================================
+                   LISTA DE RUTINAS
+                ================================================== */
+
+                function routineListHTML(
+                    routines,
+                    category
+                ) {
+
+                    return `
+
+                        <div class="nova-modal-eyebrow">
+                            NOVA · ${category}
+                        </div>
+
+
+                        <h2 id="novaModalTitle">
+                            ${category}
+                        </h2>
+
+
+                        <div class="nova-modal-text">
+
+                            <p>
+                                Selecciona una rutina para
+                                consultar la sesión completa.
+                            </p>
+
+                        </div>
+
+
+                        <div class="nova-routine-list">
+
+                            ${routines.map(
+                                function (
+                                    routine,
+                                    index
+                                ) {
+
+                                    return `
+
+                                        <button
+                                            type="button"
+                                            class="nova-routine-item"
+                                            data-routine-index="${index}"
+                                        >
+
+                                            <span class="nova-routine-item-left">
+
+                                                <span class="nova-routine-number">
+                                                    ${routine.number}
+                                                </span>
+
+                                                <span class="nova-routine-name">
+                                                    ${routine.title}
+                                                </span>
+
+                                            </span>
+
+
+                                            <span class="nova-routine-level">
+                                                ${routine.level}
+                                            </span>
+
+                                        </button>
+
+                                    `;
+
+                                }
+                            ).join("")}
+
+                        </div>
+
+                    `;
+
+                }
+
+
+                /* =================================================
+                   DETALLE DE RUTINA
+                ================================================== */
+
+                function routineDetailHTML(
+                    routine,
+                    category
+                ) {
+
+                    return `
+
+                        <div class="nova-routine-modal-header">
+
+                            <div class="nova-modal-eyebrow">
+                                NOVA · ${category}
+                            </div>
+
+
+                            <h2 id="novaModalTitle">
+                                ${routine.title}
+                            </h2>
+
+
+                            <div class="nova-routine-modal-meta">
+
+                                <span class="nova-routine-meta-pill">
+                                    ${routine.objective}
+                                </span>
+
+                                <span class="nova-routine-meta-pill">
+                                    ${routine.duration}
+                                </span>
+
+                                <span class="nova-routine-meta-pill">
+                                    ${routine.level}
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="nova-modal-text">
+
+                            <p>
+                                ${routine.description}
+                            </p>
+
+                        </div>
+
+
+                        <div class="nova-routine-section">
+
+                            <h3 class="nova-routine-section-title">
+                                SESIÓN
+                            </h3>
+
+
+                            <ul class="nova-routine-session">
+
+                                ${routine.session.map(
+                                    function (item) {
+
+                                        return `
+                                            <li>
+                                                ${item}
+                                            </li>
+                                        `;
+
+                                    }
+                                ).join("")}
+
+                            </ul>
+
+                        </div>
+
+
+                        <div class="nova-routine-section">
+
+                            <h3 class="nova-routine-section-title">
+                                MATERIAL
+                            </h3>
+
+
+                            <p class="nova-routine-note">
+                                ${routine.material}
+                            </p>
+
+                        </div>
+
+
+                        <div class="nova-routine-section">
+
+                            <h3 class="nova-routine-section-title">
+                                ENFOQUE
+                            </h3>
+
+
+                            <p class="nova-routine-note">
+                                ${routine.focus}
+                            </p>
+
+                        </div>
+
+
+                        <div class="nova-routine-section">
+
+                            <button
+                                type="button"
+                                class="nova-training-card-button"
+                                id="novaBackToRoutineList"
+                                style="
+                                    border:0;
+                                    cursor:pointer;
+                                    background:transparent;
+                                    padding:0;
+                                "
+                            >
+                                ← VOLVER A ${category}
+                            </button>
+
+                        </div>
+
+                    `;
+
+                }
+
+
+                function bindRoutineButtons(
+                    routines,
+                    category
+                ) {
+
+                    modalContent
+                        .querySelectorAll(
+                            ".nova-routine-item"
+                        )
+                        .forEach(
+                            function (button) {
+
+                                button.addEventListener(
+                                    "click",
+                                    function () {
+
+                                        const index =
+                                            Number(
+                                                button.dataset
+                                                    .routineIndex
+                                            );
+
+                                        const routine =
+                                            routines[index];
+
+
+                                        openModal(
+                                            routineDetailHTML(
+                                                routine,
+                                                category
+                                            ),
+                                            routine.title
+                                        );
+
+
+                                        const backButton =
+                                            document.getElementById(
+                                                "novaBackToRoutineList"
+                                            );
+
+
+                                        if (backButton) {
+
+                                            backButton.addEventListener(
+                                                "click",
+                                                function () {
+
+                                                    openModal(
+                                                        routineListHTML(
+                                                            routines,
+                                                            category
+                                                        ),
+                                                        category
+                                                    );
+
+                                                    bindRoutineButtons(
+                                                        routines,
+                                                        category
+                                                    );
+
+                                                }
+                                            );
+
+                                        }
+
+                                    }
+                                );
+
+                            }
+                        );
+
+                }
+
+
+                /* =================================================
+                   NATACIÓN
+                ================================================== */
+
+                document.querySelectorAll(
+                    ".js-open-swimming"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                openModal(
+                                    routineListHTML(
+                                        swimmingRoutines,
+                                        "NATACIÓN"
+                                    ),
+                                    "NATACIÓN"
+                                );
+
+                                bindRoutineButtons(
+                                    swimmingRoutines,
+                                    "NATACIÓN"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   AGUAS ABIERTAS
+                ================================================== */
+
+                document.querySelectorAll(
+                    ".js-open-open-water"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                openModal(
+                                    routineListHTML(
+                                        openWaterRoutines,
+                                        "AGUAS ABIERTAS"
+                                    ),
+                                    "AGUAS ABIERTAS"
+                                );
+
+                                bindRoutineButtons(
+                                    openWaterRoutines,
+                                    "AGUAS ABIERTAS"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   FUERZA
+                ================================================== */
+
+                document.querySelectorAll(
+                    ".js-open-strength"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                openModal(
+                                    routineListHTML(
+                                        strengthRoutines,
+                                        "FUERZA"
+                                    ),
+                                    "FUERZA"
+                                );
+
+                                bindRoutineButtons(
+                                    strengthRoutines,
+                                    "FUERZA"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   MEMBRESÍAS
+                ================================================== */
+
+                const membershipsHTML = `
+
+                    <div class="nova-modal-eyebrow">
+                        NOVA · MEMBRESÍAS
+                    </div>
+
+
+                    <h2 id="novaModalTitle">
+                        Elige cómo entrenar.
+                    </h2>
+
+
+                    <div class="nova-modal-text">
+
+                        <p>
+                            Encuentra la opción de entrenamiento
+                            que mejor se adapte a tus objetivos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="nova-routine-list">
+
+                        <button
+                            type="button"
+                            class="nova-routine-item"
+                        >
+
+                            <span class="nova-routine-item-left">
+                                <span class="nova-routine-number">
+                                    01
+                                </span>
+
+                                <span class="nova-routine-name">
+                                    NATACIÓN BASE
+                                </span>
+                            </span>
+
+                            <span class="nova-routine-level">
+                                $999
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="nova-routine-item"
+                        >
+
+                            <span class="nova-routine-item-left">
+                                <span class="nova-routine-number">
+                                    02
+                                </span>
+
+                                <span class="nova-routine-name">
+                                    NATACIÓN RENDIMIENTO
+                                </span>
+                            </span>
+
+                            <span class="nova-routine-level">
+                                $1,499
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="nova-routine-item"
+                        >
+
+                            <span class="nova-routine-item-left">
+                                <span class="nova-routine-number">
+                                    03
+                                </span>
+
+                                <span class="nova-routine-name">
+                                    FUERA DEL AGUA · FUERZA
+                                </span>
+                            </span>
+
+                            <span class="nova-routine-level">
+                                $499
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                document.querySelectorAll(
+                    ".js-open-memberships"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                openModal(
+                                    membershipsHTML,
+                                    "MEMBRESÍAS"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   FAQ
+                ================================================== */
+
+                const faqHTML = `
+
+                    <div class="nova-modal-eyebrow">
+                        NOVA · FAQ
+                    </div>
+
+
+                    <h2 id="novaModalTitle">
+                        Preguntas frecuentes.
+                    </h2>
+
+
+                    <div class="nova-modal-text">
+
+                        <p>
+                            Si tienes alguna duda sobre las
+                            sesiones, programas o proceso de
+                            entrenamiento, puedes escribirnos.
+                        </p>
+
+                        <p>
+                            También puedes utilizar el plan para
+                            encontrar la opción que mejor se adapte
+                            a lo que estás buscando.
+                        </p>
+
+                    </div>
+
+                `;
+
+
+                document.querySelectorAll(
+                    ".js-open-faq"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                openModal(
+                                    faqHTML,
+                                    "FAQ"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   LEGAL
+                ================================================== */
+
+                const legalContent = {
+
+                    privacy: {
+                        title: "Aviso de privacidad",
+                        text:
+                            "NOVA utiliza la información que compartes únicamente para atender solicitudes, responder mensajes y gestionar los servicios que solicites."
+                    },
+
+                    terms: {
+                        title: "Términos y condiciones",
+                        text:
+                            "El uso de este sitio y la contratación de servicios implica la aceptación de las condiciones aplicables al servicio solicitado."
+                    },
+
+                    cookies: {
+                        title: "Política de cookies",
+                        text:
+                            "Este sitio puede utilizar tecnologías necesarias para su funcionamiento y para mejorar la experiencia de navegación."
+                    },
+
+                    notice: {
+                        title: "Aviso legal",
+                        text:
+                            "NOVA Training presenta información relacionada con entrenamiento y servicios deportivos. La información publicada puede actualizarse sin previo aviso."
+                    },
+
+                    cancellations: {
+                        title: "Cancelaciones y reembolsos",
+                        text:
+                            "Las condiciones de cancelación y reembolso dependen del servicio contratado y de las condiciones comunicadas antes de realizar el pago."
+                    },
+
+                    responsibility: {
+                        title: "Aviso de responsabilidad",
+                        text:
+                            "El entrenamiento debe realizarse de acuerdo con las capacidades y condiciones individuales de cada persona. Ante cualquier duda sobre la práctica de ejercicio, consulta con un profesional de salud."
+                    }
+
+                };
+
+
+                document.querySelectorAll(
+                    ".js-open-legal"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                const item =
+                                    legalContent[
+                                        link.dataset.legal
+                                    ];
+
+                                if (!item) return;
+
+                                openModal(
+                                    `
+
+                                        <div class="nova-modal-eyebrow">
+                                            NOVA · LEGAL
+                                        </div>
+
+
+                                        <h2 id="novaModalTitle">
+                                            ${item.title}
+                                        </h2>
+
+
+                                        <div class="nova-modal-text">
+
+                                            <p>
+                                                ${item.text}
+                                            </p>
+
+                                        </div>
+
+                                    `,
+                                    item.title
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   PLAN
+                ================================================== */
+
+                const surveyHTML = `
+
+                    <div class="nova-modal-eyebrow">
+                        NOVA · PLAN
+                    </div>
+
+
+                    <h2 id="novaModalTitle">
+                        Encuentra tu dirección.
+                    </h2>
+
+
+                    <div class="nova-modal-text">
+
+                        <p>
+                            Cuéntanos qué quieres entrenar y
+                            encontraremos la opción que mejor
+                            se adapte a tu objetivo.
+                        </p>
+
+                    </div>
+
+
+                    <div class="nova-routine-list">
+
+                        <button
+                            type="button"
+                            class="nova-routine-item"
+                            data-survey-discipline="Natación"
+                        >
+
+                            <span class="nova-routine-item-left">
+
+                                <span class="nova-routine-number">
+                                    01
+                                </span>
+
+                                <span class="nova-routine-name">
+                                    NATACIÓN
+                                </span>
+
+                            </span>
+
+                            <span class="nova-routine-level">
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="nova-routine-item"
+                            data-survey-discipline="Aguas abiertas"
+                        >
+
+                            <span class="nova-routine-item-left">
+
+                                <span class="nova-routine-number">
+                                    02
+                                </span>
+
+                                <span class="nova-routine-name">
+                                    AGUAS ABIERTAS
+                                </span>
+
+                            </span>
+
+                            <span class="nova-routine-level">
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="nova-routine-item"
+                            data-survey-discipline="Fuerza"
+                        >
+
+                            <span class="nova-routine-item-left">
+
+                                <span class="nova-routine-number">
+                                    03
+                                </span>
+
+                                <span class="nova-routine-name">
+                                    FUERZA
+                                </span>
+
+                            </span>
+
+                            <span class="nova-routine-level">
+                                →
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="nova-routine-item"
+                            data-survey-discipline="No estoy seguro"
+                        >
+
+                            <span class="nova-routine-item-left">
+
+                                <span class="nova-routine-number">
+                                    04
+                                </span>
+
+                                <span class="nova-routine-name">
+                                    NO ESTOY SEGURO
+                                </span>
+
+                            </span>
+
+                            <span class="nova-routine-level">
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                document.querySelectorAll(
+                    ".js-open-survey"
+                ).forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function (event) {
+
+                                event.preventDefault();
+
+                                closeMenu();
+
+                                openModal(
+                                    surveyHTML,
+                                    "PLAN"
+                                );
+
+
+                                modalContent
+                                    .querySelectorAll(
+                                        "[data-survey-discipline]"
+                                    )
+                                    .forEach(
+                                        function (button) {
+
+                                            button.addEventListener(
+                                                "click",
+                                                function () {
+
+                                                    const discipline =
+                                                        button.dataset
+                                                            .surveyDiscipline;
+
+
+                                                    const message =
+                                                        encodeURIComponent(
+                                                            "Hola, quiero encontrar mi plan NOVA. Mi disciplina es: " +
+                                                            discipline
+                                                        );
+
+
+                                                    openModal(
+
+                                                        `
+
+                                                            <div class="nova-modal-eyebrow">
+                                                                NOVA · PLAN
+                                                            </div>
+
+
+                                                            <h2 id="novaModalTitle">
+                                                                Empecemos.
+                                                            </h2>
+
+
+                                                            <div class="nova-modal-text">
+
+                                                                <p>
+                                                                    Ya tenemos tu disciplina.
+                                                                    Ahora podemos orientarte
+                                                                    hacia la opción adecuada.
+                                                                </p>
+
+                                                            </div>
+
+
+                                                            <a
+                                                                href="https://wa.me/525612584271?text=${message}"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                class="nova-coach-modal-link"
+                                                            >
+                                                                CONTINUAR POR WHATSAPP
+                                                                <span>→</span>
+                                                            </a>
+
+                                                        `,
+
+                                                        "PLAN"
+
+                                                    );
+
+                                                }
+                                            );
+
+                                        }
+                                    );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   ESC
+                ================================================== */
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape"
+                        ) {
+
+                            if (
+                                modal.classList.contains(
+                                    "is-open"
+                                )
+                            ) {
+
+                                closeModal();
+
+                            }
+
+                            if (
+                                menu.classList.contains(
+                                    "is-open"
+                                )
+                            ) {
+
+                                closeMenu();
+
+                            }
+
+                        }
+
+                    }
+                );
+
+
+                /* =================================================
+                   RESIZE
+                ================================================== */
+
+                window.addEventListener(
+                    "resize",
+                    function () {
+
+                        if (
+                            window.innerWidth > 1050 &&
+                            menu.classList.contains(
+                                "is-open"
+                            )
+                        ) {
+
+                            closeMenu();
+
+                        }
+
+                    }
+                );
+
+
+                /* =================================================
+                   PAGE SHOW
+                ================================================== */
+
+                window.addEventListener(
+                    "pageshow",
+                    function () {
+
+                        if (transition) {
+
+                            transition.classList.remove(
+                                "is-active"
+                            );
+
+                        }
+
+                        if (modal) {
+
+                            modal.classList.remove(
+                                "is-open"
+                            );
+
+                            modal.setAttribute(
+                                "aria-hidden",
+                                "true"
+                            );
+
+                        }
+
+                        if (menu) {
+
+                            menu.classList.remove(
+                                "is-open"
+                            );
+
+                            menu.setAttribute(
+                                "aria-hidden",
+                                "true"
+                            )
+
+                        }
+
+                        document.body.classList.remove(
+                            "nova-modal-open",
+                            "nova-menu-open"
+                        );
+
+                    }
+                );
+
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>
